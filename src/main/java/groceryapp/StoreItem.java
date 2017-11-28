@@ -1,12 +1,9 @@
 package groceryapp;
 
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class StoreItem {
@@ -17,17 +14,17 @@ public class StoreItem {
 	private String name;
 	private double price;
 
-	@ManyToOne
-	private Set<LineItem> lineItems;
+	// @ManyToOne
+	// private LineItem lineItems;
 
 	protected StoreItem() {
 
 	}
 
-	public StoreItem(Long id, String name, double price) {
-		this.id = id;
+	public StoreItem(String name, double price) {
 		this.name = name;
 		this.price = price;
+
 	}
 
 	public Long getId() {
@@ -40,10 +37,6 @@ public class StoreItem {
 
 	public double getPrice() {
 		return price;
-	}
-
-	public Set<LineItem> getLineItems() {
-		return lineItems;
 	}
 
 }

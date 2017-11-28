@@ -22,8 +22,7 @@ public class Ingredient {
 
 	}
 
-	public Ingredient(Long id, String name, String quantity, Recipe recipes) {
-		this.id = id;
+	public Ingredient(String name, String quantity, Recipe recipes) {
 		this.name = name;
 		this.quantity = quantity;
 		this.recipes = recipes;

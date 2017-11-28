@@ -22,8 +22,7 @@ public class ShoppingList {
 
 	}
 
-	public ShoppingList(Long id, Set<LineItem> lineItems) {
-		this.id = id;
+	public ShoppingList(Set<LineItem> lineItems) {
 		this.lineItems = lineItems;
 	}
 

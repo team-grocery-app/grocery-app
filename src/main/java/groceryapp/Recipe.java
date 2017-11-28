@@ -18,7 +18,7 @@ public class Recipe {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
-	private String image;
+	private String imageUrl;
 
 	@Lob
 	private String instructions;
@@ -27,13 +27,11 @@ public class Recipe {
 	private Set<Ingredient> listOfIngredients;
 
 	protected Recipe() {
-
 	}
 
-	public Recipe(Long id, String name, String image, String instructions, Ingredient... listOfIngredients) {
-		this.id = id;
+	public Recipe(String name, String imageUrl, String instructions, Ingredient... listOfIngredients) {
 		this.name = name;
-		this.image = image;
+		this.imageUrl = imageUrl;
 		this.instructions = instructions;
 		this.listOfIngredients = new HashSet<>(Arrays.asList(listOfIngredients));
 	}
@@ -46,8 +44,8 @@ public class Recipe {
 		return name;
 	}
 
-	public String getImage() {
-		return image;
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
 	public String getInstructions() {
