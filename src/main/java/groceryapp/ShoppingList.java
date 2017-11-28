@@ -1,31 +1,30 @@
 package groceryapp;
 
+import java.util.Set;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@Entity
 public class ShoppingList {
 
 	@Id
 	@GeneratedValue
 	private Long id;
 
-	private LineItem lineItems;
+	@OneToMany(mappedBy = "lineItemsList")
+	private Set<LineItem> lineItems;
 
-	protected ShoppingList() {
-
-	}
-
-	public ShoppingList(Long id, LineItem lineItems) {
-		super();
-		this.id = id;
-		this.lineItems = lineItems;
+	public ShoppingList() {
 	}
 
 	public Long getId() {
 		return id;
 	}
 
-	public LineItem getLineItems() {
+	public Set<LineItem> getLineItems() {
 		return lineItems;
 	}
 

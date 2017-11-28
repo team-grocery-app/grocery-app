@@ -13,15 +13,17 @@ public class StoreItem {
 	private String name;
 	private double price;
 
+	// @ManyToOne
+	// private LineItem lineItems;
+
 	protected StoreItem() {
 
 	}
 
-	public StoreItem(Long id, String name, double price) {
-		super();
-		this.id = id;
+	public StoreItem(String name, double price) {
 		this.name = name;
 		this.price = price;
+
 	}
 
 	public Long getId() {
