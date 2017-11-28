@@ -1,5 +1,7 @@
 package groceryapp;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -7,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Recipe {
@@ -21,20 +23,19 @@ public class Recipe {
 	@Lob
 	private String instructions;
 
-	@ManyToMany
+	@OneToMany
 	private Set<Ingredient> listOfIngredients;
 
 	protected Recipe() {
 
 	}
 
-	public Recipe(Long id, String name, String image, String instructions, Set<Ingredient> listOfIngredients) {
-		super();
+	public Recipe(Long id, String name, String image, String instructions, Ingredient... listOfIngredients) {
 		this.id = id;
 		this.name = name;
 		this.image = image;
 		this.instructions = instructions;
-		this.listOfIngredients = listOfIngredients;
+		this.listOfIngredients = new HashSet<>(Arrays.asList(listOfIngredients));
 	}
 
 	public Long getId() {
