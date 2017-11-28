@@ -1,9 +1,12 @@
 package groceryapp;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class ShoppingList {
@@ -12,14 +15,14 @@ public class ShoppingList {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private LineItem lineItems;
+	@OneToMany(mappedBy = "lineItemsList")
+	private Set<LineItem> lineItems;
 
 	protected ShoppingList() {
 
 	}
 
-	public ShoppingList(Long id, LineItem lineItems) {
-		super();
+	public ShoppingList(Long id, Set<LineItem> lineItems) {
 		this.id = id;
 		this.lineItems = lineItems;
 	}
@@ -28,7 +31,7 @@ public class ShoppingList {
 		return id;
 	}
 
-	public LineItem getLineItems() {
+	public Set<LineItem> getLineItems() {
 		return lineItems;
 	}
 

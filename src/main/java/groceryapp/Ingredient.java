@@ -23,7 +23,6 @@ public class Ingredient {
 	}
 
 	public Ingredient(Long id, String name, String quantity, Recipe recipes) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.quantity = quantity;

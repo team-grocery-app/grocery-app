@@ -31,7 +31,6 @@ public class Recipe {
 	}
 
 	public Recipe(Long id, String name, String image, String instructions, Ingredient... listOfIngredients) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.image = image;
