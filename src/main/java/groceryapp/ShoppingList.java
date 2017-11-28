@@ -18,12 +18,7 @@ public class ShoppingList {
 	@OneToMany(mappedBy = "lineItemsList")
 	private Set<LineItem> lineItems;
 
-	protected ShoppingList() {
-
-	}
-
-	public ShoppingList(Set<LineItem> lineItems) {
-		this.lineItems = lineItems;
+	public ShoppingList() {
 	}
 
 	public Long getId() {
