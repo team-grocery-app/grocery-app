@@ -1,21 +1,57 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+#back {
+	color: #a239ca;
+	font-size: large;
+}
+
+#recipe-item {
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
+	border-color: black;
+	color: black;
+	padding: 10px;
+}
+
+#recipe-text {
+	color: black;
+}
+
+#social__media {
+	font-size: xx-large;
+}
+
+.recipes {
+	background: none;
+}
+
+a {
+	font-family: courier;
+	padding: 10px;
 }
 
 body {
-	background-color: #FBFCFE;
-	/*background-image: url("./images/meal_prep.jpg");*/
+	background-image: none;
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center;
+	background-size: auto;
+	background-blend-mode: 
 }
 
 footer {
-	background-color: transparent;
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
+}
+
+h1 {
+	color: black;
+	font-family: courier;
+	font-size: 150%;
+	font-weight: bolder;
 }
 
 header {
-	background-color: #60BC3D;
-	padding-top: 2rem;
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
 }
