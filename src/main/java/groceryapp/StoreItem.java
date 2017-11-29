@@ -14,8 +14,8 @@ public class StoreItem {
 	private String name;
 	private double price;
 
-	 @OneToOne
-	 private LineItem lineItem;
+	@OneToOne
+	private LineItem lineItem;
 
 	protected StoreItem() {
 

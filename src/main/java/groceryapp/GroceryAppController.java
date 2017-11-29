@@ -20,8 +20,6 @@ public class GroceryAppController {
 	@Resource
 	LineItemRepository lineItemRepo;
 
-
-
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
 		model.addAttribute("recipes", recipeRepo.findAll());
@@ -40,6 +38,4 @@ public class GroceryAppController {
 		return "ingredients";
 	}
 
-
-	
 }

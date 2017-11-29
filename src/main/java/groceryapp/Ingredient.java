@@ -17,7 +17,6 @@ public class Ingredient {
 
 	@ManyToOne
 	private Recipe recipes;
-	
 
 	protected Ingredient() {
 
