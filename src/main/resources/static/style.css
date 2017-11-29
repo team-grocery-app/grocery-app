@@ -81,7 +81,9 @@ a:active {
 }
 
 body {
-	background-color: #eab126;
+	background-image: url("./images/meal_prep.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 footer {
