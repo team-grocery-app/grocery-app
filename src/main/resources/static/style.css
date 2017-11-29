@@ -3,91 +3,57 @@
 	font-size: large;
 }
 
-#news {
+#recipe-item {
 	border-style: solid;
-	border-width: 5px;
+	border-width: thin;
 	border-radius: 12px;
-	border-color: #1fb58f;
+	border-color: black;
 	color: black;
-	background-color: #f24c4e;
-	opacity: 0.5;
 	padding: 10px;
 }
 
-#contact {
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 12px;
-	border-color: #1fb58f;
+#recipe-text {
 	color: black;
-	background-color: #f24c4e;
-	opacity: 0.5;
-	padding: 10px;
-}
-
-#review {
-	color: #e7dfdd;
-}
-
-#recipe-items {
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 12px;
-	border-color: #f24cfe;
-	color: #eab126;
-	background-color: #1b73b4;
-	opacity: 0.5;
-	padding: 10px;
 }
 
 #social__media {
 	font-size: xx-large;
 }
 
-.categories {
-	background: url("/images/turnTable.jpg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	border-style: solid;
-	border-width: thin;
-	border-radius: 12px;
+.recipes {
+	background: none;
 }
 
 a {
 	font-family: courier;
-	border-style: solid;
-	border-width: thin;
-	border-color: #0e0b16;
-	background-color: #0e0b16;
-	opacity: 0.5;
 	padding: 10px;
 }
 
 a:hover {
-	color: #0e0b16;
-	opacity: 0.7;
+	
 }
 
 a:link {
-	color: #e7dfdd;
+	
 }
 
 a:visited {
-	color: #e7dfdd;
+	
 }
 
 a:active {
-	color: #0e0b16;
+	
 }
 
 body {
-	background-image: url("./images/meal_prep.jpg");
+	background-image: none;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: auto;
+	background-blend-mode: 
 }
 
 footer {
-	background-color: #1fb58f;
 	border-style: solid;
 	border-width: thin;
 	border-radius: 12px;
@@ -101,7 +67,6 @@ h1 {
 }
 
 header {
-	background-color: #1fb58f;
 	border-style: solid;
 	border-width: thin;
 	border-radius: 12px;
