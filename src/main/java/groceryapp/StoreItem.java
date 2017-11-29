@@ -3,6 +3,7 @@ package groceryapp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class StoreItem {
@@ -13,8 +14,8 @@ public class StoreItem {
 	private String name;
 	private double price;
 
-	// @ManyToOne
-	// private LineItem lineItems;
+	 @OneToOne
+	 private LineItem lineItem;
 
 	protected StoreItem() {
 

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class LineItem {
@@ -14,10 +15,10 @@ public class LineItem {
 	private int quantity;
 	private double totalPrice;
 
+	@OneToOne
 	private StoreItem storeItem;
 
-	@ManyToOne
-	ShoppingList shoppingList;
+
 
 	protected LineItem() {
 	}
@@ -44,8 +45,6 @@ public class LineItem {
 		return storeItem;
 	}
 
-	public ShoppingList getShoppingList() {
-		return shoppingList;
-	}
+	
 
 }

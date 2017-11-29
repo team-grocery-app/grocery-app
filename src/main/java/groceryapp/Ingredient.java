@@ -17,15 +17,16 @@ public class Ingredient {
 
 	@ManyToOne
 	private Recipe recipes;
+	
 
 	protected Ingredient() {
 
 	}
 
-	public Ingredient(String name, String quantity, Recipe recipes) {
+	public Ingredient(String name, String quantity) {
 		this.name = name;
 		this.quantity = quantity;
-		this.recipes = recipes;
+
 	}
 
 	public Long getId() {
