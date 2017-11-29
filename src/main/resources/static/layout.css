@@ -17,18 +17,11 @@
 	justify-content: space-between;
 }
 
-.add__remove__tags {
+header {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	padding: 20px;
-}
-
-.categories {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
 }
 
 .container {
@@ -52,12 +45,14 @@ img {
 	margin-bottom: auto;
 }
 
-h3 {
-	
+.ingredients {
+	margin: 2rem;
 }
 
-header {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+.instructions {
+	margin: 2rem;
+}
+
+#social_media {
+	
 }

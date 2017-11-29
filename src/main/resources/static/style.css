@@ -29,22 +29,6 @@ a {
 	padding: 10px;
 }
 
-a:hover {
-	
-}
-
-a:link {
-	
-}
-
-a:visited {
-	
-}
-
-a:active {
-	
-}
-
 body {
 	background-image: none;
 	background-repeat: no-repeat;
@@ -70,12 +54,4 @@ header {
 	border-style: solid;
 	border-width: thin;
 	border-radius: 12px;
-}
-
-i {
-	font-size: 200%;
-}
-
-p {
-	font-size: large;
 }

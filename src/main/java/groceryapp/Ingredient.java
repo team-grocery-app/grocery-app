@@ -1,12 +1,10 @@
 package groceryapp;
 
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Ingredient {
@@ -17,16 +15,14 @@ public class Ingredient {
 	private String name;
 	private String quantity;
 
-	@ManyToMany(mappedBy = "recipeIngredients")
-	private Set<Recipe> recipes;
+	@ManyToOne
+	private Recipe recipes;
 
 	protected Ingredient() {
 
 	}
 
-	public Ingredient(Long id, String name, String quantity, Set<Recipe> recipes) {
-		super();
-		this.id = id;
+	public Ingredient(String name, String quantity, Recipe recipes) {
 		this.name = name;
 		this.quantity = quantity;
 		this.recipes = recipes;
@@ -44,7 +40,7 @@ public class Ingredient {
 		return quantity;
 	}
 
-	public Set<Recipe> getRecipes() {
+	public Recipe getRecipes() {
 		return recipes;
 	}
 
