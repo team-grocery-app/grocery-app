@@ -16,7 +16,7 @@ public class Ingredient {
 	private String quantity;
 
 	@ManyToOne
-	private Recipe recipes;
+	private Recipe recipe;
 
 	@ManyToOne
 	private Tag tag;
@@ -44,7 +44,7 @@ public class Ingredient {
 	}
 
 	public Recipe getRecipes() {
-		return recipes;
+		return recipe;
 	}
 
 	public Tag getTag() {
