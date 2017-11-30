@@ -1,0 +1,57 @@
+#back {
+	color: #a239ca;
+	font-size: large;
+}
+
+#recipe-item {
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
+	border-color: black;
+	color: black;
+	padding: 10px;
+}
+
+#recipe-text {
+	color: black;
+}
+
+#social__media {
+	font-size: xx-large;
+}
+
+.recipes {
+	background: none;
+}
+
+a {
+	font-family: courier;
+	padding: 10px;
+}
+
+body {
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	background-blend-mode: 
+}
+
+footer {
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
+}
+
+h1 {
+	color: black;
+	font-family: courier;
+	font-size: 150%;
+	font-weight: bolder;
+}
+
+header {
+	border-style: solid;
+	border-width: thin;
+	border-radius: 12px;
+}
