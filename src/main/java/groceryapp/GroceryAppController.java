@@ -20,12 +20,6 @@ public class GroceryAppController {
 	@Resource
 	LineItemRepository lineItemRepo;
 
-	@Resource
-	ShoppingListRepository shoppingListRepo;
-
-	@Resource
-	SelectedIngredientsRepository selectedIngredientsRepo;
-
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
 		model.addAttribute("recipes", recipeRepo.findAll());
@@ -44,9 +38,4 @@ public class GroceryAppController {
 		return "ingredients";
 	}
 
-	@RequestMapping("/selectedIngredients")
-	public String getAllSelectedIngredients(Model model) {
-		model.addAttribute("selectedIngredients", selectedIngredientsRepo.findAll());
-		return "selectedIngredients";
-	}
 }

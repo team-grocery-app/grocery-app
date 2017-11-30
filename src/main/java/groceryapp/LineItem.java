@@ -2,23 +2,20 @@ package groceryapp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class LineItem {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	private Long id;
 	private int quantity;
 	private double totalPrice;
 
+	@OneToOne
 	private StoreItem storeItem;
-
-	@ManyToOne
-	ShoppingList shoppingList;
 
 	protected LineItem() {
 	}
@@ -43,10 +40,6 @@ public class LineItem {
 
 	public StoreItem getStoreItem() {
 		return storeItem;
-	}
-
-	public ShoppingList getShoppingList() {
-		return shoppingList;
 	}
 
 }
