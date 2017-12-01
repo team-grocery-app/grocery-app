@@ -27,6 +27,11 @@ img {
 	grid-row: 10% 80% 10%;
 }
 
+.cover-image {
+	height: 100vh;
+	width: 100vw;
+}
+
 .instructions {
 	margin: 2rem;
 }

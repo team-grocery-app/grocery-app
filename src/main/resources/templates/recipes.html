@@ -1,21 +1,53 @@
 <!DOCTYPE HTML>
+
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<link rel="stylesheet" href="../static/style.css"></link>
-<link rel="stylesheet" href="../static/layout.css"></link>
-<script src="https://use.fontawesome.com/ecc099372b.js"></script>
-<title>Recipes</title>
+	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
+	<script src="https://use.fontawesome.com/ecc099372b.js"></script>
+	<title>Recipes</title>
 </head>
-<body>
-	<div class="container">
-		<header>
-			<h1>The Grocery App</h1>
-			<h1>Pick A Recipe</h1>
+
+	<body>
+		<div class="container">
+			<header>
+				<h1>The Grocery App</h1>
+				<h1>Pick A Recipe</h1>
+			</header>
+				
+				<img class="cover-image" src="./images/meal_prep.jpg"/>
 			
-		</header>
-		<div class="recipes">
-			
-			<div id="recipe-item">
+			<!-- Content -->
+			<div class="recipes">
+				<section class="recipe-item">
+					<div th:each="i: ${recipes}">
+						<a th:href="@{/recipe(id=${i.id})}">
+						<img class="recipe-image" th:src="${i.imageUrl}"/>
+						<h3 th:text="${i.name}"></h3></a>
+					</div>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer>
+				<div id="social__media">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i> 
+					<i class="fa fa-reddit-square" aria-hidden="true"></i> 
+					<i class="fa fa-twitter-square" aria-hidden="true"></i> 
+					<i class="fa fa-youtube-square" aria-hidden="true"></i> 
+					<i	class="fa fa-google-plus-square" aria-hidden="true"></i>
+				</div>				
+				<h4>The Grocery App Team Copyright 2017</h4>
+			</footer>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
+
+
+
+		<!-- <div id="recipe-item">
 				<a href="">
 					<img class="recipe-image" src="../static/images/chicken-pot-pie.jpg" alt=chicken-pot-pie>
 					<div id="recipe-text">
@@ -36,21 +68,4 @@
 					<img class="recipe-image" src="../static/images/chicken-broccoli-alfredo.jpg" alt=chicken-pot-pie>
 					
 				</a>
-			</div>
-			
-		</div>
-		<footer>
-			
-			<div id="social__media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
-					class="fa fa-reddit-square" aria-hidden="true"></i> <i
-					class="fa fa-twitter-square" aria-hidden="true"></i> <i
-					class="fa fa-youtube-square" aria-hidden="true"></i> <i
-					class="fa fa-google-plus-square" aria-hidden="true"></i>
-			</div>
-			<h4>The Grocery App Team Copyright 2017</h4>
-		</footer>
-	</div>
-	<script src="./app.js"></script>
-</body>
-</html>
+			</div> // to close #recipe-items div -->

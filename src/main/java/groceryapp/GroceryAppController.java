@@ -2,10 +2,12 @@ package groceryapp;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@Controller
 public class GroceryAppController {
 
 	@Resource
@@ -36,6 +38,12 @@ public class GroceryAppController {
 	public String getAllIngredients(Model model) {
 		model.addAttribute("ingredients", ingredientRepo.findAll());
 		return "ingredients";
+	}
+
+	// test
+	@RequestMapping("/hello-world")
+	public String stopGettingADamn404(Model model) {
+		return "hello-world";
 	}
 
 	// sample code for controller to save a selected ingredient to repository
