@@ -38,4 +38,8 @@ public class GroceryAppController {
 		return "ingredients";
 	}
 
+	// sample code for controller to save a selected ingredient to repository
+	// Long testObjectId = testIngredientWithTag.getId();
+	// selectedIngredientsRepo.save(ingredientRepo.findOne(testObjectId));
+
 }

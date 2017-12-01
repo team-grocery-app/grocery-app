@@ -3,6 +3,7 @@ package groceryapp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -17,10 +18,20 @@ public class StoreItem {
 	@OneToOne
 	private LineItem lineItem;
 
+	@ManyToOne
+	private Tag tag;
+
 	protected StoreItem() {
 
 	}
 
+	public StoreItem(String name, double price, Tag tag) {
+		this.name = name;
+		this.price = price;
+		this.tag = tag;
+	}
+
+	// no tag constructor to be superseded
 	public StoreItem(String name, double price) {
 		this.name = name;
 		this.price = price;
@@ -37,6 +48,10 @@ public class StoreItem {
 
 	public double getPrice() {
 		return price;
+	}
+
+	public Tag getTag() {
+		return tag;
 	}
 
 }

@@ -19,6 +19,12 @@ public class GroceryPopulator implements CommandLineRunner {
 	@Resource
 	private LineItemRepository lineItemRepo;
 
+	@Resource
+	private TagRepository tagRepo;
+
+	@Resource
+	private SelectedIngredientsRepository selectedIngredientsRepo;
+
 	@Override
 	public void run(String... args) throws Exception {
 

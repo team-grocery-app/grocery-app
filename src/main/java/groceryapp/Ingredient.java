@@ -16,12 +16,23 @@ public class Ingredient {
 	private String quantity;
 
 	@ManyToOne
-	private Recipe recipes;
+	private Recipe recipe;
+
+	@ManyToOne
+	private Tag tag;
 
 	protected Ingredient() {
 
 	}
 
+	// constructor with tag to keep
+	public Ingredient(String name, String quantity, Tag tag) {
+		this.name = name;
+		this.quantity = quantity;
+		this.tag = tag;
+	}
+
+	// no tag constructor - to be superseded
 	public Ingredient(String name, String quantity) {
 		this.name = name;
 		this.quantity = quantity;
@@ -41,7 +52,11 @@ public class Ingredient {
 	}
 
 	public Recipe getRecipes() {
-		return recipes;
+		return recipe;
+	}
+
+	public Tag getTag() {
+		return tag;
 	}
 
 }
