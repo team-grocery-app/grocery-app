@@ -25,6 +25,14 @@ public class Ingredient {
 
 	}
 
+	// constructor with tag to keep
+	public Ingredient(String name, String quantity, Tag tag) {
+		this.name = name;
+		this.quantity = quantity;
+		this.tag = tag;
+	}
+
+	// no tag constructor - to be superseded
 	public Ingredient(String name, String quantity) {
 		this.name = name;
 		this.quantity = quantity;

@@ -28,6 +28,19 @@ public class GroceryPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		// Ingredient testIngredientWithTag = new Ingredient("happiness", "lots", tag1);
+		// ingredientRepo.save(testIngredientWithTag);
+		//
+		// StoreItem testStoreItemWithTag = new StoreItem("Nabisco Happiness", 9.99,
+		// tag1);
+		// storeItemRepo.save(testStoreItemWithTag);
+
+		// sample code for controller to save a selected ingredient to repository
+		// Long testObjectId = testIngredientWithTag.getId();
+		// selectedIngredientsRepo.save(ingredientRepo.findOne(testObjectId));
+
+		// selectedIngredientsRepo.save(testIngredientWithTag);
+
 		StoreItem storeItem1 = new StoreItem("Fettuccine", 1.99);
 		storeItemRepo.save(storeItem1);
 		StoreItem storeItem2 = new StoreItem("Fresh chopped broccoli", .99);

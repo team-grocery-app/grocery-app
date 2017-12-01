@@ -11,7 +11,6 @@ import javax.persistence.OneToMany;
 public class Tag {
 
 	@Id
-	@GeneratedValue
 	private Long id;
 	private String tag;
 
@@ -25,7 +24,7 @@ public class Tag {
 
 	}
 
-	public Tag(String tag) {
+	public Tag(Long id, String tag) {
 		this.tag = tag;
 	}
 

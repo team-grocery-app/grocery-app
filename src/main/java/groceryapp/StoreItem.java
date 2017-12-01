@@ -25,6 +25,13 @@ public class StoreItem {
 
 	}
 
+	public StoreItem(String name, double price, Tag tag) {
+		this.name = name;
+		this.price = price;
+		this.tag = tag;
+	}
+
+	// no tag constructor to be superseded
 	public StoreItem(String name, double price) {
 		this.name = name;
 		this.price = price;
