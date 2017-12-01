@@ -156,7 +156,7 @@ public class GroceryPopulator implements CommandLineRunner {
 				fettuccine, broccoli, butter, garlic, heavyCream, garlicPowder, blackPepper, parmesanCheese,
 				chickenBreasts);
 		recipeRepo.save(recipe1);
-		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "classic-chicken-pot-pie.jpg", "1\r\n"
+		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1\r\n"
 				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n"
 				+ "2\r\n"
 				+ "Heat oven to 425°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"

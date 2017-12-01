@@ -2,35 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<link rel="stylesheet" href="../static/style.css"></link>
-	<link rel="stylesheet" href="../static/layout.css"></link>
+	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
 	<script src="https://use.fontawesome.com/ecc099372b.js"></script>
-	<title>Choose a Recipe</title>
+	<title th:text="${recipe.name}"></title>
 </head>
 
 <body>
 	<div class="container">
 		<header>
 			<h1>The Grocery App</h1>
-			<h1>Recipe</h1>
+			<h1 th:text="${recipe.name}"></h1>
 		</header>
 		
 		<section class="recipe-ingredients">
 			<h2>Ingredients</h2>	
 			<ul>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
+			<li th:each="i: ${recipe.listOfIngredients}">
+			<span th:text="${i.quantity} + ' ' + ${i.name}"></span>
+			</li>
 			</ul>
-			<img src="../static/images/chicken_placeholder.jpg"></img>
+			
+			<img th:src="${recipe.imageUrl}"></img>
 		</section>
 
 		
 		<section class="instructions">
 			<h2>Instructions</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eum dolores laudantium veritatis, recusandae pariatur velit doloribus fugiat reprehenderit qui assumenda ullam vitae nesciunt neque asperiores deserunt tempora illo officiis?</p>
+				<p th:text="${recipe.instructions}"></p>
 
 				<p>Back</p>
 				<button>Cook This</button>
