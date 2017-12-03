@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GroceryAppController {
 
 	@Resource
+	TagRepository tagRepo;
+
+	@Resource
 	RecipeRepository recipeRepo;
 
 	@Resource
@@ -38,6 +41,12 @@ public class GroceryAppController {
 	public String getAllIngredients(Model model) {
 		model.addAttribute("ingredients", ingredientRepo.findAll());
 		return "ingredients";
+	}
+
+	@RequestMapping("/tags")
+	public String getAllTags(Model model) {
+		model.addAttribute("tags", tagRepo.findAll());
+		return "tags";
 	}
 
 	// test

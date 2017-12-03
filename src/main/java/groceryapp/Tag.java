@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 public class Tag {
 
 	@Id
+	@GeneratedValue
 	private Long id;
 	private String tag;
 

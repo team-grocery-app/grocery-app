@@ -28,6 +28,54 @@ public class GroceryPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		Tag tag1 = new Tag(1L, "fettuccine");
+		tagRepo.save(tag1);
+
+		Tag tag2 = new Tag(2L, "broccoli");
+		tagRepo.save(tag2);
+
+		Tag tag3 = new Tag(3L, "butter");
+		tagRepo.save(tag3);
+
+		Tag tag4 = new Tag(4L, "minced garlic");
+		tagRepo.save(tag4);
+
+		Tag tag5 = new Tag(5L, "garlic powder");
+		tagRepo.save(tag5);
+
+		Tag tag6 = new Tag(6L, "pepper");
+		tagRepo.save(tag6);
+
+		Tag tag7 = new Tag(7L, "salt");
+		tagRepo.save(tag7);
+
+		Tag tag8 = new Tag(8L, "heavy cream");
+		tagRepo.save(tag8);
+
+		Tag tag9 = new Tag(9L, "parmesan cheese");
+		tagRepo.save(tag9);
+
+		Tag tag10 = new Tag(10L, "chicken");
+		tagRepo.save(tag10);
+
+		Tag tag11 = new Tag(11L, "flour");
+		tagRepo.save(tag11);
+
+		Tag tag12 = new Tag(12L, "onions");
+		tagRepo.save(tag12);
+
+		Tag tag13 = new Tag(13L, "chicken broth");
+		tagRepo.save(tag13);
+
+		Tag tag14 = new Tag(14L, "milk");
+		tagRepo.save(tag14);
+
+		Tag tag15 = new Tag(15L, "frozen peas & carrots");
+		tagRepo.save(tag15);
+
+		Tag tag16 = new Tag(16L, "refrigerated pie crust");
+		tagRepo.save(tag16);
+
 		StoreItem storeItem1 = new StoreItem("Fettuccine", 1.99);
 		storeItemRepo.save(storeItem1);
 		StoreItem storeItem2 = new StoreItem("Fresh chopped broccoli", .99);
