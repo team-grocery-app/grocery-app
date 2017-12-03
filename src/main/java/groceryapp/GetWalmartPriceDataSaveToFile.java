@@ -35,7 +35,7 @@ public class GetWalmartPriceDataSaveToFile {
 
 	public static HttpClient httpClient;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		// Figure out where we will write the output JSON files:
 		String basePath = new File("").getAbsolutePath();
@@ -86,6 +86,7 @@ public class GetWalmartPriceDataSaveToFile {
 			String productId = tagProductIdPrice.substring(firstCommaLoc + 1, secondCommaLoc);
 			String price = tagProductIdPrice.substring(secondCommaLoc + 1);
 			String urlWithProductId = urlPartA + productId + urlPartB;
+			Thread.sleep(2000); // if you make too many calls/sec, the API errors for this license
 			callWalmartProductAPI(urlWithProductId, productId, tag, price, outputBasePath);
 		}
 
@@ -136,7 +137,7 @@ public class GetWalmartPriceDataSaveToFile {
 			obj = parser.parse(retSrc);
 			((JSONObject) obj).put("groceryAppTagId", tag);
 			if (!price.isEmpty()) {
-				((JSONObject) obj).put("groceryAppPrice", price);
+				((JSONObject) obj).put("groceryAppPrice", new Double(price));
 			}
 		} catch (ParseException e1) {
 			e1.printStackTrace();
