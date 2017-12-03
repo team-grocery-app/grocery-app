@@ -273,6 +273,19 @@ public class GroceryPopulator implements CommandLineRunner {
 
 					String shortDesc = (String) jsonObject.get("shortDescription");
 					System.out.println(shortDesc);
+					// sometimes walmart leaves in html chars, so strip them out
+					// &lt;p&gt; will be at beginning
+					// &lt;/p&gt; will be at the end
+					// Also, it turns out some descriptions are not there, so
+					// in that case, set it to an empty string in the db
+
+					if (jsonObject.containsKey("shortDescription")) {
+						if (shortDesc.charAt(0) == '&') {
+							String newDesc = shortDesc.substring(9, (shortDesc.length() - 10));
+							shortDesc = newDesc;
+						}
+					}
+
 					genericItem.setDescription(shortDesc);
 
 					// String longDesc = (String) jsonObject.get("longDescription");
