@@ -282,7 +282,7 @@ public class GroceryPopulator implements CommandLineRunner {
 					System.out.println(size);
 					genericItem.setSize(size);
 
-					String brand = (String) jsonObject.get("brandname");
+					String brand = (String) jsonObject.get("brandName");
 					System.out.println(brand);
 					genericItem.setBrand(brand);
 

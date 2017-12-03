@@ -49,6 +49,13 @@ public class GroceryAppController {
 		return "tags";
 	}
 
+	@RequestMapping("/tagStoreItems")
+	public String getStoreItemsForTag(@RequestParam Long id, Model model) {
+		Tag searchTag = tagRepo.findOne(id);
+		model.addAttribute("storeItems", storeItemRepo.findByTag(searchTag));
+		return "tag-with-assoc-store-items";
+	}
+
 	// test
 	@RequestMapping("/hello-world")
 	public String stopGettingADamn404(Model model) {

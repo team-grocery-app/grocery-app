@@ -15,10 +15,8 @@ public class StoreItem {
 	private Long id;
 	private String name;
 	private double price;
-
 	@Lob
 	private String description;
-
 	private String uriItemId;
 	private String size;
 	private String brand;
