@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
+	<script src="https://use.fontawesome.com/ecc099372b.js"></script>
+	<title>Recipes</title>
+</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<h1>The Grocery App</h1>
+				<h1>Store Items for Tag</h1>
+			</header>
+				
+			<!-- Content -->
+		
+			<div class="tags">
+					<div th:each="storeItem: ${storeItems}">
+						<h3 th:text="${storeItem.name}"></h3>
+						<p th:text="${storeItem.price}"></p>
+						<p th:text="${storeItem.brand}"></p>
+						<p th:text="${storeItem.description}"></p>
+						<p th:text="${storeItem.size}"></p>
+						<img th:src="${storeItem.imgUrlSm}" alt="item image" />
+					</div>
+			</div>
+
+			<!-- Footer -->
+			<footer>
+				<div id="social__media">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i> 
+					<i class="fa fa-reddit-square" aria-hidden="true"></i> 
+					<i class="fa fa-twitter-square" aria-hidden="true"></i> 
+					<i class="fa fa-youtube-square" aria-hidden="true"></i> 
+					<i	class="fa fa-google-plus-square" aria-hidden="true"></i>
+				</div>				
+				<h4>The Grocery App Team Copyright 2017</h4>
+			</footer>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
