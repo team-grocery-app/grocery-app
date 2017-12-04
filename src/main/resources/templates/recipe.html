@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<link rel="stylesheet" href="./style.css"></link>
-	<link rel="stylesheet" href="./layout.css"></link>
-	<script src="https://use.fontawesome.com/ecc099372b.js"></script>
-	<title th:text="${recipe.name}"></title>
+<link rel="stylesheet" href="./style.css"></link>
+<link rel="stylesheet" href="./layout.css"></link>
+<script src="https://use.fontawesome.com/ecc099372b.js"></script>
+<title th:text="${recipe.name}"></title>
 </head>
 
 <body>
@@ -14,39 +14,42 @@
 			<h1>The Grocery App</h1>
 			<h1 th:text="${recipe.name}"></h1>
 		</header>
-		
+
 		<section class="recipe-ingredients">
-			<h2>Ingredients</h2>	
+			<h2>Ingredients</h2>
 			<ul>
-			<li th:each="i: ${recipe.listOfIngredients}">
-			<span th:text="${i.quantity} + ' ' + ${i.name}"></span>
-			</li>
+				<li th:each="i: ${recipe.listOfIngredients}"><span
+					th:text="${i.quantity} + ' ' + ${i.name}"></span></li>
 			</ul>
-			
+
 			<img th:src="${recipe.imageUrl}"></img>
 		</section>
 
-		
+
 		<section class="instructions">
 			<h2>Instructions</h2>
-				<p th:text="${recipe.instructions}"></p>
+			<p th:text="${recipe.instructions}"></p>
 
-				<p>Back</p>
-				<button>Cook This</button>
+			<p>Back</p>
+			<form method="POST">
+				<button type="submit" th:formaction="@{/cook-this(id=${recipe.id})}">Cook
+					This</button>
+			</form>
 		</section>
 
 		<footer>
 			<h4>The Grocery App Team Copyright 2017</h4>
 			<div id="social-media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> 
-				<i class="fa fa-reddit-square" aria-hidden="true"></i> 
-				<i class="fa fa-twitter-square" aria-hidden="true"></i> 
-				<i class="fa fa-youtube-square" aria-hidden="true"></i> 
-				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
+					class="fa fa-reddit-square" aria-hidden="true"></i> <i
+					class="fa fa-twitter-square" aria-hidden="true"></i> <i
+					class="fa fa-youtube-square" aria-hidden="true"></i> <i
+					class="fa fa-google-plus-square" aria-hidden="true"></i>
 			</div>
-			
+
 		</footer>
-	</div> <!-- container -->
+	</div>
+	<!-- container -->
 	<script src="./app.js"></script>
 </body>
 </html>

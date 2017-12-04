@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<link rel="stylesheet" href="../static/style.css"></link>
-	<link rel="stylesheet" href="../static/layout.css"></link>
+	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
 	<script src="https://use.fontawesome.com/ecc099372b.js"></script>
 	<title>Ingredients</title>
 </head>
@@ -16,13 +16,17 @@
 		</header>
 		
 		<section class="ingredients">
+			<h2></h2>
 			<h2>Checkbox, Quantity, Ingredient, Recipe Name</h2>	
 			<ul>
+					<li th:each="i: ${selectedIngredients}">
+						<span th:text="${i.name}"></span>
+					</li>
+
+<!-- 				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
 				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
 				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
+				<li>Checkbox, Quantity, Ingredient, Recipe Name</li> -->
 			</ul>
 
 		<p>Back to Recipes</p>
