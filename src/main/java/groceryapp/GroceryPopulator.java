@@ -31,10 +31,13 @@ public class GroceryPopulator implements CommandLineRunner {
 	private TagRepository tagRepo;
 
 	@Resource
-	private SelectedIngredientsRepository selectedIngredientsRepo;
+	private SelectedIngredientsListRepository selectedIngredientsListRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		SelectedIngredientsList selectedIngredientsList = new SelectedIngredientsList();
+		selectedIngredientsListRepo.save(selectedIngredientsList);
 
 		Tag tag1 = new Tag(1L, "fettuccine");
 		tagRepo.save(tag1);

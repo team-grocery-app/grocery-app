@@ -25,6 +25,9 @@ public class GroceryAppController {
 	@Resource
 	LineItemRepository lineItemRepo;
 
+	@Resource
+	SelectedIngredientsListRepository selectedIngredientsListRepo;
+
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
 		model.addAttribute("recipes", recipeRepo.findAll());
@@ -39,7 +42,7 @@ public class GroceryAppController {
 
 	@RequestMapping("/ingredients")
 	public String getAllIngredients(Model model) {
-		model.addAttribute("ingredients", ingredientRepo.findAll());
+		model.addAttribute("selectedIngredientsList", selectedIngredientsListRepo.findOne(1L).getIngredients());
 		return "ingredients";
 	}
 
@@ -56,14 +59,13 @@ public class GroceryAppController {
 		return "tag-with-assoc-store-items";
 	}
 
-	// test
-	@RequestMapping("/hello-world")
-	public String stopGettingADamn404(Model model) {
-		return "hello-world";
+	@RequestMapping("/cook-this")
+	public String cookThisButtonActionOnRecipeTemplate(@RequestParam Long id) {
+		for (Ingredient i : recipeRepo.findOne(id).getListOfIngredients()) {
+			selectedIngredientsListRepo.findOne(1L).addIngredient(i);
+		}
+		selectedIngredientsListRepo.save(selectedIngredientsListRepo.findOne(1L));
+		return "redirect:/ingredients";
 	}
-
-	// sample code for controller to save a selected ingredient to repository
-	// Long testObjectId = testIngredientWithTag.getId();
-	// selectedIngredientsRepo.save(ingredientRepo.findOne(testObjectId));
 
 }
