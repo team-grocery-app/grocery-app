@@ -26,7 +26,7 @@ public class GroceryAppController {
 	LineItemRepository lineItemRepo;
 
 	@Resource
-	SelectedIngredientsRepository selectedIngredientsRepo;
+	SelectedIngredientsListRepository selectedIngredientsListRepo;
 
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
@@ -42,7 +42,8 @@ public class GroceryAppController {
 
 	@RequestMapping("/ingredients")
 	public String getAllIngredients(Model model) {
-		model.addAttribute("selectedIngredients", selectedIngredientsRepo.findAll());
+		// model.addAttribute("selectedIngredients", selectedIngredientsRepo.findAll());
+		model.addAttribute("selectedIngredientsList", selectedIngredientsListRepo.findOne(1L).getIngredients());
 		return "ingredients";
 	}
 
@@ -75,9 +76,14 @@ public class GroceryAppController {
 		// selectedIngredientsRepo.save(i);
 		// System.out.println(i.getName() + "added to selectedIngredientsRepo");
 		// }
-		for (Ingredient i : selectedIngredientsRepo.findAll()) {
-			System.out.println(i.getName() + " is in the selectedIngredientsRepo");
+		// for (Ingredient i : selectedIngredientsRepo.findAll()) {
+		// System.out.println(i.getName() + " is in the selectedIngredientsRepo");
+		// }
+
+		for (Ingredient i : recipeRepo.findOne(id).getListOfIngredients()) {
+			selectedIngredientsListRepo.findOne(1L).addIngredient(i);
 		}
+		selectedIngredientsListRepo.save(selectedIngredientsListRepo.findOne(1L));
 		return "redirect:/ingredients";
 	}
 
