@@ -45,7 +45,7 @@ public class GetWalmartPriceDataSaveToFile {
 
 		// Now read in the input csv file. We will read the data on
 		// each line into an arraylist and parse thru it later
-		String inputFileName = inputBasePath + "/Walmart_Lookup_ItemIds_Sheet1.csv";
+		String inputFileName = inputBasePath + "/Walmart_Lookup_ItemIds_Gene.csv";
 		ArrayList<String> tagProductIdPriceList = new ArrayList<String>();
 
 		try {
