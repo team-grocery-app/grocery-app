@@ -1,3 +1,24 @@
+/*grocery app title*/
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Allerta+Stencil|Arima+Madurai|Atma|Cabin+Sketch|Chathura|Chelsea+Market|Cutive+Mono|Electrolize|Fredericka+the+Great|Glass+Antiqua|Handlee|Kalam|Kranky|Lekton|Life+Savers|Limelight|Love+Ya+Like+A+Sister|Megrim|Mountains+of+Christmas|Nixie+One|Poiret+One|Pompiere|Press+Start+2P|Quantico|Rajdhani|Ribeye+Marrow|Scope+One|Sigmar+One|Special+Elite|Stardos+Stencil|Unica+One|Unkempt');
+
+/*recipe titles*/
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Cookie|Covered+By+Your+Grace|Dancing+Script|Homemade+Apple|Parisienne|Permanent+Marker|Rochester|Rock+Salt|Rouge+Script|Sacramento|Shadows+Into+Light|Shadows+Into+Light+Two|Stalemate|Sue+Ellen+Francisco');
+
+/*main font*/
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Encode+Sans+Semi+Expanded|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Fjalla+One|Marvel|Oswald|Pathway+Gothic+One|Quicksand|Roboto+Condensed|Ruda|Saira+Condensed');
+
+
+* {
+	/*font-family: 'Barlow Condensed', sans-serif;*/
+	/*font-family: 'Fira Sans Condensed', sans-serif;*/
+	/*font-family: 'Fira Sans Extra Condensed', sans-serif;*/
+	/*font-family: 'Marvel', sans-serif;*might be too thin*/
+	/*font-family: 'Roboto Condensed', sans-serif;*/
+	/*font-family: 'Ruda', sans-serif;*/
+	font-family: 'Saira Condensed', sans-serif;
+	font-size: 26px;
+	
+}
 
 a {
 	font-family: courier;
@@ -5,7 +26,7 @@ a {
 }
 
 body {
-	background-color: #E4E5E6;
+	background-color: white;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto;
@@ -13,34 +34,81 @@ body {
 }
 
 footer {
-	background-color: #8FC33A;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+	/* background-color: white; */
+	/* background-image: url("./images/wood-footer-banner.jpg"); */
 	border: none;
 }
 
 h1 {
-	color: black;
-	font-family: courier;
-	font-size: 150%;
-	font-weight: bolder;
+	/*font-family: 'Cabin Sketch', cursive;*/
+	/*font-family: 'Arima Madurai', cursive;*/
+	/*font-family: 'Unica One', cursive;*/
+	/*font-family: 'Special Elite', cursive;*/
+	/*font-family: 'Love Ya Like A Sister', cursive;*/
+	/*font-family: 'Fredericka the Great', cursive;***/
+	font-family: 'Nixie One', cursive;
+	/*font-family: 'Kranky', cursive;*/
+	/*font-family: 'Stardos Stencil', cursive;***/
+	/*font-family: 'Life Savers', cursive;*/
+	/*font-family: 'Glass Antiqua', cursive;*/
+	/*font-family: 'Atma', cursive;*/
+	/*font-family: 'Poiret One', cursive;***/
+	/*font-family: 'Rajdhani', sans-serif;*/
+	/*font-family: 'Handlee', cursive;*/
+	/*font-family: 'Press Start 2P', cursive;*/
+	/*font-family: 'Chelsea Market', cursive;*/
+	/*font-family: 'Cutive Mono', monospace;*/
+	/*font-family: 'Allerta Stencil', sans-serif;*/
+	/*font-family: 'Scope One', serif;*/
+	font-size: 46px;
+}
+
+h2 {
+	/*font-family: 'Clicker Script', cursive;***/
+	/*font-family: 'Covered By Your Grace', cursive;*/
+	/*font-family: 'Dancing Script', cursive;*/
+	font-family: 'Homemade Apple', cursive;
+	/*font-family: 'Parisienne', cursive;*/
+	/*font-family: 'Permanent Marker', cursive;*/
+	/*font-family: 'Rock Salt', cursive;*/
+	/*font-family: 'Rouge Script', cursive;*/
+	/*font-family: 'Sacramento', cursive;*/
+	/*font-family: 'Shadows Into Light Two', cursive;*/
+	/*font-family: 'Stalemate', cursive;*/
+	/*font-family: 'Sue Ellen Francisco', cursive;*/
 }
 
 header {
 	border: none;
-	background-color: #8FC33A;
+	background-color: white;
+	background-image: none;
+}
+
+.container {
+	background-attachment: fixed;
+	/*background-image: url("./images/cutting-board.jpg");*/
+	background-image: url("./images/meal-prep-cutting-board-2.jpg");
+	background-size: cover;
+}
+
+.content {
+	background-color: white;
+}
+
+.copyright {
+	font-size: 20px;
 }
 
 .ingredients {
 	border-bottom: thin solid black;
 }
 
-/*.instructions {
-	border-bottom: thin solid black;
-}*/
-
 .recipe-image {
-	height: 200px;
-	width: 300px;
+	height: 45vh;
+	width: 30vw;
 }
+
 
 .recipe-ingredients {
 	border-bottom: thin solid black;
