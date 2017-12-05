@@ -86,6 +86,21 @@ public class GroceryPopulator implements CommandLineRunner {
 
 		Tag tag16 = new Tag(16L, "refrigerated pie crust");
 		tagRepo.save(tag16);
+		
+		Tag tag24 = new Tag(24L, "Pasta Sauce");
+		tagRepo.save(tag24);
+		Tag tag25 = new Tag(25L, "Zucchini");
+		tagRepo.save(tag25);
+		Tag tag26 = new Tag(26L, "Cottage Cheese");
+		tagRepo.save(tag26);
+		Tag tag27 = new Tag(27L, "Frozen Spinach");
+		tagRepo.save(tag27);
+		Tag tag28 = new Tag(28L, "Oregano");
+		tagRepo.save(tag28);
+		Tag tag29 = new Tag(29L, "Lasagna Noodles");
+		tagRepo.save(tag29);
+		Tag tag30 = new Tag(30L, "Mozzarella Cheese");
+		tagRepo.save(tag30);
 
 		// populateStoreItemsAndLineItems();
 		populateStoreItemsFromJSONInput();
@@ -128,6 +143,25 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(frozenVeggies);
 		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package(15 oz) softened as directed on box");
 		ingredientRepo.save(pieCrust);
+		
+		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups");
+		ingredientRepo.save(pastaSauce);
+		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup");
+		ingredientRepo.save(zucchini);
+		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup");
+		ingredientRepo.save(cottageCheese);
+		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.");
+		ingredientRepo.save(frozenSpinach);
+		Ingredient parmessanCheese = new Ingredient("Parmessan Cheese - grated", "1/3 cup");
+		ingredientRepo.save(parmessanCheese);
+		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp");
+		ingredientRepo.save(oregano);
+		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)");
+		ingredientRepo.save(lasagnaNoodles);
+		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can");
+		ingredientRepo.save(mushrooms);
+		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)");
+		ingredientRepo.save(mozzarellaCheese);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
 				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n"
@@ -149,6 +183,14 @@ public class GroceryPopulator implements CommandLineRunner {
 				+ "4\r\n" + "Bake about 35 minutes or until golden brown.", butter2, blackPepper2, chicken, flour, milk,
 				chickenBroth, onion, salt, frozenVeggies, pieCrust);
 		recipeRepo.save(recipe2);
+		
+		Recipe recipe4 = new Recipe("Vegetarian Lasagna","images/vegetarian-lasagna","1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well." +
+				"\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese." +
+						"\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight." +
+				"\r\n4. Heat oven to 400°F. Bake covered for 45 minutes." +
+						"\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.",
+						pastaSauce,zucchini,cottageCheese,frozenSpinach,parmessanCheese,oregano,lasagnaNoodles,mushrooms,mozzarellaCheese);
+				recipeRepo.save(recipe4);
 
 	}
 
