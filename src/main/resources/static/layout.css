@@ -1,3 +1,103 @@
+/*
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* ----------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- Windows Phone ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 480px) 
+  and (device-height: 800px) {
+
+	
+}*/
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,10 +105,6 @@
 }
 
 a {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	padding-top: 2rem;
 	text-decoration: none;
 }
 
@@ -33,20 +129,27 @@ h3 {
 	text-align: center;
 }
 
-
+/* @media (min-width: 768px) {
 section {
 	height: 100vh;
 	width: 100vw;
 }
-
-.container {
-	
-}
-
+} */
 
 .instructions {
 	margin: 2rem;
 }
+
+.recipe-image {
+	display: flex;
+	width: 80vw;
+}
+	/* @media (min-width:768px) {
+	.recipe-image {
+		height: 45vh;
+		width: 30vw;
+		}
+	} */
 
 .recipe-ingredients {
 	display: flex;
@@ -60,11 +163,29 @@ section {
 }
 
 .recipes {
+	align-item: center;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: center;
 }
+
+.recipes div a {
+	align-items:center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	padding-top: 2rem;
+	text-decoration: none;
+}
+
+	/* @media (min-width: 768px) {
+	.recipes {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		}
+	} */
 
 .title-social {
 	align-items: center;
