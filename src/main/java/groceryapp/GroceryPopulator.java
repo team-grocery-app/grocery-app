@@ -87,6 +87,50 @@ public class GroceryPopulator implements CommandLineRunner {
 		Tag tag16 = new Tag(16L, "refrigerated pie crust");
 		tagRepo.save(tag16);
 
+		Tag tag17 = new Tag(17L, "egg noodles");
+		tagRepo.save(tag17);
+		Tag tag18 = new Tag(18L, "tuna");
+		tagRepo.save(tag18);
+		Tag tag19 = new Tag(19L, "cream of mushroom soup");
+		tagRepo.save(tag19);
+		Tag tag20 = new Tag(20L, "shredded cheddar cheese");
+		tagRepo.save(tag20);
+		Tag tag21 = new Tag(21L, "frozen green peas");
+		tagRepo.save(tag21);
+		Tag tag22 = new Tag(22L, "potato chips");
+		tagRepo.save(tag22);
+		Tag tag23 = new Tag(23L, "sliced mushrooms");
+		tagRepo.save(tag23);
+
+		Tag tag24 = new Tag(24L, "Pasta Sauce");
+		tagRepo.save(tag24);
+		Tag tag25 = new Tag(25L, "Zucchini");
+		tagRepo.save(tag25);
+		Tag tag26 = new Tag(26L, "Cottage Cheese");
+		tagRepo.save(tag26);
+		Tag tag27 = new Tag(27L, "Frozen Spinach");
+		tagRepo.save(tag27);
+		Tag tag28 = new Tag(28L, "Oregano");
+		tagRepo.save(tag28);
+		Tag tag29 = new Tag(29L, "Lasagna Noodles");
+		tagRepo.save(tag29);
+		Tag tag30 = new Tag(30L, "Mozzarella Cheese");
+		tagRepo.save(tag30);
+		Tag tag31 = new Tag(31L, "chipotle pepper powder");
+		tagRepo.save(tag31);
+		Tag tag32 = new Tag(32L, "salmon fillet");
+		tagRepo.save(tag32);
+		Tag tag33 = new Tag(33L, "pecans");
+		tagRepo.save(tag33);
+		Tag tag34 = new Tag(34L, "onion powder");
+		tagRepo.save(tag34);
+		Tag tag35 = new Tag(35L, "maple syrup");
+		tagRepo.save(tag35);
+		Tag tag36 = new Tag(36L, "smoked paprika");
+		tagRepo.save(tag36);
+		Tag tag37 = new Tag(37L, "apple cider vinegar");
+		tagRepo.save(tag37);
+
 		// populateStoreItemsAndLineItems();
 		populateStoreItemsFromJSONInput();
 
@@ -128,6 +172,59 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(frozenVeggies);
 		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package(15 oz) softened as directed on box");
 		ingredientRepo.save(pieCrust);
+		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups");
+		ingredientRepo.save(pastaSauce);
+		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup");
+		ingredientRepo.save(zucchini);
+		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup");
+		ingredientRepo.save(cottageCheese);
+		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.");
+		ingredientRepo.save(frozenSpinach);
+		Ingredient parmessanCheese = new Ingredient("Parmessan Cheese - grated", "1/3 cup");
+		ingredientRepo.save(parmessanCheese);
+		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp");
+		ingredientRepo.save(oregano);
+		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)");
+		ingredientRepo.save(lasagnaNoodles);
+		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can");
+		ingredientRepo.save(mushrooms);
+		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)");
+		ingredientRepo.save(mozzarellaCheese);
+		Ingredient eggNoodles = new Ingredient("Egg noodles", "1(12 ounce) package");
+		ingredientRepo.save(eggNoodles);
+		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained");
+		ingredientRepo.save(tuna);
+		Ingredient onion2 = new Ingredient("Chopped onion", "¼ cup");
+		ingredientRepo.save(onion2);
+		Ingredient mushroomSoup = new Ingredient("Condensed cream of mushroom soup", "2 (10.75 ounce) cans");
+		ingredientRepo.save(mushroomSoup);
+		Ingredient cheddarCheese = new Ingredient("Shredded cheddar cheese", "2 cups");
+		ingredientRepo.save(cheddarCheese);
+		Ingredient mushrooms2 = new Ingredient("Sliced mushrooms", "1/2 (4.5 ounce) can");
+		ingredientRepo.save(mushrooms2);
+		Ingredient greenPeas = new Ingredient("Frozen green peas", "1 cup");
+		ingredientRepo.save(greenPeas);
+		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup");
+		ingredientRepo.save(potatoChips);
+
+		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "½ tsp");
+		ingredientRepo.save(chipotlePowder);
+		Ingredient salmon = new Ingredient("Salmon fillets", "4(4 ounce)");
+		ingredientRepo.save(salmon);
+		Ingredient pecans = new Ingredient("Pecans", "½ cup");
+		ingredientRepo.save(pecans);
+		Ingredient onionPowder = new Ingredient("Onion powder", "½ tsp");
+		ingredientRepo.save(onionPowder);
+		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp");
+		ingredientRepo.save(mapleSyrup);
+		Ingredient paprika = new Ingredient("Smoked paprika", "1 tsp");
+		ingredientRepo.save(paprika);
+		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp");
+		ingredientRepo.save(acv);
+		Ingredient salt2 = new Ingredient("Salt", "to taste");
+		ingredientRepo.save(salt2);
+		Ingredient pepper3 = new Ingredient("Pepper", "to taste");
+		ingredientRepo.save(pepper3);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
 				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n"
@@ -149,6 +246,34 @@ public class GroceryPopulator implements CommandLineRunner {
 				+ "4\r\n" + "Bake about 35 minutes or until golden brown.", butter2, blackPepper2, chicken, flour, milk,
 				chickenBroth, onion, salt, frozenVeggies, pieCrust);
 		recipeRepo.save(recipe2);
+
+		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1\r\n"
+				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.\r\n"
+				+ "2\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "3\r\n"
+				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.\r\n"
+				+ "4\r\n" + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.", eggNoodles,
+				tuna, onion2, mushroomSoup, cheddarCheese, mushrooms2, greenPeas, potatoChips);
+		recipeRepo.save(recipe3);
+
+		Recipe recipe4 = new Recipe("Vegetarian Lasagna", "images/veggie-lasagna.jpg",
+				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well."
+						+ "\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese."
+						+ "\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight."
+						+ "\r\n4. Heat oven to 400°F. Bake covered for 45 minutes."
+						+ "\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.",
+				pastaSauce, zucchini, cottageCheese, frozenSpinach, parmessanCheese, oregano, lasagnaNoodles, mushrooms,
+				mozzarellaCheese);
+		recipeRepo.save(recipe4);
+	
+		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1\r\n"
+                + "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n"
+                + "2\r\n"
+                + "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
+                + "3\r\n"
+                + "Preheat oven to 425 degrees F (220 degrees C).\r\n"
+                + "4\r\n"
+                + "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.", chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, pepper3);
+        recipeRepo.save(recipe5);
 
 	}
 
@@ -282,13 +407,19 @@ public class GroceryPopulator implements CommandLineRunner {
 					// Also, it turns out some descriptions are not there, so
 					// in that case, set it to an empty string in the db
 
+									
 					if (jsonObject.containsKey("shortDescription")) {
-						if (shortDesc.charAt(0) == '&') {
-							String newDesc = shortDesc.substring(9, (shortDesc.length() - 10));
-							shortDesc = newDesc;
+						// found a weird case where the desc was equal to this
+						if (shortDesc.contentEquals("&nbsp;")) {
+							shortDesc = "";
+						} else {
+							if (shortDesc.charAt(0) == '&') {
+								String newDesc = shortDesc.substring(9, (shortDesc.length() - 10));
+								shortDesc = newDesc;
+							}
 						}
 					}
-
+					
 					genericItem.setDescription(shortDesc);
 
 					// String longDesc = (String) jsonObject.get("longDescription");
