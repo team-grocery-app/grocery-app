@@ -83,18 +83,38 @@ header {
 	border: none;
 	background-color: white;
 	background-image: none;
+	
 }
 
 .container {
 	background-attachment: fixed;
 	/*background-image: url("./images/cutting-board.jpg");*/
-	background-image: url("./images/meal-prep-cutting-board-2.jpg");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("./images/meal-prep-cutting-board-2.jpg");
 	background-size: cover;
 }
+ 	@media (min-width: 768px) {
+	.container {
+		background-attachment: fixed;
+		background-image: url("./images/cutting-board.jpg");
+		background-image: url("./images/meal-prep-cutting-board-2.jpg");
+		background-size: cover;
+	}
+	}
 
-.content {
+/* .content {
 	background-color: white;
-}
+} */
+
+/* .content {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4, rgba(255, 255, 255, 0.4));	
+} */
+
+/* 	@media (min-width: 768px) {
+	.content {
+		background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+		}
+	}
+ */
 
 .copyright {
 	font-size: 20px;
@@ -104,19 +124,13 @@ header {
 	border-bottom: thin solid black;
 }
 
-.recipe-image {
-	height: 45vh;
-	width: 30vw;
-}
-
-
 .recipe-ingredients {
 	border-bottom: thin solid black;
 }
 
-.recipes {
+/* .recipes {
 	background: none;
-}
+} */
 
 #back {
 	color: #a239ca;
