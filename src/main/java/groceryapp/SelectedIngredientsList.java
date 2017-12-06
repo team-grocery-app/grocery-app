@@ -18,15 +18,23 @@ public class SelectedIngredientsList {
 	private Set<Ingredient> ingredients;
 
 	public SelectedIngredientsList() {
-
 	}
 
 	public void addIngredient(Ingredient ingredient) {
 		ingredients.add(ingredient);
 	}
 
-	public void removeIngredient(Ingredient ingredient) {
-		ingredients.remove(ingredient);
+	public void removeIngredient(Ingredient i) {
+		ingredients.remove(i);
+	}
+
+	public Ingredient getIngredient(Long id) {
+		for (Ingredient i : ingredients) {
+			if (i.getId() == id) {
+				return i;
+			}
+		}
+		return null;
 	}
 
 	public Long getId() {
