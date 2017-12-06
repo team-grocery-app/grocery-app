@@ -1,7 +1,5 @@
 package groceryapp;
 
-import java.util.Set;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -44,7 +42,7 @@ public class GroceryAppController {
 
 	@RequestMapping("/ingredients")
 	public String getAllIngredients(Model model) {
-		model.addAttribute("selectedIngredientsList", selectedIngredientsListRepo.findOne(1L).getIngredients());
+		model.addAttribute("selectedIngredients", selectedIngredientsListRepo.findOne(1L).getIngredients());
 		return "ingredients";
 	}
 
@@ -68,9 +66,16 @@ public class GroceryAppController {
 		}
 		selectedIngredientsListRepo.save(selectedIngredientsListRepo.findOne(1L));
 		return "redirect:/ingredients";
-	
+
 	}
 
-	
+	@RequestMapping("/remove")
+	public String removeTag(@RequestParam(value = "id") Long id) {
 
+		SelectedIngredientsList selList = selectedIngredientsListRepo.findOne(1L);
+		Ingredient i = selList.getIngredient(id);
+		selList.removeIngredient(i);
+		selectedIngredientsListRepo.save(selList);
+		return "redirect:/ingredients?id=" + id.toString();
+	}
 }

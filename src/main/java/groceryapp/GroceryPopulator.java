@@ -221,9 +221,9 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(paprika);
 		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp");
 		ingredientRepo.save(acv);
-		Ingredient salt2 = new Ingredient("Salt", "to taste");
+		Ingredient salt2 = new Ingredient("Salt", "To taste");
 		ingredientRepo.save(salt2);
-		Ingredient pepper3 = new Ingredient("Pepper", "to taste");
+		Ingredient pepper3 = new Ingredient("Pepper", "To taste");
 		ingredientRepo.save(pepper3);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
@@ -264,16 +264,14 @@ public class GroceryPopulator implements CommandLineRunner {
 				pastaSauce, zucchini, cottageCheese, frozenSpinach, parmessanCheese, oregano, lasagnaNoodles, mushrooms,
 				mozzarellaCheese);
 		recipeRepo.save(recipe4);
-	
+
 		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1\r\n"
-                + "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n"
-                + "2\r\n"
-                + "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
-                + "3\r\n"
-                + "Preheat oven to 425 degrees F (220 degrees C).\r\n"
-                + "4\r\n"
-                + "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.", chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, pepper3);
-        recipeRepo.save(recipe5);
+				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n" + "2\r\n"
+				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
+				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "4\r\n"
+				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.",
+				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, pepper3);
+		recipeRepo.save(recipe5);
 
 	}
 
@@ -407,7 +405,6 @@ public class GroceryPopulator implements CommandLineRunner {
 					// Also, it turns out some descriptions are not there, so
 					// in that case, set it to an empty string in the db
 
-									
 					if (jsonObject.containsKey("shortDescription")) {
 						// found a weird case where the desc was equal to this
 						if (shortDesc.contentEquals("&nbsp;")) {
@@ -419,7 +416,7 @@ public class GroceryPopulator implements CommandLineRunner {
 							}
 						}
 					}
-					
+
 					genericItem.setDescription(shortDesc);
 
 					// String longDesc = (String) jsonObject.get("longDescription");
