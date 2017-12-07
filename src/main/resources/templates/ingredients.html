@@ -11,14 +11,12 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>The Grocery App</h1>
-			<h1>Ingredients</h1>
+			<h1 class="page-title">Ingredients</h1>
 		</header>
 		
 		<section class="ingredients">
-			<h2></h2>
-			<h2>Checkbox, Quantity, Ingredient, Recipe Name</h2>	
-			<ul>
+			<!-- <h2>Checkbox, Quantity, Ingredient, Recipe Name</h2> -->	
+			<ul class="ing-pg-list">
 					<li th:each="i: ${selectedIngredientsList}">
 						<span th:text="${i.name}"></span>
 					</li>
@@ -29,11 +27,17 @@
 				<li>Checkbox, Quantity, Ingredient, Recipe Name</li> -->
 			</ul>
 
-		<p>Back to Recipes</p>
-		<button>Shop</button>
 		</section>
+		
+		<div class="nav-buttons">
+			<form id="shop-button" method="POST">
+				<button><!-- type="submit" th:formaction="@{/cook-this(id=${recipe.id})}" -->Shop</button>
+			</form>
+			<a class="back" href="http://localhost:8080/recipes">Back to
+				Recipes</a>
+		</div>
 
-		<footer>
+		<!-- <footer>
 			<div id="social__media">
 				<i class="fa fa-facebook-square" aria-hidden="true"></i> 
 				<i class="fa fa-reddit-square" aria-hidden="true"></i> 
@@ -42,7 +46,12 @@
 				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
 			</div>
 			<h4>The Grocery App Team Copyright 2017</h4>
-		</footer>
+		</footer> -->
+		
+		<footer>
+				<p class="copyright">The Grocery App Team Copyright 2017</p>
+			</footer>
+		
 	</div> <!-- container -->
 	<script src="./app.js"></script>
 </body>

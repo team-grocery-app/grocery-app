@@ -3,9 +3,6 @@
     margin: 0;
     padding: 0;
 }
-a {
-    text-decoration: none;
-}
 
 footer {
 	display: flex;
@@ -23,17 +20,17 @@ h1 {
 		h1 {
 			padding-bottom: 1rem;
 		    padding-left: 1rem;
-		    pdading-top: 2rem;
+		    padding-top: 1rem;
 		}
 	}
 
 h2 {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
+
 	@media (min-width: 768px) {
 		h2 {
-		    padding-bottom: 2rem;
-		    padding-left: 1.5rem;
 		    padding-top: 2rem;
 		}
 	}
@@ -44,13 +41,14 @@ h3 {
 
 	@media (min-width: 768px) {
 		section {
-		    height: 100vh;
+		    min-height: 100vh;
 		    width: 100vw;
 		}
 	}
 
 header {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 	@media (min-width: 768px) {
@@ -58,41 +56,60 @@ header {
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-start;
+			width: 100vw;
 		}
 	}
-	
-@media (min-width: 768px) {
-	.container {
-		height: 100vh;
-		width: 100vw;
-	}
+
+.back {
+	display: flex;
+	justify-content: center;
 }
 
-.instructions {
-    margin: 2rem;
+.nav-buttons {
+	display:flex;
+	flex-direction: column;
 }
-.recipe-image {
+
+	@media (min-width) {
+		.nav-buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+.one-recipe-image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.recipe-image,
+.one-recipe-image {
     display: flex;
     width: 80vw;
 }
     @media (min-width:768px) {
     .recipe-image {
-        height: 45vh;
-        width: 30vw;
+        /* max-height: 45vh;
+        max-width: 30vw; */
+        height: 400px;
+        width: 600px;
         }
     }
     
 .recipe-ingredients {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 2rem;
-}
-.recipe-name {
-    padding-bottom: 2rem;
 }
 
-.recipe-on-home {
+.recipe-name {
+/*     padding-bottom: 2rem;
+ */}
+
+.recipe-on-home,
+.image-section {
     align-items:center;
     display: flex;
     flex-wrap: wrap;
@@ -123,6 +140,7 @@ header {
 	flex-direction: row;
 	flex-wrap: wrap;
 	}
+	}
 
     /* @media (min-width: 768px) {
     .recipes {
@@ -140,6 +158,9 @@ header {
     justify-content: flex-start;
     padding: .75rem;
 }
-#recipe-text {
-        margin-left: 15px;
+
+#cook-button,
+#shop-button {
+	display: flex;
+	justify-content: center;
 }

@@ -19,7 +19,12 @@
 a {
     font-family: courier;
     padding: 10px;
+    text-decoration: none;
 }
+
+	a:visited {
+		color: black;
+	}
 
 body {
 	background-attachment: fixed;
@@ -41,6 +46,12 @@ footer {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+	@media (min-width: 768px){
+		footer {
+			margin: 0;
+		}
+	}
 	
 h1 {
 	font-family: 'Nixie One', cursive;
@@ -56,7 +67,7 @@ h1 {
 		    /*font-family: 'Special Elite', cursive;*/
 		    /*font-family: 'Love Ya Like A Sister', cursive;*/
 		    /*font-family: 'Fredericka the Great', cursive;***/
-		    /* font-family: 'Nixie One', cursive; */
+		    /*font-family: 'Nixie One', cursive;*/
 		    /*font-family: 'Kranky', cursive;*/
 		    /*font-family: 'Stardos Stencil', cursive;***/
 		    /*font-family: 'Life Savers', cursive;*/
@@ -72,8 +83,10 @@ h1 {
 		    /*font-family: 'Scope One', serif;*/
 		    font-family: 'Source Serif Pro', serif;
 		    font-size: 46px;
+		    
 		}
 	}
+	
 	
 h2 {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
@@ -109,6 +122,14 @@ footer,
 	box-shadow: 2px 2px 2px 2px black;
 }
 
+	@media (min-width: 768px) {
+		h2, 
+		footer, 
+		.recipe-on-home {
+			box-shadow: none;
+		}
+	}
+
 
 	
 h3 {
@@ -128,18 +149,58 @@ header {
     background-image: none;
 }
 
-@media (min-width: 768px) {
-	.content {
-		background-color: white;
-		border: none;
-		box-shadow: none;
-		margin: 0;
+	@media (min-width: 768px) {
+		header {
+			border: none;
+		}
 	}
+
+
+ul {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	border: thin solid black;
+	margin: 1rem;
+	box-shadow: 2px 2px 2px 2px black;
+	list-style-position:inside;
+	padding: 15px;
 }
+
+.back {
+    color: #a239ca;
+    font-size: large;
+    text-decoration: none;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: .3rem;
+}
+	
+	@media (min-width: 768px) {
+		.content {
+			background-color: white;
+			border: none;
+			box-shadow: none;
+		}
+	}
 
 .copyright {
     font-size: 3.5vw;
 }
+
+	@media (min-width: 600px) {
+		.copyright {
+		font-size: 3vw;
+		}
+	}
+
+	@media (min-width: 768px) {
+	.copyright {
+		font-size: 2vw;
+		}
+	}
 
 .dollar {
 	color: green;
@@ -147,14 +208,42 @@ header {
 	font-size: 46px;
 }
 
-.ingredients {
-    border-bottom: thin solid black;
-}
-.recipe-ingredients {
-    border-bottom: thin solid black;
+.image-section {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	border: thin solid black;
+	box-shadow: 2px 2px 2px 2px black;
 }
 
-.recipe-on-home {
+	@media (min-width: 768px) {
+		.image-section {
+			background-image:none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+.ing-pg-list {
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+}
+
+	.ing-pg-list li {
+		background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+		border: thin solid black;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		box-shadow: 2px 2px 2px 2px black;
+		padding: 15px;
+	}
+
+.page-title {
+	font-family: 'Homemade Apple', cursive;
+}
+
+.recipe-on-home,
+.image-section {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 	margin-bottom: 0.5rem;
 	margin-left: 1rem;
@@ -172,10 +261,16 @@ header {
 	.recipes {
 	background-color: white;
 	}
+}
 
-#back {
-    color: #a239ca;
-    font-size: large;
+
+#recipe-instructions {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	border: thin solid black;
+	margin: 1rem;
+	box-shadow: 2px 2px 2px 2px black;
+	padding: 15px;
+	text-align: center;
 }
 
 #recipe-text {
