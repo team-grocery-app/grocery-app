@@ -131,6 +131,14 @@ footer,
 	}
 
 
+
+.container {
+	background-attachment: fixed;
+	background-image: url("./images/cutting-board.jpg");
+	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
+	background-size: cover;
+}
+
 	
 h3 {
 	font-size: 5vw;

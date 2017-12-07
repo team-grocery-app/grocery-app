@@ -15,18 +15,31 @@
 		</header>
 		
 		<section class="ingredients">
-			<!-- <h2>Checkbox, Quantity, Ingredient, Recipe Name</h2> -->	
+
+			<!-- <h2>Checkbox, Quantity, Ingredient, Recipe Name</h2>
 			<ul class="ing-pg-list">
 					<li th:each="i: ${selectedIngredientsList}">
-						<span th:text="${i.name}"></span>
+						<span th:text="${i.name}"></span> -->	
+
+			<h2></h2>
+		
+	<!-- 	<form action="/action_page.php" method="get">
+  			<input type="checkbox" name="vehicle" value="Bike"><span> I have a bike</span>
+  			<input type="checkbox" name="vehicle" value="Car"><span>I have a car</span> 
+  			<input type="submit" value="Submit">
+		</form>  -->	
+      
+			<h2>CheckBox, Quantity, Ingredient, Recipe Name</h2> -->
+			<form method = "POST">
+			
+				<ul>
+					<li th:each="i: ${selectedIngredients}">
+					 	<button th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">delete</button> 
+						<span th:text="${i.quantity} + ' ' + ${i.name}"></span>
 					</li>
-
-<!-- 				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li>
-				<li>Checkbox, Quantity, Ingredient, Recipe Name</li> -->
+			
 			</ul>
-
+        
 		</section>
 		
 		<div class="nav-buttons">
