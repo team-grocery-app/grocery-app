@@ -3,9 +3,11 @@ package groceryapp;
 import java.util.Map.Entry;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 import javax.annotation.Resource;
 
@@ -88,27 +90,13 @@ public class GroceryAppController {
 
 	@RequestMapping("/store-items")
 	public String showStoreItemsTemplate(Model model) {
-		// give model treemap - works
-		SelectedIngredientsList selectedIngredientsList = selectedIngredientsListRepo.findOne(1L);
-		TreeMap<String, ArrayList<Ingredient>> treeMap = selectedIngredientsList.getTreeMap();
-		model.addAttribute("selectedIngredientsTreeMap", treeMap);
-		// give model a set of selected tags to narrow down our displayed store items
-		Set<Tag> selectedTags = new HashSet<Tag>();
-		for (Entry<String, ArrayList<Ingredient>> i : treeMap.entrySet()) {
-			ArrayList<Ingredient> arrayListAtEntry = i.getValue();
-			for (Ingredient j : arrayListAtEntry) {
-				selectedTags.add(j.getTag());
-			}
+		List<Ingredient> selectedIngredients = selectedIngredientsListRepo.findOne(1L).getIngredients();
+		Set<Tag> selectedTags = new TreeSet<Tag>();
+		for (Ingredient i : selectedIngredients) {
+			selectedTags.add(i.getTag());
 		}
-		Set<StoreItem> matchingStoreItems = new HashSet<StoreItem>();
-		for (Tag k : selectedTags) {
-			for (StoreItem m : k.getStoreItems()) {
-				matchingStoreItems.add(m);
-			}
-		}
+		model.addAttribute("selectedIngredients", selectedIngredients);
 		model.addAttribute("selectedTags", selectedTags);
-		model.addAttribute("matchingStoreItems", matchingStoreItems);
-		model.addAttribute("selectedIngredients", selectedIngredientsListRepo.findOne(1L).getIngredients());
 		return "store-items";
 	}
 
@@ -120,6 +108,6 @@ public class GroceryAppController {
 		selList.removeIngredient(i);
 		selectedIngredientsListRepo.save(selList);
 		return "redirect:/ingredients";
-		// removed id parameter. ingredients mapping does not accept ids - AB
 	}
-}
+
+} // to close Controller class
