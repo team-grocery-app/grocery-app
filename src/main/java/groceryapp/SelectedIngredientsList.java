@@ -45,7 +45,7 @@ public class SelectedIngredientsList {
 	}
 
 	public List<Ingredient> getIngredients() {
-		// return ingredients;
+
 		String currentTagName;
 		TreeMap<String, ArrayList<Ingredient>> selIngredientMap = new TreeMap<String, ArrayList<Ingredient>>();
 		for (Ingredient currentIngredient : ingredients) {
@@ -67,8 +67,11 @@ public class SelectedIngredientsList {
 
 		return iList;
 
-		// return selIngredientMap.values();
+		// The original code just did this:
+		// return ingredients;
 
+		// Brian's code did this but it removed duplicate entries for a
+		// tag:
 		// SortedSet<Ingredient> sorted = new TreeMap<>(new ByTagComparator());
 		// sorted.addAll(ingredients);
 		// return Collections.unmodifiableSet(sorted); // makes this read-only

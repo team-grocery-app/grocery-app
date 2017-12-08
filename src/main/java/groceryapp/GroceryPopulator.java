@@ -102,19 +102,19 @@ public class GroceryPopulator implements CommandLineRunner {
 		Tag tag23mushrooms = new Tag(23L, "sliced mushrooms");
 		tagRepo.save(tag23mushrooms);
 
-		Tag tag24pastaSauce = new Tag(24L, "Pasta Sauce");
+		Tag tag24pastaSauce = new Tag(24L, "pasta Sauce");
 		tagRepo.save(tag24pastaSauce);
-		Tag tag25zucchini = new Tag(25L, "Zucchini");
+		Tag tag25zucchini = new Tag(25L, "zucchini");
 		tagRepo.save(tag25zucchini);
-		Tag tag26 = new Tag(26L, "Cottage Cheese");
+		Tag tag26 = new Tag(26L, "cottage Cheese");
 		tagRepo.save(tag26);
-		Tag tag27 = new Tag(27L, "Frozen Spinach");
+		Tag tag27 = new Tag(27L, "frozen Spinach");
 		tagRepo.save(tag27);
-		Tag tag28 = new Tag(28L, "Oregano");
+		Tag tag28 = new Tag(28L, "oregano");
 		tagRepo.save(tag28);
-		Tag tag29 = new Tag(29L, "Lasagna Noodles");
+		Tag tag29 = new Tag(29L, "lasagna Noodles");
 		tagRepo.save(tag29);
-		Tag tag30mozzarellaCheese = new Tag(30L, "Mozzarella Cheese");
+		Tag tag30mozzarellaCheese = new Tag(30L, "mozzarella Cheese");
 		tagRepo.save(tag30mozzarellaCheese);
 		Tag tag31 = new Tag(31L, "chipotle pepper powder");
 		tagRepo.save(tag31);
