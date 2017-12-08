@@ -33,17 +33,11 @@ public class GroceryPopulator implements CommandLineRunner {
 	@Resource
 	private SelectedIngredientsListRepository selectedIngredientsListRepo;
 
-	@Resource
-	private SelectedTagsListRepository selectedTagsListRepo;
-
 	@Override
 	public void run(String... args) throws Exception {
 
 		SelectedIngredientsList selectedIngredientsList = new SelectedIngredientsList();
 		selectedIngredientsListRepo.save(selectedIngredientsList);
-
-		SelectedTagsList selectedTagsList = new SelectedTagsList();
-		selectedTagsListRepo.save(selectedTagsList);
 
 		Tag tag1fettuccine = new Tag(1L, "fettuccine");
 		tagRepo.save(tag1fettuccine);
@@ -236,49 +230,49 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(blackPepper3);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
-				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n"
+				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n\n\n"
 				+ "2\r\n"
-				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.\r\n"
+				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.\r\n\n\n"
 				+ "3\r\n"
-				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.\r\n"
+				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.\r\n\n\n"
 				+ "4\r\n"
-				+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.",
+				+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.\n\n",
 				fettuccine, broccoli, butter, garlic, heavyCream, garlicPowder, blackPepper, parmesanCheese,
 				chickenBreasts);
 		recipeRepo.save(recipe1);
 		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1\r\n"
-				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n"
+				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n\n\n"
 				+ "2\r\n"
-				+ "Heat oven to 425°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"
+				+ "Heat oven to 425°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n\n\n"
 				+ "3\r\n"
-				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n"
-				+ "4\r\n" + "Bake about 35 minutes or until golden brown.", butter2, blackPepper2, chicken, flour, milk,
-				chickenBroth, onion, salt, frozenVeggies, pieCrust);
+				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n\n\n"
+				+ "4\r\n" + "Bake about 35 minutes or until golden brown.\n\n", butter2, blackPepper2, chicken, flour,
+				milk, chickenBroth, onion, salt, frozenVeggies, pieCrust);
 		recipeRepo.save(recipe2);
 
 		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1\r\n"
-				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.\r\n"
-				+ "2\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "3\r\n"
-				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.\r\n"
-				+ "4\r\n" + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.", eggNoodles,
-				tuna, onion2, mushroomSoup, cheddarCheese, mushrooms2, greenPeas, potatoChips);
+				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.\r\n\n\n"
+				+ "2\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n\n\n" + "3\r\n"
+				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.\r\n\n\n"
+				+ "4\r\n" + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.\n\n",
+				eggNoodles, tuna, onion2, mushroomSoup, cheddarCheese, mushrooms2, greenPeas, potatoChips);
 		recipeRepo.save(recipe3);
 
 		Recipe recipe4 = new Recipe("Vegetarian Lasagna", "images/veggie-lasagna.jpg",
-				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well."
-						+ "\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese."
-						+ "\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight."
-						+ "\r\n4. Heat oven to 400°F. Bake covered for 45 minutes."
-						+ "\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.",
+				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well.\n\n"
+						+ "\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese.\n\n"
+						+ "\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight.\n\n"
+						+ "\r\n4. Heat oven to 400°F. Bake covered for 45 minutes.\n\n"
+						+ "\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.\n\n",
 				pastaSauce, zucchini, cottageCheese, frozenSpinach, parmessanCheese, oregano, lasagnaNoodles, mushrooms,
 				mozzarellaCheese);
 		recipeRepo.save(recipe4);
 
 		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1\r\n"
-				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n" + "2\r\n"
-				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
-				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "4\r\n"
-				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.",
+				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n\n\n" + "2\r\n"
+				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n\n\n"
+				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n\n\n" + "4\r\n"
+				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.\n\n",
 				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, blackPepper3);
 		recipeRepo.save(recipe5);
 
@@ -371,7 +365,9 @@ public class GroceryPopulator implements CommandLineRunner {
 		JSONParser parser = new JSONParser();
 
 		String basePath = new File("").getAbsolutePath();
-		basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
+		// basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
+		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator
+				+ "walmart-input-json-for-db-init";
 		System.out.println(basePath);
 
 		File folder = new File(basePath);
