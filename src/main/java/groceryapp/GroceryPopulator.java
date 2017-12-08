@@ -138,11 +138,11 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(fettuccine);
 		Ingredient broccoli = new Ingredient("Fresh chopped broccoli", "1 to 2 cups", tag2broccoli);
 		ingredientRepo.save(broccoli);
-		Ingredient butter = new Ingredient("Butter", "1/2 cup(1 stick)", tag3butter);
+		Ingredient butter = new Ingredient("Butter", "1/2 cup (1 stick)", tag3butter);
 		ingredientRepo.save(butter);
 		Ingredient butter2 = new Ingredient("Butter", "1/3 cup", tag3butter);
 		ingredientRepo.save(butter2);
-		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp(1 clove)", tag4mincedGarlic);
+		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp (1 clove)", tag4mincedGarlic);
 		ingredientRepo.save(garlic);
 		Ingredient heavyCream = new Ingredient("Heavy Cream", "2 cups", tag8heavyCream);
 		ingredientRepo.save(heavyCream);
@@ -168,9 +168,9 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(onion);
 		Ingredient salt = new Ingredient("Salt", "1/2 tsp", tag7salt);
 		ingredientRepo.save(salt);
-		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box(10 oz)", tag15frozenPeasAndCarrots);
+		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box (10 oz)", tag15frozenPeasAndCarrots);
 		ingredientRepo.save(frozenVeggies);
-		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package(15 oz) softened as directed on box",
+		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package (15 oz) softened as directed on box",
 				tag16refrigeratedPieCrust);
 		ingredientRepo.save(pieCrust);
 		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups", tag24pastaSauce);
@@ -192,11 +192,11 @@ public class GroceryPopulator implements CommandLineRunner {
 		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)",
 				tag30mozzarellaCheese);
 		ingredientRepo.save(mozzarellaCheese);
-		Ingredient eggNoodles = new Ingredient("Egg noodles", "1(12 ounce) package", tag17eggNoodles);
+		Ingredient eggNoodles = new Ingredient("Egg noodles", "1 (12 ounce) package", tag17eggNoodles);
 		ingredientRepo.save(eggNoodles);
 		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained", tag18tuna);
 		ingredientRepo.save(tuna);
-		Ingredient onion2 = new Ingredient("Chopped onion", "¼ cup", tag12onions);
+		Ingredient onion2 = new Ingredient("Chopped onion", "1/4 cup", tag12onions);
 		ingredientRepo.save(onion2);
 		Ingredient mushroomSoup = new Ingredient("Condensed cream of mushroom soup", "2 (10.75 ounce) cans",
 				tag19mushroomSoup);
@@ -210,13 +210,13 @@ public class GroceryPopulator implements CommandLineRunner {
 		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup", tag22chips);
 		ingredientRepo.save(potatoChips);
 
-		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "½ tsp", tag31);
+		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "1/2 tsp", tag31);
 		ingredientRepo.save(chipotlePowder);
-		Ingredient salmon = new Ingredient("Salmon fillets", "4(4 ounce)", tag32);
+		Ingredient salmon = new Ingredient("Salmon fillets", "4 (4 ounce)", tag32);
 		ingredientRepo.save(salmon);
-		Ingredient pecans = new Ingredient("Pecans", "½ cup", tag33);
+		Ingredient pecans = new Ingredient("Pecans", "1/2 cup", tag33);
 		ingredientRepo.save(pecans);
-		Ingredient onionPowder = new Ingredient("Onion powder", "½ tsp", tag34);
+		Ingredient onionPowder = new Ingredient("Onion powder", "1/2 tsp", tag34);
 		ingredientRepo.save(onionPowder);
 		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp", tag35);
 		ingredientRepo.save(mapleSyrup);
@@ -243,7 +243,7 @@ public class GroceryPopulator implements CommandLineRunner {
 		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1\r\n"
 				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n"
 				+ "2\r\n"
-				+ "Heat oven to 425°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"
+				+ "Heat oven to 425Â°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"
 				+ "3\r\n"
 				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n"
 				+ "4\r\n" + "Bake about 35 minutes or until golden brown.", butter2, blackPepper2, chicken, flour, milk,
@@ -252,7 +252,7 @@ public class GroceryPopulator implements CommandLineRunner {
 
 		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1\r\n"
 				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.\r\n"
-				+ "2\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "3\r\n"
+				+ "2\r\n" + "Preheat oven to 425Â°F (220 degrees C).\r\n" + "3\r\n"
 				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.\r\n"
 				+ "4\r\n" + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.", eggNoodles,
 				tuna, onion2, mushroomSoup, cheddarCheese, mushrooms2, greenPeas, potatoChips);
@@ -262,7 +262,7 @@ public class GroceryPopulator implements CommandLineRunner {
 				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well."
 						+ "\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese."
 						+ "\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight."
-						+ "\r\n4. Heat oven to 400°F. Bake covered for 45 minutes."
+						+ "\r\n4. Heat oven to 400Â°F. Bake covered for 45 minutes."
 						+ "\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.",
 				pastaSauce, zucchini, cottageCheese, frozenSpinach, parmessanCheese, oregano, lasagnaNoodles, mushrooms,
 				mozzarellaCheese);
@@ -271,7 +271,7 @@ public class GroceryPopulator implements CommandLineRunner {
 		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1\r\n"
 				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n" + "2\r\n"
 				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
-				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "4\r\n"
+				+ "3\r\n" + "Preheat oven to 425Â°F (220 degrees C).\r\n" + "4\r\n"
 				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.",
 				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, blackPepper3);
 		recipeRepo.save(recipe5);
@@ -365,7 +365,8 @@ public class GroceryPopulator implements CommandLineRunner {
 		JSONParser parser = new JSONParser();
 
 		String basePath = new File("").getAbsolutePath();
-		basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
+		// basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
+		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "walmart-input-json-for-db-init";
 		System.out.println(basePath);
 
 		File folder = new File(basePath);
