@@ -31,9 +31,9 @@
 				<ul>
 					<li th:each="i: ${selectedIngredients}">
 					 	<button th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">delete</button> 
-						<span th:text="${i.quantity} + ' ' + ${i.name}"></span>
+						<span th:text="${i.tag.tag} + ' ' + ${i.name}"></span>
 					</li>
-			
+				
 			</ul>
 		</form>	
 	

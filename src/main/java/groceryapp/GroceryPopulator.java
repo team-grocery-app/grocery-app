@@ -39,73 +39,73 @@ public class GroceryPopulator implements CommandLineRunner {
 		SelectedIngredientsList selectedIngredientsList = new SelectedIngredientsList();
 		selectedIngredientsListRepo.save(selectedIngredientsList);
 
-		Tag tag1 = new Tag(1L, "fettuccine");
-		tagRepo.save(tag1);
+		Tag tag1fettuccine = new Tag(1L, "fettuccine");
+		tagRepo.save(tag1fettuccine);
 
-		Tag tag2 = new Tag(2L, "broccoli");
-		tagRepo.save(tag2);
+		Tag tag2broccoli = new Tag(2L, "broccoli");
+		tagRepo.save(tag2broccoli);
 
-		Tag tag3 = new Tag(3L, "butter");
-		tagRepo.save(tag3);
+		Tag tag3butter = new Tag(3L, "butter");
+		tagRepo.save(tag3butter);
 
-		Tag tag4 = new Tag(4L, "minced garlic");
-		tagRepo.save(tag4);
+		Tag tag4mincedGarlic = new Tag(4L, "minced garlic");
+		tagRepo.save(tag4mincedGarlic);
 
-		Tag tag5 = new Tag(5L, "garlic powder");
-		tagRepo.save(tag5);
+		Tag tag5garlicPowder = new Tag(5L, "garlic powder");
+		tagRepo.save(tag5garlicPowder);
 
-		Tag tag6 = new Tag(6L, "pepper");
-		tagRepo.save(tag6);
+		Tag tag6pepper = new Tag(6L, "pepper");
+		tagRepo.save(tag6pepper);
 
-		Tag tag7 = new Tag(7L, "salt");
-		tagRepo.save(tag7);
+		Tag tag7salt = new Tag(7L, "salt");
+		tagRepo.save(tag7salt);
 
-		Tag tag8 = new Tag(8L, "heavy cream");
-		tagRepo.save(tag8);
+		Tag tag8heavyCream = new Tag(8L, "heavy cream");
+		tagRepo.save(tag8heavyCream);
 
-		Tag tag9 = new Tag(9L, "parmesan cheese");
-		tagRepo.save(tag9);
+		Tag tag9parmesanCheese = new Tag(9L, "parmesan cheese");
+		tagRepo.save(tag9parmesanCheese);
 
-		Tag tag10 = new Tag(10L, "chicken");
-		tagRepo.save(tag10);
+		Tag tag10chicken = new Tag(10L, "chicken");
+		tagRepo.save(tag10chicken);
 
-		Tag tag11 = new Tag(11L, "flour");
-		tagRepo.save(tag11);
+		Tag tag11flour = new Tag(11L, "flour");
+		tagRepo.save(tag11flour);
 
-		Tag tag12 = new Tag(12L, "onions");
-		tagRepo.save(tag12);
+		Tag tag12onions = new Tag(12L, "onions");
+		tagRepo.save(tag12onions);
 
-		Tag tag13 = new Tag(13L, "chicken broth");
-		tagRepo.save(tag13);
+		Tag tag13chickenBroth = new Tag(13L, "chicken broth");
+		tagRepo.save(tag13chickenBroth);
 
-		Tag tag14 = new Tag(14L, "milk");
-		tagRepo.save(tag14);
+		Tag tag14milk = new Tag(14L, "milk");
+		tagRepo.save(tag14milk);
 
-		Tag tag15 = new Tag(15L, "frozen peas & carrots");
-		tagRepo.save(tag15);
+		Tag tag15frozenPeasAndCarrots = new Tag(15L, "frozen peas & carrots");
+		tagRepo.save(tag15frozenPeasAndCarrots);
 
-		Tag tag16 = new Tag(16L, "refrigerated pie crust");
-		tagRepo.save(tag16);
+		Tag tag16refrigeratedPieCrust = new Tag(16L, "refrigerated pie crust");
+		tagRepo.save(tag16refrigeratedPieCrust);
 
-		Tag tag17 = new Tag(17L, "egg noodles");
-		tagRepo.save(tag17);
-		Tag tag18 = new Tag(18L, "tuna");
-		tagRepo.save(tag18);
-		Tag tag19 = new Tag(19L, "cream of mushroom soup");
-		tagRepo.save(tag19);
-		Tag tag20 = new Tag(20L, "shredded cheddar cheese");
-		tagRepo.save(tag20);
-		Tag tag21 = new Tag(21L, "frozen green peas");
-		tagRepo.save(tag21);
-		Tag tag22 = new Tag(22L, "potato chips");
-		tagRepo.save(tag22);
-		Tag tag23 = new Tag(23L, "sliced mushrooms");
-		tagRepo.save(tag23);
+		Tag tag17eggNoodles = new Tag(17L, "egg noodles");
+		tagRepo.save(tag17eggNoodles);
+		Tag tag18tuna = new Tag(18L, "tuna");
+		tagRepo.save(tag18tuna);
+		Tag tag19mushroomSoup = new Tag(19L, "cream of mushroom soup");
+		tagRepo.save(tag19mushroomSoup);
+		Tag tag20cheddarCheese = new Tag(20L, "shredded cheddar cheese");
+		tagRepo.save(tag20cheddarCheese);
+		Tag tag21frozenGreenPeas = new Tag(21L, "frozen green peas");
+		tagRepo.save(tag21frozenGreenPeas);
+		Tag tag22chips = new Tag(22L, "potato chips");
+		tagRepo.save(tag22chips);
+		Tag tag23mushrooms = new Tag(23L, "sliced mushrooms");
+		tagRepo.save(tag23mushrooms);
 
-		Tag tag24 = new Tag(24L, "Pasta Sauce");
-		tagRepo.save(tag24);
-		Tag tag25 = new Tag(25L, "Zucchini");
-		tagRepo.save(tag25);
+		Tag tag24pastaSauce = new Tag(24L, "Pasta Sauce");
+		tagRepo.save(tag24pastaSauce);
+		Tag tag25zucchini = new Tag(25L, "Zucchini");
+		tagRepo.save(tag25zucchini);
 		Tag tag26 = new Tag(26L, "Cottage Cheese");
 		tagRepo.save(tag26);
 		Tag tag27 = new Tag(27L, "Frozen Spinach");
@@ -114,8 +114,8 @@ public class GroceryPopulator implements CommandLineRunner {
 		tagRepo.save(tag28);
 		Tag tag29 = new Tag(29L, "Lasagna Noodles");
 		tagRepo.save(tag29);
-		Tag tag30 = new Tag(30L, "Mozzarella Cheese");
-		tagRepo.save(tag30);
+		Tag tag30mozzarellaCheese = new Tag(30L, "Mozzarella Cheese");
+		tagRepo.save(tag30mozzarellaCheese);
 		Tag tag31 = new Tag(31L, "chipotle pepper powder");
 		tagRepo.save(tag31);
 		Tag tag32 = new Tag(32L, "salmon fillet");
@@ -134,97 +134,100 @@ public class GroceryPopulator implements CommandLineRunner {
 		// populateStoreItemsAndLineItems();
 		populateStoreItemsFromJSONInput();
 
-		Ingredient fettuccine = new Ingredient("Fettucine", "");
+		Ingredient fettuccine = new Ingredient("Fettucine", "", tag1fettuccine);
 		ingredientRepo.save(fettuccine);
-		Ingredient broccoli = new Ingredient("Fresh chopped broccoli", "1 to 2 cups");
+		Ingredient broccoli = new Ingredient("Fresh chopped broccoli", "1 to 2 cups", tag2broccoli);
 		ingredientRepo.save(broccoli);
-		Ingredient butter = new Ingredient("Butter", "1/2 cup(1 stick)");
+		Ingredient butter = new Ingredient("Butter", "1/2 cup(1 stick)", tag3butter);
 		ingredientRepo.save(butter);
-		Ingredient butter2 = new Ingredient("Butter", "1/3 cup");
+		Ingredient butter2 = new Ingredient("Butter", "1/3 cup", tag3butter);
 		ingredientRepo.save(butter2);
-		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp(1 clove)");
+		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp(1 clove)", tag4mincedGarlic);
 		ingredientRepo.save(garlic);
-		Ingredient heavyCream = new Ingredient("Heavy Cream", "2 cups");
+		Ingredient heavyCream = new Ingredient("Heavy Cream", "2 cups", tag8heavyCream);
 		ingredientRepo.save(heavyCream);
-		Ingredient garlicPowder = new Ingredient("Garlic Powder", "1/8 tsp");
+		Ingredient garlicPowder = new Ingredient("Garlic Powder", "1/8 tsp", tag5garlicPowder);
 		ingredientRepo.save(garlicPowder);
-		Ingredient blackPepper = new Ingredient("Black Pepper", "1/8 tsp");
+		Ingredient blackPepper = new Ingredient("Black Pepper", "1/8 tsp", tag6pepper);
 		ingredientRepo.save(blackPepper);
-		Ingredient blackPepper2 = new Ingredient("Black Pepper", "1/4 tsp");
+		Ingredient blackPepper2 = new Ingredient("Black Pepper", "1/4 tsp", tag6pepper);
 		ingredientRepo.save(blackPepper2);
-		Ingredient parmesanCheese = new Ingredient("Parmesan Cheese", "1/4 cup freshly grated");
+		Ingredient parmesanCheese = new Ingredient("Parmesan Cheese", "1/4 cup freshly grated", tag9parmesanCheese);
 		ingredientRepo.save(parmesanCheese);
-		Ingredient chickenBreasts = new Ingredient("Chicken Breasts", "2 to 3 cooked/diced");
+		Ingredient chickenBreasts = new Ingredient("Chicken Breasts", "2 to 3 cooked/diced", tag10chicken);
 		ingredientRepo.save(chickenBreasts);
-		Ingredient chicken = new Ingredient("Chicken", "2 1/2 to 3 cups cut-up cooked chicken or turkey");
+		Ingredient chicken = new Ingredient("Chicken", "2 1/2 to 3 cups cut-up cooked chicken or turkey", tag10chicken);
 		ingredientRepo.save(chicken);
-		Ingredient flour = new Ingredient("All Purpose flour", "1/3 cup");
+		Ingredient flour = new Ingredient("All Purpose flour", "1/3 cup", tag11flour);
 		ingredientRepo.save(flour);
-		Ingredient milk = new Ingredient("Milk", "2/3 cup");
+		Ingredient milk = new Ingredient("Milk", "2/3 cup", tag14milk);
 		ingredientRepo.save(milk);
-		Ingredient chickenBroth = new Ingredient("Chicken Broth", "1 3/4 cups");
+		Ingredient chickenBroth = new Ingredient("Chicken Broth", "1 3/4 cups", tag13chickenBroth);
 		ingredientRepo.save(chickenBroth);
-		Ingredient onion = new Ingredient("Chopped onion", "1/3 cup");
+		Ingredient onion = new Ingredient("Chopped onion", "1/3 cup", tag12onions);
 		ingredientRepo.save(onion);
-		Ingredient salt = new Ingredient("Salt", "1/2 tsp");
+		Ingredient salt = new Ingredient("Salt", "1/2 tsp", tag7salt);
 		ingredientRepo.save(salt);
-		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box(10 oz)");
+		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box(10 oz)", tag15frozenPeasAndCarrots);
 		ingredientRepo.save(frozenVeggies);
-		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package(15 oz) softened as directed on box");
+		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package(15 oz) softened as directed on box",
+				tag16refrigeratedPieCrust);
 		ingredientRepo.save(pieCrust);
-		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups");
+		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups", tag24pastaSauce);
 		ingredientRepo.save(pastaSauce);
-		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup");
+		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup", tag25zucchini);
 		ingredientRepo.save(zucchini);
-		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup");
+		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup", tag26);
 		ingredientRepo.save(cottageCheese);
-		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.");
+		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.", tag27);
 		ingredientRepo.save(frozenSpinach);
-		Ingredient parmessanCheese = new Ingredient("Parmessan Cheese - grated", "1/3 cup");
+		Ingredient parmessanCheese = new Ingredient("Parmessan Cheese - grated", "1/3 cup", tag9parmesanCheese);
 		ingredientRepo.save(parmessanCheese);
-		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp");
+		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp", tag28);
 		ingredientRepo.save(oregano);
-		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)");
+		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)", tag29);
 		ingredientRepo.save(lasagnaNoodles);
-		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can");
+		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can", tag23mushrooms);
 		ingredientRepo.save(mushrooms);
-		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)");
+		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)",
+				tag30mozzarellaCheese);
 		ingredientRepo.save(mozzarellaCheese);
-		Ingredient eggNoodles = new Ingredient("Egg noodles", "1(12 ounce) package");
+		Ingredient eggNoodles = new Ingredient("Egg noodles", "1(12 ounce) package", tag17eggNoodles);
 		ingredientRepo.save(eggNoodles);
-		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained");
+		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained", tag18tuna);
 		ingredientRepo.save(tuna);
-		Ingredient onion2 = new Ingredient("Chopped onion", "¼ cup");
+		Ingredient onion2 = new Ingredient("Chopped onion", "¼ cup", tag12onions);
 		ingredientRepo.save(onion2);
-		Ingredient mushroomSoup = new Ingredient("Condensed cream of mushroom soup", "2 (10.75 ounce) cans");
+		Ingredient mushroomSoup = new Ingredient("Condensed cream of mushroom soup", "2 (10.75 ounce) cans",
+				tag19mushroomSoup);
 		ingredientRepo.save(mushroomSoup);
-		Ingredient cheddarCheese = new Ingredient("Shredded cheddar cheese", "2 cups");
+		Ingredient cheddarCheese = new Ingredient("Shredded cheddar cheese", "2 cups", tag20cheddarCheese);
 		ingredientRepo.save(cheddarCheese);
-		Ingredient mushrooms2 = new Ingredient("Sliced mushrooms", "1/2 (4.5 ounce) can");
+		Ingredient mushrooms2 = new Ingredient("Sliced mushrooms", "1/2 (4.5 ounce) can", tag23mushrooms);
 		ingredientRepo.save(mushrooms2);
-		Ingredient greenPeas = new Ingredient("Frozen green peas", "1 cup");
+		Ingredient greenPeas = new Ingredient("Frozen green peas", "1 cup", tag21frozenGreenPeas);
 		ingredientRepo.save(greenPeas);
-		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup");
+		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup", tag22chips);
 		ingredientRepo.save(potatoChips);
 
-		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "½ tsp");
+		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "½ tsp", tag31);
 		ingredientRepo.save(chipotlePowder);
-		Ingredient salmon = new Ingredient("Salmon fillets", "4(4 ounce)");
+		Ingredient salmon = new Ingredient("Salmon fillets", "4(4 ounce)", tag32);
 		ingredientRepo.save(salmon);
-		Ingredient pecans = new Ingredient("Pecans", "½ cup");
+		Ingredient pecans = new Ingredient("Pecans", "½ cup", tag33);
 		ingredientRepo.save(pecans);
-		Ingredient onionPowder = new Ingredient("Onion powder", "½ tsp");
+		Ingredient onionPowder = new Ingredient("Onion powder", "½ tsp", tag34);
 		ingredientRepo.save(onionPowder);
-		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp");
+		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp", tag35);
 		ingredientRepo.save(mapleSyrup);
-		Ingredient paprika = new Ingredient("Smoked paprika", "1 tsp");
+		Ingredient paprika = new Ingredient("Smoked paprika", "1 tsp", tag36);
 		ingredientRepo.save(paprika);
-		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp");
+		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp", tag37);
 		ingredientRepo.save(acv);
-		Ingredient salt2 = new Ingredient("Salt", "To taste");
+		Ingredient salt2 = new Ingredient("Salt", "to taste", tag7salt);
 		ingredientRepo.save(salt2);
-		Ingredient pepper3 = new Ingredient("Pepper", "To taste");
-		ingredientRepo.save(pepper3);
+		Ingredient blackPepper3 = new Ingredient("Pepper", "to taste", tag6pepper);
+		ingredientRepo.save(blackPepper3);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
 				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n"
@@ -270,7 +273,7 @@ public class GroceryPopulator implements CommandLineRunner {
 				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
 				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n" + "4\r\n"
 				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.",
-				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, pepper3);
+				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, blackPepper3);
 		recipeRepo.save(recipe5);
 
 	}

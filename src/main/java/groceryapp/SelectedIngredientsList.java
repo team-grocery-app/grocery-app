@@ -1,6 +1,9 @@
 package groceryapp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeMap;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,8 +44,34 @@ public class SelectedIngredientsList {
 		return id;
 	}
 
-	public Set<Ingredient> getIngredients() {
-		return ingredients;
+	public List<Ingredient> getIngredients() {
+		// return ingredients;
+		String currentTagName;
+		TreeMap<String, ArrayList<Ingredient>> selIngredientMap = new TreeMap<String, ArrayList<Ingredient>>();
+		for (Ingredient currentIngredient : ingredients) {
+			currentTagName = currentIngredient.getTag().getTag();
+			if (selIngredientMap.containsKey(currentTagName)) {
+				selIngredientMap.get(currentTagName).add(currentIngredient);
+			} else {
+				ArrayList<Ingredient> newIngredientsArray = new ArrayList<Ingredient>();
+				newIngredientsArray.add(currentIngredient);
+				selIngredientMap.put(currentTagName, newIngredientsArray);
+			}
+		}
+		List<Ingredient> iList = new ArrayList<Ingredient>();
+
+		for (ArrayList<Ingredient> i : selIngredientMap.values()) {
+
+			iList.addAll(i);
+		}
+
+		return iList;
+
+		// return selIngredientMap.values();
+
+		// SortedSet<Ingredient> sorted = new TreeMap<>(new ByTagComparator());
+		// sorted.addAll(ingredients);
+		// return Collections.unmodifiableSet(sorted); // makes this read-only
 	}
 
 } // to close class
