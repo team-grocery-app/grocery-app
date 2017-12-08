@@ -1,71 +1,42 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<link rel="stylesheet" href="./style.css"></link>
-	<link rel="stylesheet" href="./layout.css"></link>
-	<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
-	<title>Ingredients</title>
+    <link rel="stylesheet" href="./style.css"></link>
+    <link rel="stylesheet" href="./layout.css"></link>
+    <!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
+    <title>Ingredients</title>
 </head>
-
 <body>
-	<div class="container">
-		<header>
-			<h1 class="page-title">Ingredients</h1>
-		</header>
-		
-		<section class="ingredients">
-
-			<!-- <h2>Checkbox, Quantity, Ingredient, Recipe Name</h2>
-			<ul class="ing-pg-list">
-					<li th:each="i: ${selectedIngredientsList}">
-						<span th:text="${i.name}"></span> -->	
-
-			<h2></h2>
-		
-	<!-- 	<form action="/action_page.php" method="get">
-  			<input type="checkbox" name="vehicle" value="Bike"><span> I have a bike</span>
-  			<input type="checkbox" name="vehicle" value="Car"><span>I have a car</span> 
-  			<input type="submit" value="Submit">
-		</form>  -->	
-      
-			<h2>CheckBox, Quantity, Ingredient, Recipe Name</h2> -->
-			<form method = "POST">
-			
-				<ul>
-					<li th:each="i: ${selectedIngredients}">
-					 	<button th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">delete</button> 
-						<span th:text="${i.tag.tag} + '  ---    ' + ${i.quantity} + ' ' + ${i.name}"></span>
-					</li>
-				
-			</ul>
+    <div class="container">
+        <header>
+            <h1 class="page-title">Ingredients</h1>
+        </header>
         
-		</section>
-		
-		<div class="nav-buttons">
-			<form id="shop-button" method="POST">
-				<button><!-- type="submit" th:formaction="@{/cook-this(id=${recipe.id})}" -->Shop</button>
-			</form>
-			<a class="back" href="http://localhost:8080/recipes">Back to
-				Recipes</a>
-		</div>
-
-		<!-- <footer>
-			<div id="social__media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> 
-				<i class="fa fa-reddit-square" aria-hidden="true"></i> 
-				<i class="fa fa-twitter-square" aria-hidden="true"></i> 
-				<i class="fa fa-youtube-square" aria-hidden="true"></i> 
-				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
-			</div>
-			<h4>The Grocery App Team Copyright 2017</h4>
-		</footer> -->
-		
-		<footer>
-				<p class="copyright">The Grocery App Team Copyright 2017</p>
-			</footer>
-		
-	</div> <!-- container -->
-	<script src="./app.js"></script>
+        <section class="ingredients">
+            <form method = "POST">
+            
+                <ul>
+                    <li th:each="i: ${selectedIngredients}">
+                        <span th:text="${i.name} + '  ---    ' + ${i.quantity}"></span>
+                        <button id="delete-button" th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">x</button>
+                    </li>
+                </ul>
+            </form>
+                    
+        </section>
+        
+        <div class="nav-buttons">
+            <form id="shop-button" method="POST">
+                <button><!-- type="submit" th:formaction="@{/cook-this(id=${recipe.id})}" -->Shop</button>
+            </form>
+            <a class="back" href="http://localhost:8080/recipes">Back to
+                Recipes</a>
+        </div>
+        <footer>
+                <p class="copyright">The Grocery App Team Copyright 2017</p>
+            </footer>
+        
+    </div> <!-- container -->
+    <script src="./app.js"></script>
 </body>
 </html>
