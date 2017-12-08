@@ -366,8 +366,7 @@ public class GroceryPopulator implements CommandLineRunner {
 
 		String basePath = new File("").getAbsolutePath();
 		// basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
-		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator
-				+ "walmart-input-json-for-db-init";
+		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "walmart-input-json-for-db-init";
 		System.out.println(basePath);
 
 		File folder = new File(basePath);
