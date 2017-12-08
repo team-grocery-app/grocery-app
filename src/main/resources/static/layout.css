@@ -48,7 +48,6 @@ h3 {
 
 header {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 	@media (min-width: 768px) {
@@ -63,6 +62,27 @@ header {
 .back {
 	display: flex;
 	justify-content: center;
+}
+
+.ingredients ul li{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+	.ingredients ul li span {
+		font-size: large;
+	}
+
+	.ingredients ul li button {
+		font-size: medium;
+		margin-bottom: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+.instructions h2 {
+	margin-top: 0;
 }
 
 .nav-buttons {
@@ -103,6 +123,10 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+	.recipe-ingredients h2 {
+		margin-bottom: 0;
+	}
 
 .recipe-name {
 /*     padding-bottom: 2rem;
@@ -164,3 +188,24 @@ header {
 	display: flex;
 	justify-content: center;
 }
+
+/* #delete-layout {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+}
+
+	@media (min-width: 768px) {
+		#delete-layout {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+	}
+	
+	#delete-layout button {
+		font-size: small;
+		margin-bottom: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	} */
