@@ -28,13 +28,15 @@ main font
     
 }
 a {
-    font-family: courier;
+	color: black;
+	font-size: large;
     padding: 10px;
-    text-decoration: none;
+    text-shadow: white;
 }
 
 	a:visited {
-		color: black;
+		color: white;
+		text-shadow: blue;
 	}
 
 body {
@@ -49,9 +51,14 @@ body {
 		    background-size: cover;
 		}
 	}
+	
+button {
+	box-shadow: 2px 2px 2px 2px black;
+}
 
 footer {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+	background-color: white;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); */
     border: none;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -100,7 +107,8 @@ h1 {
 	
 	
 h2 {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	background-color: white;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	border: thin solid black;
 	margin: 1rem;
 	font-family: 'Homemade Apple', cursive;
@@ -145,7 +153,6 @@ footer,
 
 .container {
 	background-attachment: fixed;
-	background-image: url("./images/cutting-board.jpg");
 	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
 	background-size: cover;
 }
@@ -176,7 +183,8 @@ header {
 
 
 ul {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	background-color: white;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	border: thin solid black;
 	margin: 1rem;
 	box-shadow: 2px 2px 2px 2px black;
@@ -184,11 +192,11 @@ ul {
 	padding: 15px;
 }
 
-.back {
-    color: #a239ca;
+/* .back {
+    color: white;
     font-size: large;
     text-decoration: none;
-}
+} */
 
 .container {
 	display: flex;
@@ -228,9 +236,11 @@ ul {
 }
 
 .image-section {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	background-color: white;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	border: thin solid black;
 	box-shadow: 2px 2px 2px 2px black;
+	margin-top: 1rem;
 }
 
 	@media (min-width: 768px) {
@@ -249,7 +259,8 @@ ul {
 }
 
 	.ing-pg-list li {
-		background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+		background-color: white;
+		/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 		border: thin solid black;
 		margin-bottom: 1rem;
 		margin-top: 1rem;
@@ -263,7 +274,8 @@ ul {
 
 .recipe-on-home,
 .image-section {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	background-color: white;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	margin-bottom: 0.5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;	
@@ -284,7 +296,8 @@ ul {
 
 
 #recipe-instructions {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+	background-color: white;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	border: thin solid black;
 	margin: 1rem;
 	box-shadow: 2px 2px 2px 2px black;
