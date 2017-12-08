@@ -15,26 +15,47 @@
 			<h1>The Grocery App</h1>
 			<h1>Build Your Cart</h1>
 		</header>
+		<!-- 
+model attribute names for thymeleaf: 
+	selectedIngredientsTreeMap
+	selectedTags (set)
+	matchingStoreItems (set) - works ok
+-->
 
-		<div th:each="i: ${selectedTagsList}">
+		<h4>Dynamic content follows</h4>
+
+		<div th:each="i:${selectedTags}">
+			<span>a div for </span><span th:text="${i.tag}"></span>
+			<p th:each="j: ${selectedIngredients}">
+				<span th:if="${j.tag.tag} == ${i.tag}" th:text="'a p for selected ingredient ' + ${j.name}"></span>
+			</p>
+			<p th:each="j: ${i.storeItems}">
+				<span>a p for </span><span th:text="${j.name}"></span>
+			</p>
+
+		</div>
+
+
+
+		<!--  		<div th:each="i: ${selectedTags}">
 			<p th:text="${i.tag} +_group"></p>
 			<p th:each="j: ${selectedIngredientsList}">
-			<!-- <span th:text="${j.tag.tag}"> </span><span th:text="${i.tag}"></span> -->
+			<span th:text="${j.tag.tag}"> </span><span th:text="${i.tag}"></span>
 			<span th:if="${j.tag.tag} == ${i.tag}" th:text="${j.name}"></span>
-			
-<!-- 			Thymeleaf conditional will iterate through each 
+ -->
+		<!-- 			Thymeleaf conditional will iterate through each 
 			ingredient [j] in selectedIngredientsList
 			, compare its tag to 
 			[i.tag.tag], and if it matches, list [j.quantity] and [j.name] here. 
 			If not, thymeleaf does nothing. -->
-			</p>
-<!-- 			<p>Tags in selected ingredients</p> -->
-			<ul>
+		<!-- 	</p> -->
+		<!-- 			<p>Tags in selected ingredients</p> -->
+		<!-- 			<ul>
 				<li></li>
 			</ul>
 
 
-		</div>
+		</div> -->
 
 
 		<p>hard coded stuff follows</p>

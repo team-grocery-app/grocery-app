@@ -77,4 +77,26 @@ public class SelectedIngredientsList {
 		// return Collections.unmodifiableSet(sorted); // makes this read-only
 	}
 
+	public TreeMap<String, ArrayList<Ingredient>> getTreeMap() {
+		TreeMap<String, ArrayList<Ingredient>> selIngredientMap = new TreeMap<String, ArrayList<Ingredient>>();
+		for (Ingredient currentIngredient : ingredients) {
+			String currentTagName = currentIngredient.getTag().getTag();
+			if (selIngredientMap.containsKey(currentTagName)) {
+				selIngredientMap.get(currentTagName).add(currentIngredient);
+			} else {
+				ArrayList<Ingredient> newIngredientsArray = new ArrayList<Ingredient>();
+				newIngredientsArray.add(currentIngredient);
+				selIngredientMap.put(currentTagName, newIngredientsArray);
+			}
+		}
+		return selIngredientMap;
+	}
+
+	public Set<StoreItem> getMatchingStoreItems() {
+		Set<StoreItem> matchingStoreItems = null;
+
+		return matchingStoreItems;
+
+	}
+
 } // to close class
