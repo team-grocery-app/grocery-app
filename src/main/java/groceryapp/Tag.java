@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Tag {
+public class Tag implements Comparable<Tag> {
 
 	@Id
 	@GeneratedValue
@@ -53,6 +53,11 @@ public class Tag {
 
 	public Set<StoreItem> getStoreItems() {
 		return storeItems;
+	}
+
+	@Override
+	public int compareTo(Tag other) {
+		return tag.compareTo(other.tag);
 	}
 
 }

@@ -1,6 +1,6 @@
 package groceryapp;
 
-import java.util.Set;
+import java.util.ArrayList;
 
 import javax.annotation.Resource;
 
@@ -30,6 +30,8 @@ public class GroceryAppController {
 	@Resource
 	SelectedIngredientsListRepository selectedIngredientsListRepo;
 
+	ArrayList<String> newList;
+
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
 		model.addAttribute("recipes", recipeRepo.findAll());
@@ -42,13 +44,11 @@ public class GroceryAppController {
 		return "recipe";
 	}
 
-	// @RequestMapping("/ingredients")
-	// public String getAllIngredients(Model model) {
-	// model.addAttribute("selectedIngredientsList",
-	// selectedIngredientsListRepo.findOne(1L).getIngredients());
-	//
-	// return "ingredients";
-	// }
+	@RequestMapping("/ingredients")
+	public String getAllIngredients(Model model) {
+		model.addAttribute("selectedIngredients", selectedIngredientsListRepo.findOne(1L).getIngredients());
+		return "ingredients";
+	}
 
 	@RequestMapping("/tags")
 	public String getAllTags(Model model) {
@@ -65,10 +65,12 @@ public class GroceryAppController {
 
 	@RequestMapping("/cook-this")
 	public String cookThisButtonActionOnRecipeTemplate(@RequestParam Long id) {
+
+		SelectedIngredientsList selectedIngredientsList = selectedIngredientsListRepo.findOne(1L);
 		for (Ingredient i : recipeRepo.findOne(id).getListOfIngredients()) {
-			selectedIngredientsListRepo.findOne(1L).addIngredient(i);
+			selectedIngredientsList.addIngredient(i);
 		}
-		selectedIngredientsListRepo.save(selectedIngredientsListRepo.findOne(1L));
+		selectedIngredientsListRepo.save(selectedIngredientsList);
 		return "redirect:/ingredients";
 
 	}
@@ -84,4 +86,13 @@ public class GroceryAppController {
 		return "store-items";
 	}
 
+	@RequestMapping("/remove")
+	public String removeTag(@RequestParam(value = "id") Long id) {
+
+		SelectedIngredientsList selList = selectedIngredientsListRepo.findOne(1L);
+		Ingredient i = selList.getIngredient(id);
+		selList.removeIngredient(i);
+		selectedIngredientsListRepo.save(selList);
+		return "redirect:/ingredients?id=" + id.toString();
+	}
 }

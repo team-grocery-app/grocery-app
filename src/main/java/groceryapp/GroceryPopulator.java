@@ -102,19 +102,20 @@ public class GroceryPopulator implements CommandLineRunner {
 		Tag tag23mushrooms = new Tag(23L, "sliced mushrooms");
 		tagRepo.save(tag23mushrooms);
 
-		Tag tag24pastaSauce = new Tag(24L, "Pasta Sauce");
+		Tag tag24pastaSauce = new Tag(24L, "pasta Sauce");
 		tagRepo.save(tag24pastaSauce);
-		Tag tag25zucchini = new Tag(25L, "Zucchini");
+		Tag tag25zucchini = new Tag(25L, "zucchini");
 		tagRepo.save(tag25zucchini);
-		Tag tag26 = new Tag(26L, "Cottage Cheese");
+		Tag tag26 = new Tag(26L, "cottage Cheese");
 		tagRepo.save(tag26);
-		Tag tag27 = new Tag(27L, "Frozen Spinach");
+		Tag tag27 = new Tag(27L, "frozen Spinach");
 		tagRepo.save(tag27);
-		Tag tag28 = new Tag(28L, "Oregano");
+		Tag tag28 = new Tag(28L, "oregano");
 		tagRepo.save(tag28);
-		Tag tag29 = new Tag(29L, "Lasagna Noodles");
+		Tag tag29 = new Tag(29L, "lasagna Noodles");
 		tagRepo.save(tag29);
-		Tag tag30mozzarellaCheese = new Tag(30L, "Mozzarella Cheese");
+
+		Tag tag30mozzarellaCheese = new Tag(30L, "mozzarella Cheese");
 		tagRepo.save(tag30mozzarellaCheese);
 		Tag tag31 = new Tag(31L, "chipotle pepper powder");
 		tagRepo.save(tag31);
@@ -273,6 +274,7 @@ public class GroceryPopulator implements CommandLineRunner {
 				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n\n\n"
 				+ "3\r\n" + "Preheat oven to 425 degrees F (220 degrees C).\r\n\n\n" + "4\r\n"
 				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.\n\n",
+
 				chipotlePowder, salmon, pecans, onionPowder, mapleSyrup, paprika, acv, salt2, blackPepper3);
 		recipeRepo.save(recipe5);
 
