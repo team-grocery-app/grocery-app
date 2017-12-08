@@ -1,5 +1,7 @@
 package groceryapp;
 
+import java.util.ArrayList;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -27,6 +29,8 @@ public class GroceryAppController {
 
 	@Resource
 	SelectedIngredientsListRepository selectedIngredientsListRepo;
+
+	ArrayList<String> newList;
 
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {
@@ -61,10 +65,12 @@ public class GroceryAppController {
 
 	@RequestMapping("/cook-this")
 	public String cookThisButtonActionOnRecipeTemplate(@RequestParam Long id) {
+
+		SelectedIngredientsList selectedIngredientsList = selectedIngredientsListRepo.findOne(1L);
 		for (Ingredient i : recipeRepo.findOne(id).getListOfIngredients()) {
-			selectedIngredientsListRepo.findOne(1L).addIngredient(i);
+			selectedIngredientsList.addIngredient(i);
 		}
-		selectedIngredientsListRepo.save(selectedIngredientsListRepo.findOne(1L));
+		selectedIngredientsListRepo.save(selectedIngredientsList);
 		return "redirect:/ingredients";
 
 	}
