@@ -29,7 +29,7 @@
 				<!-- <img class="cover-image" src="./images/meal_prep.jpg"/> -->
 			
 			<!-- Content -->
-			<section class="content">
+			<div class="content">
 				<h2>Pick Your Recipe(s):</h2>
 				<div class="recipes">
 					<div th:each="i: ${recipes}">
@@ -38,7 +38,7 @@
 						<h3 th:text="${i.name}"></h3></a>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			<!-- Footer -->
 			<footer>
