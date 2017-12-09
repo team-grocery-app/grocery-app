@@ -1,6 +1,5 @@
 package groceryapp;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
