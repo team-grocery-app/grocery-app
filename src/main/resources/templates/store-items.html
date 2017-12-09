@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<link rel="stylesheet" href="../static/style.css"></link>
-	<link rel="stylesheet" href="../static/layout.css"></link>
-	<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
-	<title>Store Items</title>
+<!-- 	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
+ -->
+<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
+<title>Store Items</title>
 </head>
 
 <body>
@@ -14,40 +15,60 @@
 			<h1>The Grocery App</h1>
 			<h1>Build Your Cart</h1>
 		</header>
-		
+		<!-- 
+model attribute names for thymeleaf: 
+	selectedIngredientsTreeMap
+	selectedTags (set)
+	matchingStoreItems (set) - works ok
+-->
+
+		<h4>Dynamic content follows</h4>
+
+		<div th:each="i:${selectedTags}">
+			<span>a div for TAG </span><span th:text="${i.tag}"></span>
+			<p th:each="j: ${selectedIngredients}">
+				<span th:if="${j.tag.tag} == ${i.tag}" th:text="'a p for selected INGREDIENT ' + ${j.name}"></span>
+			</p>
+			<p th:each="j: ${i.storeItems}">
+				<span>a p for STOREITEM </span><span th:text="${j.name}"></span>
+			</p>
+
+		</div>
+
+		<p>hard coded stuff follows</p>
 		<section class="ingredients">
 			<ul>
 				<li>Ingredient, Quantity</li>
 				<li>Ingredient, Quantity</li>
-			</ul>	
-				<ul>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
+			</ul>
+			<ul>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
 			</ul>
 			<ul>
 				<li>Ingredient, Quantity</li>
 				<li>Ingredient, Quantity</li>
-			</ul>	
-				<ul>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
+			</ul>
+			<ul>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
 			</ul>
 			<ul>
 				<li>Ingredient, Quantity</li>
 				<li>Ingredient, Quantity</li>
-			</ul>	
-				<ul>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
-					<li>Checkbox, Store Item, Quantity</li>
+			</ul>
+			<ul>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
+				<li>Checkbox, Store Item, Quantity</li>
 			</ul>
 
 			<p>Back to Ingredients</p>
@@ -57,15 +78,16 @@
 
 		<footer>
 			<div id="social__media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> 
-				<i class="fa fa-reddit-square" aria-hidden="true"></i> 
-				<i class="fa fa-twitter-square" aria-hidden="true"></i> 
-				<i class="fa fa-youtube-square" aria-hidden="true"></i> 
-				<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
+					class="fa fa-reddit-square" aria-hidden="true"></i> <i
+					class="fa fa-twitter-square" aria-hidden="true"></i> <i
+					class="fa fa-youtube-square" aria-hidden="true"></i> <i
+					class="fa fa-google-plus-square" aria-hidden="true"></i>
 			</div>
 			<h4>The Grocery App Team Copyright 2017</h4>
 		</footer>
-	</div> <!-- container -->
+	</div>
+	<!-- container -->
 	<script src="./app.js"></script>
 </body>
 </html>

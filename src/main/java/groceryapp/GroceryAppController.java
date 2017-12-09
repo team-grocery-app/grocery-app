@@ -1,6 +1,13 @@
 package groceryapp;
 
+import java.util.Map.Entry;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import javax.annotation.Resource;
 
@@ -75,6 +82,24 @@ public class GroceryAppController {
 
 	}
 
+	@RequestMapping("/shop")
+	public String shop() {
+
+		return "redirect:/store-items";
+	}
+
+	@RequestMapping("/store-items")
+	public String showStoreItemsTemplate(Model model) {
+		List<Ingredient> selectedIngredients = selectedIngredientsListRepo.findOne(1L).getIngredients();
+		Set<Tag> selectedTags = new TreeSet<Tag>();
+		for (Ingredient i : selectedIngredients) {
+			selectedTags.add(i.getTag());
+		}
+		model.addAttribute("selectedIngredients", selectedIngredients);
+		model.addAttribute("selectedTags", selectedTags);
+		return "store-items";
+	}
+
 	@RequestMapping("/remove")
 	public String removeTag(@RequestParam(value = "id") Long id) {
 
@@ -82,6 +107,7 @@ public class GroceryAppController {
 		Ingredient i = selList.getIngredient(id);
 		selList.removeIngredient(i);
 		selectedIngredientsListRepo.save(selList);
-		return "redirect:/ingredients?id=" + id.toString();
+		return "redirect:/ingredients";
 	}
-}
+
+} // to close Controller class

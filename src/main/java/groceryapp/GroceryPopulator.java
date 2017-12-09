@@ -114,6 +114,7 @@ public class GroceryPopulator implements CommandLineRunner {
 		tagRepo.save(tag28);
 		Tag tag29 = new Tag(29L, "lasagna Noodles");
 		tagRepo.save(tag29);
+
 		Tag tag30mozzarellaCheese = new Tag(30L, "mozzarella Cheese");
 		tagRepo.save(tag30mozzarellaCheese);
 		Tag tag31 = new Tag(31L, "chipotle pepper powder");
@@ -168,7 +169,8 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(onion);
 		Ingredient salt = new Ingredient("Salt", "1/2 tsp", tag7salt);
 		ingredientRepo.save(salt);
-		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box (10 oz)", tag15frozenPeasAndCarrots);
+		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box (10 oz)",
+				tag15frozenPeasAndCarrots);
 		ingredientRepo.save(frozenVeggies);
 		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package (15 oz) softened as directed on box",
 				tag16refrigeratedPieCrust);
@@ -230,24 +232,24 @@ public class GroceryPopulator implements CommandLineRunner {
 		ingredientRepo.save(blackPepper3);
 
 		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
-				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n"
+				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n\n\n"
 				+ "2\r\n"
-				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.\r\n"
+				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.\r\n\n\n"
 				+ "3\r\n"
-				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.\r\n"
+				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.\r\n\n\n"
 				+ "4\r\n"
-				+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.",
+				+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.\n\n",
 				fettuccine, broccoli, butter, garlic, heavyCream, garlicPowder, blackPepper, parmesanCheese,
 				chickenBreasts);
 		recipeRepo.save(recipe1);
 		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1\r\n"
-				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n"
+				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n\n\n"
 				+ "2\r\n"
 				+ "Heat oven to 425°F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"
 				+ "3\r\n"
-				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n"
-				+ "4\r\n" + "Bake about 35 minutes or until golden brown.", butter2, blackPepper2, chicken, flour, milk,
-				chickenBroth, onion, salt, frozenVeggies, pieCrust);
+				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n\n\n"
+				+ "4\r\n" + "Bake about 35 minutes or until golden brown.\n\n", butter2, blackPepper2, chicken, flour,
+				milk, chickenBroth, onion, salt, frozenVeggies, pieCrust);
 		recipeRepo.save(recipe2);
 
 		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1\r\n"
@@ -366,7 +368,8 @@ public class GroceryPopulator implements CommandLineRunner {
 
 		String basePath = new File("").getAbsolutePath();
 		// basePath += "\\src\\main\\resources\\walmart-input-json-for-db-init";
-		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "walmart-input-json-for-db-init";
+		basePath += File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator
+				+ "walmart-input-json-for-db-init";
 		System.out.println(basePath);
 
 		File folder = new File(basePath);
