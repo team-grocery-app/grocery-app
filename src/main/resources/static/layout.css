@@ -31,6 +31,8 @@ h2 {
 
 	@media (min-width: 768px) {
 		h2 {
+			display: flex;
+			justify-content: center;
 		    padding-top: 2rem;
 		}
 	}
@@ -107,6 +109,8 @@ header {
 .recipe-image,
 .one-recipe-image {
     display: flex;
+    height:auto;
+    max-width: 100%;
     width: 80vw;
 }
     @media (min-width:768px) {
@@ -128,10 +132,6 @@ header {
 		margin-bottom: 0;
 	}
 
-.recipe-name {
-/*     padding-bottom: 2rem;
- */}
-
 .recipe-on-home,
 .image-section {
     align-items:center;
@@ -144,7 +144,7 @@ header {
 
 	@media (min-width: 768px) {
 	.recipe-on-home {
-	align-item: center;
+	align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,7 +152,7 @@ header {
 	}	
 
 .recipes {
-    align-item: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
