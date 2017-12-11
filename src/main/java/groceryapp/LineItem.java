@@ -1,5 +1,7 @@
 package groceryapp;
 
+import java.text.DecimalFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +15,7 @@ public class LineItem {
 	private Long id;
 	private int quantity;
 	private double totalPrice;
+	private String displayTotalPrice;
 
 	@OneToOne
 	private StoreItem storeItem;
@@ -24,6 +27,11 @@ public class LineItem {
 		this.storeItem = storeItem;
 		this.quantity = quantity;
 		this.totalPrice = quantity * storeItem.getPrice();
+		this.displayTotalPrice = new DecimalFormat("#.00").format(totalPrice);
+	}
+
+	public String getDisplayTotalPrice() {
+		return displayTotalPrice;
 	}
 
 	public Long getId() {

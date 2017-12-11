@@ -22,7 +22,7 @@ public class Recipe {
 	@Lob
 	private String instructions;
 
-	@OneToMany
+	@OneToMany(mappedBy = "recipe")
 	private Set<Ingredient> listOfIngredients;
 
 	protected Recipe() {
