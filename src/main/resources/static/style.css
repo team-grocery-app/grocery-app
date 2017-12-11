@@ -6,13 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Encode+Sans+Semi+Expanded|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Fjalla+One|Marvel|Oswald|Pathway+Gothic+One|Quicksand|Roboto+Condensed|Ruda|Saira+Condensed');
 
 * {
-    /*font-family: 'Barlow Condensed', sans-serif;*/
-    /*font-family: 'Fira Sans Condensed', sans-serif;*/
+    font-family: 'Barlow Condensed', sans-serif;
     /*font-family: 'Fira Sans Extra Condensed', sans-serif;*/
-    /*font-family: 'Marvel', sans-serif;*might be too thin*/
-    /*font-family: 'Roboto Condensed', sans-serif;*/
     /*font-family: 'Ruda', sans-serif;*/
-    font-family: 'Saira Condensed', sans-serif;
+    /*font-family: 'Saira Condensed', sans-serif;*/
     font-size: 26px;
     
 }
@@ -48,7 +45,6 @@ button {
 
 footer {
 	background-color: white;
-    /* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); */
     border: none;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -57,6 +53,8 @@ footer {
 
 	@media (min-width: 768px){
 		footer {
+			background-color: transparent;
+    		background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); 
 			margin: 0;
 		}
 	}
@@ -64,12 +62,12 @@ footer {
 .dollar,	
 h1 {
 	font-family: 'Source Serif Pro', serif;
-	font-size: 8vw;
+	font-size: 6vw;
 	text-align: center;
 }
 	
 	@media (min-width: 768px) {
-		.dollar,
+		h1 .dollar,
 		h1 {
 		    /*font-family: 'Cabin Sketch', cursive;*/
 		    /*font-family: 'Arima Madurai', cursive;*/
@@ -105,6 +103,7 @@ h2 {
 	font-family: 'Homemade Apple', cursive;
 	font-size: 5vw;
 	margin: 1rem;
+	text-shadow: .5px .5px grey;
 }
 	
 	@media (min-width: 768px) {
@@ -133,23 +132,6 @@ footer,
 .recipe-on-home {
 	box-shadow: 2px 2px 2px 2px black;
 }
-
-	@media (min-width: 768px) {
-		h2, 
-		footer, 
-		.recipe-on-home {
-			box-shadow: none;
-		}
-	}
-
-
-
-.container {
-	background-attachment: fixed;
-	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
-	background-size: cover;
-}
-
 	
 h3 {
 	font-size: 5vw;
@@ -171,6 +153,8 @@ header {
 	@media (min-width: 768px) {
 		header {
 			border: none;
+			/*border-bottom: 10px solid #1B3818;*/
+			/*border-bottom: 10px solid green;*/
 		}
 	}
 
@@ -192,6 +176,9 @@ ul {
 } */
 
 .container {
+	background-attachment: fixed;
+	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -208,6 +195,7 @@ ul {
 
 .copyright {
     font-size: 3.5vw;
+    text-shadow: .5px .5px grey;
 }
 
 	@media (min-width: 600px) {
@@ -216,25 +204,26 @@ ul {
 		}
 	}
 
-	@media (min-width: 768px) {
-	.copyright {
-		font-size: 2vw;
+		@media (min-width: 768px) {
+		.copyright {
+			font-size: 2vw;
+			}
 		}
-	}
 
 .dollar {
 	color: green;
+	/*color: #1B3818;*/
 	font-family: 'Source Serif Pro', serif;
 	font-size: 8vw;
 }
 
-.image-section {
+/*.image-section {
 	background-image: transparent;
-	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
+	 background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); 
 	margin-bottom: 0.5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;	
-}
+}*/
 	@media (min-width: 768px) {
 		.recipe-on-home {
 			border: none;
@@ -260,13 +249,6 @@ ul {
 		padding: 15px;
 	}
 
-.one-recipe-image {
-	background-image: transparent;
-	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
-	border: thin solid black;
-	box-shadow: 2px 2px 2px 2px black;
-	margin-top: 1rem;
-}
 
 .page-title {
 	font-family: 'Homemade Apple', cursive;
@@ -293,6 +275,23 @@ ul {
 	}
 }
 
+#one-recipe-image {
+	background-image: transparent;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
+	border: thin solid black;
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+#pick-recipes {
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+	@media (min-width: 768px) {
+		#pick-recipes {
+			border: none;
+			box-shadow: none;
+		}
+	}
 
 #recipe-instructions {
 	background-color: white;

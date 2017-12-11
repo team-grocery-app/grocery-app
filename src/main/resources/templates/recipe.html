@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<link rel="stylesheet" href="./style.css"></link>
-<link rel="stylesheet" href="./layout.css"></link>
-<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
-<title th:text="${recipe.name}"></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="./style.css"></link>
+	<link rel="stylesheet" href="./layout.css"></link>
+	<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
+	<title th:text="${recipe.name}"></title>
 </head>
 
 <body>
@@ -14,16 +15,15 @@
 			<h1 class="page-title" th:text="${recipe.name}"></h1>
 		</header>
 
-		<section class="image-section">
-			<img class="one-recipe-image" th:src="${recipe.imageUrl}"></img>
-		</section>
-
-		<section class="recipe-ingredients">
-			<h2>Ingredients</h2>
-			<ul>
-				<li th:each="i: ${recipe.listOfIngredients}"><span
-					th:text="${i.quantity} + ' ' + ${i.name}"></span></li>
-			</ul>
+		<section class="recipe-layout">
+				<img id="one-recipe-image" th:src="${recipe.imageUrl}"></img>
+			<div class="recipe-ingredients">
+				<h2 id="ingredients">Ingredients</h2>
+					<ul>
+						<li th:each="i: ${recipe.listOfIngredients}"><span
+							th:text="${i.quantity} + ' ' + ${i.name}"></span></li>
+					</ul>
+			</div>
 		</section>
 
 		<section class="instructions">
@@ -53,7 +53,7 @@
 
 		</footer> -->
 		<footer>
-				<p class="copyright">The Grocery App Team Copyright 2017</p>
+				<p class="copyright">Copyright © 2017</p>
 		</footer>
 	</div>
 	<!-- container -->

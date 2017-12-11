@@ -3,6 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="./style.css"></link>
 	<link rel="stylesheet" href="./layout.css"></link>
 	<!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
@@ -11,18 +12,18 @@
 
 	<body>
 		<div class="container">
-			<section>
+			<section id="home-header">
 			<header>
-			<!-- <div class="title-social"> -->
+						<!-- <div class="title-social"> -->
 				<h1>dinner plan<span class="dollar">$</span></h1>
-				<!-- <div id="social__media">
-					<i class="fa fa-facebook-square" aria-hidden="true"></i> 
-					<i class="fa fa-reddit-square" aria-hidden="true"></i> 
-					<i class="fa fa-twitter-square" aria-hidden="true"></i> 
-					<i class="fa fa-youtube-square" aria-hidden="true"></i> 
-					<i	class="fa fa-google-plus-square" aria-hidden="true"></i>
-				</div> -->
-			<!-- </div> -->			
+							<!-- <div id="social__media">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i> 
+								<i class="fa fa-reddit-square" aria-hidden="true"></i> 
+								<i class="fa fa-twitter-square" aria-hidden="true"></i> 
+								<i class="fa fa-youtube-square" aria-hidden="true"></i> 
+								<i	class="fa fa-google-plus-square" aria-hidden="true"></i>
+							</div> -->
+						<!-- </div> -->			
 			</header>
 			</section>
 				
@@ -30,7 +31,7 @@
 			
 			<!-- Content -->
 			<div class="content">
-				<h2>Pick Your Recipe(s):</h2>
+				<h2 id="pick-recipes">Pick Your Recipe(s):</h2>
 				<div class="recipes">
 					<div th:each="i: ${recipes}">
 						<a class="recipe-on-home" th:href="@{/recipe(id=${i.id})}">
@@ -42,7 +43,7 @@
 
 			<!-- Footer -->
 			<footer>
-				<p class="copyright">The Grocery App Team Copyright 2017</p>
+				<p class="copyright">Copyright © 2017</p>
 			</footer>
 		</div> <!-- close .container -->
 		<script src="./app.js"></script>

@@ -5,7 +5,7 @@ let copyright = document.querySelectorAll('.copyright');
  		this.innerText = 'Created By Aaron Barclay, Tiffany Chuang, Gene Chung, Leslie Geissler, Jesse Snyder, and Mary Ziegler';
  	});
  	copyright[i].addEventListener('mouseout', function() {
- 		this.innerText = '© 2017';
+ 		this.innerText = 'Copyright © 2017';
  	});
  }
 
