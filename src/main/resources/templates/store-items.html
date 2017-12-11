@@ -32,12 +32,12 @@ model attribute names for thymeleaf:
 				</p>
 
 				<p th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
-					<input type="checkbox" th:field="*{ids[__${iter.index}__]}"
+					<input type="checkbox" th:field="*{ids[__${j.id}__]}"
 						th:value="${j.id}" /> <span>a p for STOREITEM </span> 
 						<p th:text="'id ' + ${j.id}"></p>
 						<span
 						th:text="${j.name}"></span> <input type="text"
-						th:field="*{qtys[__${iter.index}__]}" th:value="'1'" />
+						th:field="*{qtys[__${j.id}__]}" th:value="'1'" />
 				</p>
 			</div>
 

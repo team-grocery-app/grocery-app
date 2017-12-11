@@ -1,5 +1,6 @@
 package groceryapp;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -123,7 +124,54 @@ public class GroceryAppController {
 		for (int i = 0; i < productSelections.getIds().size(); i++) {
 			id = productSelections.getIds().get(i);
 			qty = productSelections.getQtys().get(i);
-			if (!id.isEmpty()) {
+			if (id == null || id.isEmpty()) {
+			} else {
+				Long longId = Long.valueOf(id);
+				selectedStoreItem = storeItemRepo.findOne(longId);
+				Integer intQty = Integer.valueOf(qty);
+				groceryListLineItem = new LineItem(intQty, selectedStoreItem);
+				lineItemRepo.save(groceryListLineItem);
+
+			}
+		}
+		return "redirect:/grocery-list";
+	}
+
+	@RequestMapping("/grocery-list")
+	public String getAllSelectedStoreItems(Model model) {
+		Double listTotal = 0D;
+		for (LineItem lineItem : lineItemRepo.findAll()) {
+			listTotal += lineItem.getTotalPrice();
+		}
+		String formattedTotal = new DecimalFormat("#.00").format(listTotal);
+		model.addAttribute("totalGroceryPrice", formattedTotal);
+		model.addAttribute("groceryListLineItems", lineItemRepo.findAll());
+		return "grocery-list";
+	}
+
+	// important ref for form stuff
+	// https://stackoverflow.com/questions/44415339/bind-list-or-array-to-form-in-thymleaf
+
+	@GetMapping("/test-select-store-items")
+	public String testSelectStoreItems(Model model) {
+		model.addAttribute("storeItems", storeItemRepo.findAll());
+		model.addAttribute("productSelections", new ProductSelections());
+		return "test-select-store-items";
+	}
+
+	@PostMapping("/test-show-selected-store-items")
+	public String testShowSelectedStoreItems(@ModelAttribute ProductSelections productSelections) {
+		System.out.println("List: " + productSelections.getIds());
+		System.out.println("List: " + productSelections.getQtys());
+
+		StoreItem selectedStoreItem;
+		LineItem groceryListLineItem;
+		String id, qty;
+
+		for (int i = 0; i < productSelections.getIds().size(); i++) {
+			id = productSelections.getIds().get(i);
+			qty = productSelections.getQtys().get(i);
+			if (id != null) {
 				Long longId = Long.valueOf(id);
 				selectedStoreItem = storeItemRepo.findOne(longId);
 				Integer intQty = Integer.valueOf(qty);
@@ -131,11 +179,7 @@ public class GroceryAppController {
 				lineItemRepo.save(groceryListLineItem);
 			}
 		}
-		return "redirect:/shopping-list";
+		return "redirect:/grocery-list";
 	}
-
-	// @RequestMapping("/shopping-list") {
-	// return "shopping-list";
-	// }
 
 } // to close Controller class
