@@ -20,10 +20,11 @@
 			
 			<ul>
 			<li th:each="i: ${groceryListLineItems}">
-			 	<span th:text="${i.quantity} + '---' + ${i.storeItem.name} 
-			 	+ '---' + ${i.storeItem.displayPrice}
-			 	 	+ '--- ' + ${i.displayTotalPrice}"></span>
-			
+				<img th:src="${i.storeItem.imgUrlLg}"/>
+			 	<span th:text="${i.quantity}"></span>
+			 	<span th:text="${i.storeItem.name}"></span>
+			 	<span th:text="${i.storeItem.displayPrice}"></span>
+			 	<span th:text="${i.displayTotalPrice}"></span>
 			</li>
 		
 			</ul>

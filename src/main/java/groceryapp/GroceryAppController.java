@@ -1,7 +1,6 @@
 package groceryapp;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -36,8 +35,6 @@ public class GroceryAppController {
 
 	@Resource
 	SelectedIngredientsListRepository selectedIngredientsListRepo;
-
-	ArrayList<String> newList;
 
 	@RequestMapping("/recipes")
 	public String getAllRecipes(Model model) {

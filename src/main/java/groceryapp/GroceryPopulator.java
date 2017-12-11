@@ -135,44 +135,44 @@ public class GroceryPopulator implements CommandLineRunner {
 		// populateStoreItemsAndLineItems();
 		populateStoreItemsFromJSONInput();
 
-		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1\r\n"
-				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.\r\n\n\n"
-				+ "2\r\n"
-				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.\r\n\n\n"
-				+ "3\r\n"
-				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.\r\n\n\n"
-				+ "4\r\n"
+		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg", "1. "
+				+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.<br/>"
+				+ "2. "
+				+ "Meanwhile, melt butter in medium saucepan over medium heat. Add minced garlic with the butter. Add cream, garlic powder, and pepper.<br/>"
+				+ "3. "
+				+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.<br/>"
+				+ "4. "
 				+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.\n\n");
 		recipeRepo.save(recipe1);
 
-		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1\r\n"
-				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.\r\n\n\n"
-				+ "2\r\n"
-				+ "Heat oven to 425째F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.\r\n"
-				+ "3\r\n"
-				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.\r\n\n\n"
-				+ "4\r\n" + "Bake about 35 minutes or until golden brown.\n\n");
+		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg", "1. "
+				+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.<br/>"
+				+ "2. "
+				+ "Heat oven to 425째F. Roll 1 pie crust into 13-inch square. Ease into ungreased 9-inch (2-quart) glass baking dish. Pour chicken mixture into crust-lined dish.<br/>"
+				+ "3. "
+				+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.<br/>"
+				+ "4. " + "Bake about 35 minutes or until golden brown.\n\n");
 		recipeRepo.save(recipe2);
 
-		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1\r\n"
-				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.\r\n"
-				+ "2\r\n" + "Preheat oven to 425째F (220 degrees C).\r\n" + "3\r\n"
-				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.\r\n"
-				+ "4\r\n" + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.");
+		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg", "1. "
+				+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.<br/>"
+				+ "2. " + "Preheat oven to 425캟 (220� C).<br/>" + "3. "
+				+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.<br/>"
+				+ "4. " + "Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.");
 		recipeRepo.save(recipe3);
 
 		Recipe recipe4 = new Recipe("Vegetarian Lasagna", "images/veggie-lasagna.jpg",
-				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well."
-						+ "\r\n2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese."
-						+ "\r\n3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight."
-						+ "\r\n4. Heat oven to 400째F. Bake covered for 45 minutes."
-						+ "\r\n5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.");
+				"1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well.<br/>"
+						+ "2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese.<br/>"
+						+ "3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight.<br/>"
+						+ "4. Heat oven to 400캟. Bake covered for 45 minutes.<br/>"
+						+ "5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.");
 		recipeRepo.save(recipe4);
 
-		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1\r\n"
-				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.\r\n" + "2\r\n"
-				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.\r\n"
-				+ "3\r\n" + "Preheat oven to 425째F (220 degrees C).\r\n" + "4\r\n"
+		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg", "1. "
+				+ "Place salmon fillets on a baking sheet and season with salt and black pepper.<br/>" + "2. "
+				+ "Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours.<br/>"
+				+ "3. " + "Preheat oven to 425캟 (220캜).<br/>" + "4. "
 				+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.");
 		recipeRepo.save(recipe5);
 

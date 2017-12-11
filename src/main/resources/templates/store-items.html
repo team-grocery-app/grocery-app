@@ -12,7 +12,7 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>The Grocery App</h1>
+			<h1>Our Fucking Grocery App</h1>
 			<h1>Build Your Cart</h1>
 		</header>
 		<!-- 
@@ -23,21 +23,24 @@ model attribute names for thymeleaf:
 -->
 
 		<form th:action="@{/process-store-item-selections}"
-			th:object="${productSelections}" target="_blank" method="post">
+			th:object="${productSelections}" method="post">
 			<div th:each="i, tagIter:${selectedTags}">
-				<span>a div for TAG </span><span th:text="${i.tag}"></span>
-				<p th:each="j: ${selectedIngredients}"
+					<p>selected ingredient(s)</p>
+					<ul>
+				<li th:each="j: ${selectedIngredients}"
 					th:if="${j.tag.tag} == ${i.tag}">
-					<span th:text="'a p for selected INGREDIENT ' + ${j.name}"></span>
-				</p>
+					<span th:text="${j.quantity} + ' ' + ${j.name}"></span>
+				</li>
+				</ul>
 
 				<p th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
 					<input type="checkbox" th:field="*{ids[__${j.id}__]}"
-						th:value="${j.id}" /> <span>a p for STOREITEM </span> 
-						<p th:text="'id ' + ${j.id}"></p>
+						th:value="${j.id}" /> 
 						<span
-						th:text="${j.name}"></span> <input type="text"
-						th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
+						th:text="${j.name}"></span> 
+						<img class="store-item-image" th:src="${j.imgUrlLg}"/>
+						<input type="text"
+						th:field="*{qtys[__${j.id}__]}" th:value="''" th:placeholder="1" />
 				</p>
 			</div>
 
