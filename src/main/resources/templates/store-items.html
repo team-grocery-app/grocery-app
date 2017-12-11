@@ -37,7 +37,7 @@ model attribute names for thymeleaf:
 						<p th:text="'id ' + ${j.id}"></p>
 						<span
 						th:text="${j.name}"></span> <input type="text"
-						th:field="*{qtys[__${j.id}__]}" th:value="'1'" />
+						th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
 				</p>
 			</div>
 

@@ -117,17 +117,25 @@ public class GroceryAppController {
 		System.out.println("List: " + productSelections.getIds());
 		System.out.println("List: " + productSelections.getQtys());
 
+		lineItemRepo.deleteAll();
 		StoreItem selectedStoreItem;
 		LineItem groceryListLineItem;
 		String id, qty;
 
-		for (int i = 0; i < productSelections.getIds().size(); i++) {
+		for (int i = 1; i < productSelections.getIds().size(); i++) {
 			id = productSelections.getIds().get(i);
 			qty = productSelections.getQtys().get(i);
 			if (id == null || id.isEmpty()) {
 			} else {
 				Long longId = Long.valueOf(id);
 				selectedStoreItem = storeItemRepo.findOne(longId);
+				System.out.println("i is " + i);
+				System.out.println("id is " + id);
+				if (qty == null || qty.isEmpty()) {
+					qty = "1";
+				}
+				System.out.println("qty is " + qty);
+
 				Integer intQty = Integer.valueOf(qty);
 				groceryListLineItem = new LineItem(intQty, selectedStoreItem);
 				lineItemRepo.save(groceryListLineItem);

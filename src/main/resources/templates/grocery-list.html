@@ -21,8 +21,8 @@
 			<ul>
 			<li th:each="i: ${groceryListLineItems}">
 			 	<span th:text="${i.quantity} + '---' + ${i.storeItem.name} 
-			 	+ '---' + ${i.storeItem.price}
-			 	 	+ '--- ' + ${i.totalPrice}"></span>
+			 	+ '---' + ${i.storeItem.displayPrice}
+			 	 	+ '--- ' + ${i.displayTotalPrice}"></span>
 			
 			</li>
 		

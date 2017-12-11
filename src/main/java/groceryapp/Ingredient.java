@@ -26,10 +26,11 @@ public class Ingredient {
 
 	}
 
-	public Ingredient(String name, String quantity, Tag tag) {
+	public Ingredient(String name, String quantity, Tag tag, Recipe recipe) {
 		this.name = name;
 		this.quantity = quantity;
 		this.tag = tag;
+		this.recipe = recipe;
 	}
 
 	public Long getId() {

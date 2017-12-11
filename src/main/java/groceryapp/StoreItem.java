@@ -1,5 +1,7 @@
 package groceryapp;
 
+import java.text.DecimalFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +17,7 @@ public class StoreItem {
 	private Long id;
 	private String name;
 	private double price;
+	private String displayPrice;
 	@Lob
 	private String description;
 	private String uriItemId;
@@ -39,6 +42,15 @@ public class StoreItem {
 		this.name = name;
 		this.price = price;
 		this.tag = tag;
+		this.displayPrice = new DecimalFormat("#.00").format(price);
+	}
+
+	public void setDisplayPrice(String displayPrice) {
+		this.displayPrice = displayPrice;
+	}
+
+	public String getDisplayPrice() {
+		return displayPrice;
 	}
 
 	// no tag constructor to be superseded
@@ -110,6 +122,7 @@ public class StoreItem {
 
 	public void setPrice(double price) {
 		this.price = price;
+		displayPrice = new DecimalFormat("#.00").format(price);
 	}
 
 	public void setDescription(String description) {
