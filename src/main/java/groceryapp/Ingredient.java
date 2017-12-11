@@ -44,7 +44,7 @@ public class Ingredient {
 		return quantity;
 	}
 
-	public Recipe getRecipes() {
+	public Recipe getRecipe() {
 		return recipe;
 	}
 

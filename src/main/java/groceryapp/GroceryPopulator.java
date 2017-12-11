@@ -476,6 +476,11 @@ public class GroceryPopulator implements CommandLineRunner {
 
 					storeItemRepo.save(genericItem);
 
+					// mwzig test logic populate some store items
+					// here so that I can test page 5
+					// LineItem lineItem = new LineItem(2, genericItem);
+					// lineItemRepo.save(lineItem);
+
 					// Saved this logic because it shows how to iterate through
 					// json array of data (in case we want to loop thru an
 					// array of images present)
