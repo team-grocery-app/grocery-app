@@ -6,13 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Encode+Sans+Semi+Expanded|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Fjalla+One|Marvel|Oswald|Pathway+Gothic+One|Quicksand|Roboto+Condensed|Ruda|Saira+Condensed');
 
 * {
-    /*font-family: 'Barlow Condensed', sans-serif;*/
-    /*font-family: 'Fira Sans Condensed', sans-serif;*/
+    font-family: 'Barlow Condensed', sans-serif;
     /*font-family: 'Fira Sans Extra Condensed', sans-serif;*/
-    /*font-family: 'Marvel', sans-serif;*might be too thin*/
-    /*font-family: 'Roboto Condensed', sans-serif;*/
     /*font-family: 'Ruda', sans-serif;*/
-    font-family: 'Saira Condensed', sans-serif;
+    /*font-family: 'Saira Condensed', sans-serif;*/
     font-size: 26px;
     
 }
@@ -20,17 +17,18 @@ a {
 	color: black;
 	font-size: large;
     padding: 10px;
-    text-shadow: white;
+    text-shadow: .5px .5px grey;
 }
 
 	a:visited {
-		color: white;
-		text-shadow: blue;
+		color: grey;
+		text-shadow: .5px .5px black;
 	}
 
 body {
 	background-attachment: fixed;
     background-image: url("./images/media-query-backdrop.jpg");
+    background-position: center;
     background-size: cover;
 }
 	@media (min-width: 768px) {
@@ -47,7 +45,6 @@ button {
 
 footer {
 	background-color: white;
-    /* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); */
     border: none;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -56,17 +53,21 @@ footer {
 
 	@media (min-width: 768px){
 		footer {
+			background-color: transparent;
+    		background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)); 
 			margin: 0;
 		}
 	}
-	
+
+.dollar,	
 h1 {
-	font-family: 'Nixie One', cursive;
-	font-size: 8vw;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 6vw;
 	text-align: center;
 }
 	
 	@media (min-width: 768px) {
+		h1 .dollar,
 		h1 {
 		    /*font-family: 'Cabin Sketch', cursive;*/
 		    /*font-family: 'Arima Madurai', cursive;*/
@@ -99,9 +100,10 @@ h2 {
 	background-color: white;
 	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	border: thin solid black;
-	margin: 1rem;
 	font-family: 'Homemade Apple', cursive;
 	font-size: 5vw;
+	margin: 1rem;
+	text-shadow: .5px .5px grey;
 }
 	
 	@media (min-width: 768px) {
@@ -121,6 +123,7 @@ h2 {
 		    /*font-family: 'Stalemate', cursive;*/
 		    /*font-family: 'Sue Ellen Francisco', cursive;*/
 			font-size: 34px;
+			text-shadow: .5px .5px grey;
 		}
 	}
 	
@@ -129,23 +132,6 @@ footer,
 .recipe-on-home {
 	box-shadow: 2px 2px 2px 2px black;
 }
-
-	@media (min-width: 768px) {
-		h2, 
-		footer, 
-		.recipe-on-home {
-			box-shadow: none;
-		}
-	}
-
-
-
-.container {
-	background-attachment: fixed;
-	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
-	background-size: cover;
-}
-
 	
 h3 {
 	font-size: 5vw;
@@ -167,6 +153,8 @@ header {
 	@media (min-width: 768px) {
 		header {
 			border: none;
+			/*border-bottom: 10px solid #1B3818;*/
+			/*border-bottom: 10px solid green;*/
 		}
 	}
 
@@ -188,10 +176,13 @@ ul {
 } */
 
 .container {
+	background-attachment: fixed;
+	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: .3rem;
+	/*margin: .3rem;*/
 }
 	
 	@media (min-width: 768px) {
@@ -204,6 +195,7 @@ ul {
 
 .copyright {
     font-size: 3.5vw;
+    text-shadow: .5px .5px grey;
 }
 
 	@media (min-width: 600px) {
@@ -212,31 +204,31 @@ ul {
 		}
 	}
 
-	@media (min-width: 768px) {
-	.copyright {
-		font-size: 2vw;
+		@media (min-width: 768px) {
+		.copyright {
+			font-size: 2vw;
+			}
 		}
-	}
 
 .dollar {
 	color: green;
+	/*color: #1B3818;*/
 	font-family: 'Source Serif Pro', serif;
-	font-size: 46px;
+	font-size: 8vw;
 }
 
-.image-section {
-	background-color: white;
-	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
-	border: thin solid black;
-	box-shadow: 2px 2px 2px 2px black;
-	margin-top: 1rem;
-}
-
+/*.image-section {
+	background-image: transparent;
+	 background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); 
+	margin-bottom: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;	
+}*/
 	@media (min-width: 768px) {
-		.image-section {
-			background-image:none;
+		.recipe-on-home {
+			border: none;
+			box-shadow: none;
 			margin: 0;
-			padding: 0;
 		}
 	}
 
@@ -257,12 +249,12 @@ ul {
 		padding: 15px;
 	}
 
+
 .page-title {
 	font-family: 'Homemade Apple', cursive;
 }
 
-.recipe-on-home,
-.image-section {
+.recipe-on-home {
 	background-color: white;
 	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 	margin-bottom: 0.5rem;
@@ -283,6 +275,23 @@ ul {
 	}
 }
 
+#one-recipe-image {
+	background-image: transparent;
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
+	border: thin solid black;
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+#pick-recipes {
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+	@media (min-width: 768px) {
+		#pick-recipes {
+			border: none;
+			box-shadow: none;
+		}
+	}
 
 #recipe-instructions {
 	background-color: white;
