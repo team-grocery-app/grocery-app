@@ -31,7 +31,7 @@ model attribute names for thymeleaf:
 					<span th:text="'a p for selected INGREDIENT ' + ${j.name}"></span>
 				</p>
 
-				<p th:each="j, iter: ${i.storeItems}">
+				<p th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
 					<input type="checkbox" th:field="*{ids[__${iter.index}__]}"
 						th:value="${j.id}" /> <span>a p for STOREITEM </span> 
 						<p th:text="'id ' + ${j.id}"></p>

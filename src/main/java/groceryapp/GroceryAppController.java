@@ -97,6 +97,7 @@ public class GroceryAppController {
 		model.addAttribute("selectedIngredients", selectedIngredients);
 		model.addAttribute("selectedTags", selectedTags);
 		model.addAttribute("productSelections", new ProductSelections());
+		model.addAttribute("storeItems", storeItemRepo.findAll());
 		return "store-items";
 	}
 
@@ -122,7 +123,7 @@ public class GroceryAppController {
 		for (int i = 0; i < productSelections.getIds().size(); i++) {
 			id = productSelections.getIds().get(i);
 			qty = productSelections.getQtys().get(i);
-			if (id != null) {
+			if (!id.isEmpty()) {
 				Long longId = Long.valueOf(id);
 				selectedStoreItem = storeItemRepo.findOne(longId);
 				Integer intQty = Integer.valueOf(qty);
