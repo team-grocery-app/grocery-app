@@ -24,7 +24,7 @@ model attribute names for thymeleaf:
 
 		<form th:action="@{/process-store-item-selections}"
 			th:object="${productSelections}" target="_blank" method="post">
-			<div th:each="i:${selectedTags}">
+			<div th:each="i, tagIter:${selectedTags}">
 				<span>a div for TAG </span><span th:text="${i.tag}"></span>
 				<p th:each="j: ${selectedIngredients}"
 					th:if="${j.tag.tag} == ${i.tag}">
