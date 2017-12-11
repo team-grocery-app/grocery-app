@@ -80,7 +80,7 @@ public class GroceryAppController {
 
 	@RequestMapping("/shop")
 	public String shop() {
-
+		// reserved in case some functionality is required
 		return "redirect:/store-items";
 	}
 
@@ -93,6 +93,7 @@ public class GroceryAppController {
 		}
 		model.addAttribute("selectedIngredients", selectedIngredients);
 		model.addAttribute("selectedTags", selectedTags);
+		model.addAttribute("productSelections", new ProductSelections());
 		return "store-items";
 	}
 
