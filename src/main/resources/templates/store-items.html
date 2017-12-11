@@ -22,7 +22,6 @@ model attribute names for thymeleaf:
 	productSelections
 -->
 
-		<h4>Dynamic content follows</h4>
 		<form th:action="@{/process-store-item-selections}"
 			th:object="${productSelections}" target="_blank" method="post">
 			<div th:each="i:${selectedTags}">
@@ -34,7 +33,9 @@ model attribute names for thymeleaf:
 
 				<p th:each="j, iter: ${i.storeItems}">
 					<input type="checkbox" th:field="*{ids[__${iter.index}__]}"
-						th:value="${j.id}" /> <span>a p for STOREITEM </span> <span
+						th:value="${j.id}" /> <span>a p for STOREITEM </span> 
+						<p th:text="'id ' + ${j.id}"></p>
+						<span
 						th:text="${j.name}"></span> <input type="text"
 						th:field="*{qtys[__${iter.index}__]}" th:value="'1'" />
 				</p>
