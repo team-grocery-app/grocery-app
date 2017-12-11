@@ -9,6 +9,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -106,5 +108,32 @@ public class GroceryAppController {
 		selectedIngredientsListRepo.save(selList);
 		return "redirect:/ingredients";
 	}
+
+	@PostMapping("/process-store-item-selections")
+	public String buildLineItems(@ModelAttribute ProductSelections productSelections) {
+		System.out.println("List: " + productSelections.getIds());
+		System.out.println("List: " + productSelections.getQtys());
+
+		StoreItem selectedStoreItem;
+		LineItem groceryListLineItem;
+		String id, qty;
+
+		for (int i = 0; i < productSelections.getIds().size(); i++) {
+			id = productSelections.getIds().get(i);
+			qty = productSelections.getQtys().get(i);
+			if (id != null) {
+				Long longId = Long.valueOf(id);
+				selectedStoreItem = storeItemRepo.findOne(longId);
+				Integer intQty = Integer.valueOf(qty);
+				groceryListLineItem = new LineItem(intQty, selectedStoreItem);
+				lineItemRepo.save(groceryListLineItem);
+			}
+		}
+		return "redirect:/shopping-list";
+	}
+
+	// @RequestMapping("/shopping-list") {
+	// return "shopping-list";
+	// }
 
 } // to close Controller class

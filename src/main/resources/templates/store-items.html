@@ -17,64 +17,34 @@
 		</header>
 		<!-- 
 model attribute names for thymeleaf: 
-	selectedIngredientsTreeMap
-	selectedTags (set)
-	matchingStoreItems (set) - works ok
+	selectedIngredients
+	selectedTags
+	productSelections
 -->
 
 		<h4>Dynamic content follows</h4>
+		<form th:action="@{/process-store-item-selections}"
+			th:object="${productSelections}" target="_blank" method="post">
+			<div th:each="i:${selectedTags}">
+				<span>a div for TAG </span><span th:text="${i.tag}"></span>
+				<p th:each="j: ${selectedIngredients}"
+					th:if="${j.tag.tag} == ${i.tag}">
+					<span th:text="'a p for selected INGREDIENT ' + ${j.name}"></span>
+				</p>
 
-		<div th:each="i:${selectedTags}">
-			<span>a div for TAG </span><span th:text="${i.tag}"></span>
-			<p th:each="j: ${selectedIngredients}">
-				<span th:if="${j.tag.tag} == ${i.tag}" th:text="'a p for selected INGREDIENT ' + ${j.name}"></span>
+				<p th:each="j, iter: ${i.storeItems}">
+					<input type="checkbox" th:field="*{ids[__${iter.index}__]}"
+						th:value="${j.id}" /> <span>a p for STOREITEM </span> <span
+						th:text="${j.name}"></span> <input type="text"
+						th:field="*{qtys[__${iter.index}__]}" th:value="'1'" />
+				</p>
+			</div>
+
+			<p>
+				<input type="submit" value="Submit" /> <input type="reset"
+					value="Reset" />
 			</p>
-			<p th:each="j: ${i.storeItems}">
-				<span>a p for STOREITEM </span><span th:text="${j.name}"></span>
-			</p>
-
-		</div>
-
-		<p>hard coded stuff follows</p>
-		<section class="ingredients">
-			<ul>
-				<li>Ingredient, Quantity</li>
-				<li>Ingredient, Quantity</li>
-			</ul>
-			<ul>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-			</ul>
-			<ul>
-				<li>Ingredient, Quantity</li>
-				<li>Ingredient, Quantity</li>
-			</ul>
-			<ul>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-			</ul>
-			<ul>
-				<li>Ingredient, Quantity</li>
-				<li>Ingredient, Quantity</li>
-			</ul>
-			<ul>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-				<li>Checkbox, Store Item, Quantity</li>
-			</ul>
-
-			<p>Back to Ingredients</p>
-			<button>Final List</button>
-
-		</section>
+		</form>
 
 		<footer>
 			<div id="social__media">
@@ -87,7 +57,7 @@ model attribute names for thymeleaf:
 			<h4>The Grocery App Team Copyright 2017</h4>
 		</footer>
 	</div>
-	<!-- container -->
+	<!-- to close container -->
 	<script src="./app.js"></script>
 </body>
 </html>
