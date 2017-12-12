@@ -1,9 +1,51 @@
 /*grocery app title*/
-@import url('https://fonts.googleapis.com/css?family=Aldrich|Allerta+Stencil|Arima+Madurai|Atma|Cabin+Sketch|Chathura|Chelsea+Market|Cutive+Mono|Electrolize|Fredericka+the+Great|Glass+Antiqua|Handlee|Kalam|Kranky|Lekton|Life+Savers|Limelight|Love+Ya+Like+A+Sister|Megrim|Mountains+of+Christmas|Nixie+One|Poiret+One|Pompiere|Press+Start+2P|Quantico|Rajdhani|Ribeye+Marrow|Scope+One|Sigmar+One|Special+Elite|Stardos+Stencil|Unica+One|Unkempt|Source+Serif+Pro');
+/* @import url('https://fonts.googleapis.com/css?family=Aldrich|Allerta+Stencil|Arima+Madurai|Atma|Cabin+Sketch|Chathura|Chelsea+Market|Cutive+Mono|Electrolize|Fredericka+the+Great|Glass+Antiqua|Handlee|Kalam|Kranky|Lekton|Life+Savers|Limelight|Love+Ya+Like+A+Sister|Megrim|Mountains+of+Christmas|Nixie+One|Poiret+One|Pompiere|Press+Start+2P|Quantico|Rajdhani|Ribeye+Marrow|Scope+One|Sigmar+One|Special+Elite|Stardos+Stencil|Unica+One|Unkempt|Source+Serif+Pro'); */
 /*recipe titles*/
-@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Cookie|Covered+By+Your+Grace|Dancing+Script|Homemade+Apple|Parisienne|Permanent+Marker|Rochester|Rock+Salt|Rouge+Script|Sacramento|Shadows+Into+Light|Shadows+Into+Light+Two|Stalemate|Sue+Ellen+Francisco');
+/* @import url('https://fonts.googleapis.com/css?family=Clicker+Script|Cookie|Covered+By+Your+Grace|Dancing+Script|Homemade+Apple|Parisienne|Permanent+Marker|Rochester|Rock+Salt|Rouge+Script|Sacramento|Shadows+Into+Light|Shadows+Into+Light+Two|Stalemate|Sue+Ellen+Francisco'); */
 /*main font*/
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Encode+Sans+Semi+Expanded|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Fjalla+One|Marvel|Oswald|Pathway+Gothic+One|Quicksand|Roboto+Condensed|Ruda|Saira+Condensed');
+/* @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Encode+Sans+Semi+Expanded|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed|Fjalla+One|Marvel|Oswald|Pathway+Gothic+One|Quicksand|Roboto+Condensed|Ruda|Saira+Condensed'); */
+
+/* to define local fonts */
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Barlow Condensed Regular'), local('BarlowCondensed-Regular'), url(./fonts/barlow-condensed-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Barlow Condensed Regular'), local('BarlowCondensed-Regular'), url(./fonts/barlow-condensed-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(./fonts/source-serif-pro-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(./static/fonts/source-serif-pro-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Homemade Apple';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(./fonts/homemade-apple-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
 * {
     font-family: 'Barlow Condensed', sans-serif;
