@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<!-- 	<link rel="stylesheet" href="./style.css"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="./style.css"></link>
 	<link rel="stylesheet" href="./layout.css"></link>
- -->
 <!-- <script src="https://use.fontawesome.com/ecc099372b.js"></script> -->
 <title>Store Items</title>
 </head>
@@ -14,6 +14,13 @@
 		<header>
 			<h1>Our Grocery App</h1>
 			<h1>Build Your Cart</h1>
+				<!-- <div id="social__media">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
+						class="fa fa-reddit-square" aria-hidden="true"></i> <i
+						class="fa fa-twitter-square" aria-hidden="true"></i> <i
+						class="fa fa-youtube-square" aria-hidden="true"></i> <i
+						class="fa fa-google-plus-square" aria-hidden="true"></i>
+				</div> -->
 		</header>
 		<!-- 
 model attribute names for thymeleaf: 
@@ -21,47 +28,48 @@ model attribute names for thymeleaf:
 	selectedTags
 	productSelections
 -->
-
+		<section>
 		<form th:action="@{/process-store-item-selections}"
 			th:object="${productSelections}" method="post">
-			<div th:each="i, tagIter:${selectedTags}">
-					<p>selected ingredient(s)</p>
-					<ul>
-				<li th:each="j: ${selectedIngredients}"
-					th:if="${j.tag.tag} == ${i.tag}">
-					<span th:text="${j.quantity} + ' ' + ${j.name}"></span>
-				</li>
-				</ul>
+			<div class="store-item-selection" th:each="i, tagIter:${selectedTags}">
+					
+				<p>Selected Ingredient:</p>
+					<ul class="selected-ingredients">
+						<li class="ingredient-name" th:each="j: ${selectedIngredients}"
+							th:if="${j.tag.tag} == ${i.tag}">
+							<span th:text="${j.quantity} + ' ' + ${j.name}"></span>
+						</li>
+					</ul>
 
-				<p th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
-					<input type="checkbox" th:field="*{ids[__${j.id}__]}"
+				<p class="store-item" th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
+					
+					<img class="store-item-image" th:src="${j.imgUrlLg}"/>
+					<br></br>
+					<span><input class="checkbox" type="checkbox" th:field="*{ids[__${j.id}__]}"
 						th:value="${j.id}" /> 
-						<span
-						th:text="${j.name}"></span> 
-						<img class="store-item-image" th:src="${j.imgUrlLg}"/>
-						<input type="text"
-						th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
+					<input id="quantity-input" type="text" th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
+					<!-- <br></br> -->
+					<span class="store-item-name" th:text="${j.name}"></span> </span>
+					<br></br>
+				
 				</p>
+			
 			</div>
 
-			<p>
-				<input type="submit" value="Submit" /> <input type="reset"
-					value="Reset" />
+			<p class="submit-reset">
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Reset" />
+				<!-- <button><input type="submit" value="Submit" /></button>
+				<button><input type="reset" value="Reset" /></button> -->
 			</p>
+		
 		</form>
+		</section>
 
 		<footer>
-			<div id="social__media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
-					class="fa fa-reddit-square" aria-hidden="true"></i> <i
-					class="fa fa-twitter-square" aria-hidden="true"></i> <i
-					class="fa fa-youtube-square" aria-hidden="true"></i> <i
-					class="fa fa-google-plus-square" aria-hidden="true"></i>
-			</div>
-			<h4>The Grocery App Team Copyright 2017</h4>
+			<p class="copyright">Copyright © 2017</p>
 		</footer>
-	</div>
-	<!-- to close container -->
+	</div> <!-- to close container -->
 	<script src="./app.js"></script>
 </body>
 </html>
