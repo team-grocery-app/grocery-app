@@ -217,6 +217,10 @@ ul {
     text-decoration: none;
 } */
 
+.checkout-item {
+	font-size: 5vw;
+}
+
 .container {
 	background-attachment: fixed;
 	/*background-image: url("./images/meal-prep-cutting-board-2.jpg");*/
@@ -274,6 +278,24 @@ ul {
 		}
 	}
 
+
+.final-selection {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.final-selection li {
+		background-color: white;
+		border: thin solid black;
+		margin: 1rem;
+		box-shadow: 2px 2px 2px 2px black;
+		padding: 15px;
+	}
+
 .ing-pg-list {
 	background: none;
 	border: none;
@@ -317,6 +339,55 @@ ul {
 	}
 }
 
+/*.selection {
+	background-color: white;
+	border: thin solid black;
+	margin: 1rem;
+	box-shadow: 2px 2px 2px 2px black;
+	padding: 15px;
+}*/
+
+.store-item {
+	font-size: small;
+}
+
+.store-item-image {
+	height: auto;
+	max-width: 65vw;
+}
+
+.store-item-name {
+	font-size: 5vw;
+}
+
+.store-item-selection {
+	background-color: white;
+	border: thin solid black;
+	margin: 1rem;
+	box-shadow: 2px 2px 2px 2px black;
+	padding: 15px;
+	/*text-align: center;*/
+}
+
+.text {
+	font-size: 5vw;
+}
+
+.total-edit {
+	background-color: white;
+	border: thin solid black;
+	margin: 1rem;
+	box-shadow: 2px 2px 2px 2px black;
+	padding: 15px;
+	text-align: right;
+}
+
+#my-shopping-list {
+	border: none;
+	box-shadow: none;
+	margin: 0;
+}
+
 #one-recipe-image {
 	background-image: transparent;
 	/* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
@@ -348,6 +419,12 @@ ul {
 #recipe-text {
     color: black;
 }
+
+#selected-image {
+	height: auto;
+	max-width: 90%;
+}
+
 #social__media {
     font-size: xx-large;
 }
