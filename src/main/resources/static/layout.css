@@ -178,6 +178,35 @@ ul {
 	padding-bottom: .5rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 768px) {
 	h1 {
 		padding-bottom: 1rem;
@@ -190,16 +219,16 @@ ul {
 		justify-content: center;
 	}
 
-	.container #home-header {
-	    min-height: 100vh;
-	    width: 100vw;
-	}
-
 	header {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
 		width: 100vw;
+	}
+	
+	.container #home-header {
+	    min-height: 100vh;
+	    width: 100vw;
 	}
 
 	.nav-buttons {
@@ -251,6 +280,49 @@ ul {
 		flex-direction: row;
 		flex-wrap: wrap;
 		margin-bottom: 1rem;
+	}
+
+	.selected-ingredients {
+		margin: 0;
+	}
+
+	.selection-header {
+		margin-bottom: 1rem;
+	}
+
+		.selection-header p {
+			margin-left: 1rem;
+			margin-top: .5rem;
+		}
+
+		.selection-header li {
+			margin-left: 1rem;
+		}
+
+	.selection-item {
+		margin-left: .5rem;
+		margin-right: .5rem;
+	}
+
+	.store-item {
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.store-item-image {
+		margin-top: 1rem;
+		max-width: 70%;
+		height: auto;
+	}
+
+	.store-item-name {
+		word-wrap: normal;
+	}
+
+	.store-options {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	#ingredients {

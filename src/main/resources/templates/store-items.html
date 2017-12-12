@@ -12,8 +12,7 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>Our Grocery App</h1>
-			<h1>Build Your Cart</h1>
+			<h2 id="build-cart">Build Your Cart</h2>
 				<!-- <div id="social__media">
 					<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
 						class="fa fa-reddit-square" aria-hidden="true"></i> <i
@@ -32,29 +31,34 @@ model attribute names for thymeleaf:
 		<form th:action="@{/process-store-item-selections}"
 			th:object="${productSelections}" method="post">
 			<div class="store-item-selection" th:each="i, tagIter:${selectedTags}">
-					
-				<p>Selected Ingredient:</p>
-					<ul class="selected-ingredients">
-						<li class="ingredient-name" th:each="j: ${selectedIngredients}"
-							th:if="${j.tag.tag} == ${i.tag}">
-							<span th:text="${j.quantity} + ' ' + ${j.name}"></span>
-						</li>
-					</ul>
-
+				
+				<div class="selection-header">	
+					<p>Selected Ingredient:</p>
+						<ul class="selected-ingredients">
+							<li class="ingredient-name" th:each="j: ${selectedIngredients}"
+								th:if="${j.tag.tag} == ${i.tag}">
+								<span th:text="${j.quantity} + ' ' + ${j.name}"></span>
+							</li>
+						</ul>
+				</div>
+				
+				<div class="store-options">
 				<p class="store-item" th:each="j, iter: ${storeItems}" th:if="${i.tag} == ${j.tag.tag}">
 					
 					<img class="store-item-image" th:src="${j.imgUrlLg}"/>
 					<br></br>
-					<span><input class="checkbox" type="checkbox" th:field="*{ids[__${j.id}__]}"
+					<span class="selection-item"><input class="checkbox" type="checkbox" th:field="*{ids[__${j.id}__]}"
 						th:value="${j.id}" /> 
 					<input id="quantity-input" type="text" th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
 					<!-- <br></br> -->
-					<span class="store-item-name" th:text="${j.name}"></span> </span>
+					<span class="store-item-name" th:text="${j.name}"></span></span>
 					<br></br>
 				
 				</p>
-			
+				</div>
 			</div>
+
+			<a class="back" href="http://localhost:8080/recipes">Back to Recipes</a>
 
 			<p class="submit-reset">
 				<input type="submit" value="Submit" />
