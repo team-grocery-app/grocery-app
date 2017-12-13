@@ -39,6 +39,10 @@ ul {
 	justify-content: center;
 }
 
+.container {
+	min-height: 100vh;
+}
+
 .final-selection li {
 	display: flex;
 	flex-direction: column;
@@ -223,7 +227,19 @@ ul {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
+		margin-top: 1rem;
 		width: 100vw;
+	}
+
+	.build-cart {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.container {
+		min-height: 100vh;
 	}
 	
 	.container #home-header header{
@@ -260,7 +276,7 @@ ul {
 		display: flex;
 		justify-content: flex-start;
 		/*margin: auto;*/
-		max-width: 50vw;
+		max-width: 45vw;
 		padding: 0;
 	}
 
@@ -346,6 +362,6 @@ ul {
 	#one-recipe-image {
 	/*	margin-right: 1rem;
 		margin-bottom: 1rem;*/
-		width: 50vw;
+		width: 45vw;
 	}
 }

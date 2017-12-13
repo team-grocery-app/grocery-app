@@ -138,6 +138,15 @@ ul {
 	padding: 15px;
 }
 
+.build-cart #build-cart {
+	border: double;
+    border-width: 10px;
+    background-color: white;
+    background-image: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .checkout-item {
 	font-size: 5vw;
 }
@@ -211,13 +220,22 @@ ul {
 	margin-right: 1rem;	
 }
 
+.selection-header {
+	background-color: white;
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+	.selection-header p {
+		padding-top: .5rem;
+	}
+
 .store-item {
 	font-size: small;
 }
 
-.store-item-image {
+.store-options .store-item-image {
 	height: auto;
-	max-width: 65vw;
+	width: 30vw;
 }
 
 .store-item-selection {
@@ -460,4 +478,5 @@ ul {
 
 	#project-name {
 		font-size: 8vw;
+
 	}
