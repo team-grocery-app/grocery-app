@@ -98,8 +98,8 @@ public class GroceryAppController {
 
 	@PostMapping("/process-store-item-selections")
 	public String buildLineItems(@ModelAttribute ProductSelections productSelections) {
-		System.out.println("List: " + productSelections.getIds());
-		System.out.println("List: " + productSelections.getQtys());
+		// System.out.println("List: " + productSelections.getIds());
+		// System.out.println("List: " + productSelections.getQtys());
 
 		lineItemRepo.deleteAll();
 		StoreItem selectedStoreItem;
@@ -113,12 +113,9 @@ public class GroceryAppController {
 			} else {
 				Long longId = Long.valueOf(id);
 				selectedStoreItem = storeItemRepo.findOne(longId);
-				System.out.println("i is " + i);
-				System.out.println("id is " + id);
 				if (qty == null || qty.isEmpty()) {
 					qty = "1";
 				}
-				System.out.println("qty is " + qty);
 
 				Integer intQty = Integer.valueOf(qty);
 				groceryListLineItem = new LineItem(intQty, selectedStoreItem);
