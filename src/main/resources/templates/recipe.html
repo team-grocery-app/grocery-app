@@ -16,7 +16,9 @@
 		</header>
 
 		<section class="recipe-layout">
+			<div class="image-container">	
 				<img id="one-recipe-image" th:src="${recipe.imageUrl}"></img>
+			</div>
 			<div class="recipe-ingredients">
 				<h2 id="ingredients">Ingredients</h2>
 					<ul>
@@ -28,7 +30,9 @@
 
 		<section class="instructions">
 			<h2>Instructions</h2>
-			<p id="recipe-instructions" th:utext="${recipe.instructions}"></p>
+			<div class="all-instructions">
+				<p id="recipe-instructions" th:utext="${recipe.instructions}"></p>
+			</div>
 			
 		</section>
 		

@@ -68,8 +68,8 @@ a {
 	}
 
 body {
-    background-attachment: fixed;
-    background-image: url("./images/cutting-board.jpg");
+	background-attachment: fixed;
+    background-image: url("./images/media-query-backdrop.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -136,6 +136,7 @@ ul {
 	margin: 1rem;
 	box-shadow: 2px 2px 2px 2px black;
 	padding: 15px;
+	text-align: center;
 }
 
 .checkout-item {
@@ -200,10 +201,6 @@ ul {
 	font-family: 'Homemade Apple', cursive;
 }
 
-.recipe-instruction {
-	padding-bottom: 1rem;
-}
-
 .recipe-on-home {
 	background-color: white;
 	margin-bottom: 0.5rem;
@@ -218,6 +215,10 @@ ul {
 .store-item-image {
 	height: auto;
 	max-width: 65vw;
+}
+
+.store-item-name {
+	font-size: 5vw;
 }
 
 .store-item-selection {
@@ -247,16 +248,6 @@ ul {
 	margin: 0;
 }
 
-#comma, 
-#store-item-name,
-#store-item-price {
-	font-size: 5vw;
-}
-
-#ingredient-item {
-	font-size: 1rem;
-}
-
 #my-shopping-list {
 	border: none;
 	box-shadow: none;
@@ -272,6 +263,7 @@ ul {
 #pick-recipes {
 	box-shadow: 2px 2px 2px 2px black;
 }
+
 
 #recipe-text {
     color: black;
@@ -316,8 +308,6 @@ ul {
 
 
 
-
-
 @media (min-width: 600px) {
 	.copyright {
 		font-size: 3vw;
@@ -325,11 +315,16 @@ ul {
 }
 
 @media (min-width: 768px) {
-/*	body {
+	* {
+		border: none;
+		box-shadow: none;
+	}
+
+	body {
 		background-attachment: fixed;
-	    background-image: url("./images/cutting-board.jpg");
+	    background-image: url("./images/meal-prep-cutting-board-2.jpg");
 	    background-size: cover;
-	}*/
+	}
 
 	footer {
 		background-color: transparent;
@@ -337,10 +332,8 @@ ul {
 		margin: 0;
 	}
 
+	h1 .dollar,
 	h1 {
-		background-color: white;
-	    border: double;
-	    border-width: 10px;
 	    /*font-family: 'Cabin Sketch', cursive;*/
 	    /*font-family: 'Arima Madurai', cursive;*/
 	    /*font-family: 'Unica One', cursive;*/
@@ -363,12 +356,12 @@ ul {
 	    /*font-family: 'Scope One', serif;*/
 	    font-family: 'Source Serif Pro', serif;
 	    font-size: 46px;
-	    padding-left: 1rem;
-	    padding-right: 1rem;
+		    
 	}
 
 	h2 {
-		box-shadow: 2px 2px 2px 2px black;
+		border: none;
+		box-shadow: none;
 	    /*font-family: 'Clicker Script', cursive;***/
 	    /*font-family: 'Covered By Your Grace', cursive;*/
 	    /*font-family: 'Dancing Script', cursive;*/
@@ -385,14 +378,28 @@ ul {
 		text-shadow: .5px .5px grey;
 	}
 
+		.instructions h2 {
+			border: none;
+			box-shadow: none;
+		}
+
 	h3 {
 		font-size: 32px;
 	}
 
 	header {
-		background-color: transparent;
+		border: none;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.all-instructions {
 		border: none;
 		box-shadow: none;
+		padding: 1rem;
 	}
 
 	.content {
@@ -405,10 +412,21 @@ ul {
 		font-size: 2vw;
 	}
 
-	.recipe-on-home {
-		border: none;
-		box-shadow: none;
+	.recipe-ingredients {
 		margin: 0;
+	}
+
+		.recipe-ingredients ul {
+			border: none;
+			box-shadow: none;
+		}
+	
+	.recipe-layout {
+		background-color: white;
+		margin-bottom: 1rem;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 1rem;
 	}
 
 	.recipe-on-home {
@@ -426,17 +444,17 @@ ul {
 		box-shadow: none;
 	}
 
-/*	.selection-header {
+	.selection-header {
 		background-color: white;
 		border: thin solid black;
 		box-shadow: 2px 2px 2px 2px black;
-	}*/
+	}
 
-/*	.store-item {
+	.store-item {
 		background-color: white;
 		border: thin solid black;
 		box-shadow: 2px 2px 2px 2px black;
-	}*/
+	}
 
 	.store-item-name {
 		font-size: 1.75vw;
@@ -448,9 +466,23 @@ ul {
 		box-shadow: none;
 	}
 
-	.store-options {
+	/*.store-options {
 		background-color: white;
-		width: 100vw;
+		max-width: 100vw;
+	}*/
+
+	#ingredients {
+		margin: 0
+	}
+
+		#ingredients ul li {
+			border: none;
+			box-shadow: none;
+		}
+
+	#one-recipe-image {
+		border: none;
+		box-shadow: none;
 	}
 
 	#pick-recipes {
@@ -458,6 +490,9 @@ ul {
 		box-shadow: none;
 	}
 
-	#project-name {
-		font-size: 8vw;
+	.recipe-instruction {
+		background-color: white;
+		border: none;
+		box-shadow: none;
 	}
+}

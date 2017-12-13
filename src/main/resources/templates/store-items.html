@@ -51,7 +51,9 @@ model attribute names for thymeleaf:
 						th:value="${j.id}" /> 
 					<input id="quantity-input" type="text" th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
 					<!-- <br></br> -->
-					<span class="store-item-name" th:text="${j.name}"></span></span>
+					<span id="store-item-name" th:text="${j.name}"></span>
+					<span id="comma">,</span>
+					<span id="store-item-price" th:text="'$' + ${j.displayPrice}"></span></span>
 					<br></br>
 				
 				</p>
