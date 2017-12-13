@@ -54,19 +54,6 @@ public class GroceryAppController {
 		return "ingredients";
 	}
 
-	@RequestMapping("/tags")
-	public String getAllTags(Model model) {
-		model.addAttribute("tags", tagRepo.findAll());
-		return "tags";
-	}
-
-	@RequestMapping("/tagStoreItems")
-	public String getStoreItemsForTag(@RequestParam Long id, Model model) {
-		Tag searchTag = tagRepo.findOne(id);
-		model.addAttribute("storeItems", storeItemRepo.findByTag(searchTag));
-		return "tag-with-assoc-store-items";
-	}
-
 	@RequestMapping("/cook-this")
 	public String cookThisButtonActionOnRecipeTemplate(@RequestParam Long id) {
 
@@ -154,8 +141,45 @@ public class GroceryAppController {
 		return "grocery-list";
 	}
 
+	// This is a utility mapping in case we want to remove all of the
+	// selected ingredients. They are in the database once the user
+	// starts a session, until they basically start the controller over again.
+	@RequestMapping("/reset")
+	public String removeSelectedIngredients() {
+		SelectedIngredientsList selIngList = selectedIngredientsListRepo.findOne(1L);
+		selIngList.removeAllIngredients();
+		lineItemRepo.deleteAll();
+		return "redirect:/recipes";
+	}
+
+	// this is a utility mapping used during development to show all
+	// of the tags in the system
+	@RequestMapping("/tags")
+	public String getAllTags(Model model) {
+		model.addAttribute("tags", tagRepo.findAll());
+		return "tags";
+	}
+
+	// this is a utility mapping used during development to show all
+	// of the store items for a particular tag in the system
+	@RequestMapping("/tagStoreItems")
+	public String getStoreItemsForTag(@RequestParam Long id, Model model) {
+		Tag searchTag = tagRepo.findOne(id);
+		model.addAttribute("storeItems", storeItemRepo.findByTag(searchTag));
+		return "tag-with-assoc-store-items";
+	}
+
 	// important ref for form stuff
 	// https://stackoverflow.com/questions/44415339/bind-list-or-array-to-form-in-thymleaf
+
+	// The mappings below are for testing purposes
+	// The test-select-store-items url shows all store items in the system
+	// IF IF IF you uncomment the mwzig line in the populator to put every
+	// Store item we have into selected items
+	// You can then go directly to this page to select store items
+	// When you click submit, it will then do a POST to /testshowselectedstoreitems
+	// That logic creates line items then re-routes to the grocery-list page to
+	// show the grocery items selected and total cost.
 
 	@GetMapping("/test-select-store-items")
 	public String testSelectStoreItems(Model model) {
