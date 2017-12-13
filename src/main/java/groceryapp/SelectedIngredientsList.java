@@ -92,6 +92,10 @@ public class SelectedIngredientsList {
 		return selIngredientMap;
 	}
 
+	public void removeAllIngredients() {
+		ingredients.clear();
+	}
+
 	public Set<StoreItem> getMatchingStoreItems() {
 		Set<StoreItem> matchingStoreItems = null;
 
