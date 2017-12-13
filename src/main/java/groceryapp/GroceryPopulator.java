@@ -135,7 +135,7 @@ public class GroceryPopulator implements CommandLineRunner {
 		// populateStoreItemsAndLineItems();
 		populateStoreItemsFromJSONInput();
 
-		Recipe recipe1 = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg",
+		Recipe recipeChkBrocAlf = new Recipe("Chicken Broccoli Alfredo", "/images/chicken-broccoli-alfredo.jpg",
 				"<p class=\"recipe-instruction recipe-instruction-1\">1. "
 						+ "Cook fettuccine according to package directions adding broccoli last 3 minutes, drain. Set aside.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-2\">2. "
@@ -144,9 +144,9 @@ public class GroceryPopulator implements CommandLineRunner {
 						+ "Simmer, uncovered, for 10 to 12 minutes or until thick, stirring frequently. Trust me, it will thicken. When sauce has reached desired consistency, stir in Parmesan cheese.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-4\">4. "
 						+ "Add cooked chicken to Alfredo sauce and heat through. Serve over hot, cooked fettuccine and broccoli.</p>");
-		recipeRepo.save(recipe1);
+		recipeRepo.save(recipeChkBrocAlf);
 
-		Recipe recipe2 = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg",
+		Recipe recPotPie = new Recipe("Classic Chicken Pot Pie", "/images/classic-chicken-pot-pie.jpg",
 				"<p class=\"recipe-instruction recipe-instruction-1\">1. "
 						+ "In 2-quart saucepan, melt butter over medium heat. Stir in flour, onion, salt and pepper. Cook, stirring constantly, until mixture is bubbly; remove from heat. Stir in broth and milk. Heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in chicken and peas and carrots; remove from heat.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-2\">2. "
@@ -154,9 +154,9 @@ public class GroceryPopulator implements CommandLineRunner {
 						+ "<p class=\"recipe-instruction recipe-instruction-3\">3. "
 						+ "Roll remaining pie crust into 11-inch square. Cut out designs with 1-inch cookie cutter. Place square over chicken mixture. Arrange cutouts on top crust. Turn edges of pie crust under; flute edge.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-4\">4. Bake about 35 minutes or until golden brown.</p>");
-		recipeRepo.save(recipe2);
+		recipeRepo.save(recPotPie);
 
-		Recipe recipe3 = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg",
+		Recipe recTunaCass = new Recipe("Best Tuna Casserole", "/images/tuna-casserole.jpg",
 				"<p class=\"recipe-instruction recipe-instruction-1\">1. "
 						+ "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water for 8 to 10 minutes, or until al dente; drain.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-2\">2. "
@@ -164,17 +164,17 @@ public class GroceryPopulator implements CommandLineRunner {
 						+ "<p class=\"recipe-instruction recipe-instruction-3\">3. "
 						+ "In a large bowl, thoroughly mix noodles, onion, 1 cup cheese, peas, tuna, soup and mushrooms. Transfer to a 9x13 inch baking dish, and top with potato chip crumbs and remaining 1 cup cheese. Parmesan cheese.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-4\">4. Bake for 15 to 20 minutes in the preheated oven, or until cheese is bubbly.</p>");
-		recipeRepo.save(recipe3);
+		recipeRepo.save(recTunaCass);
 
-		Recipe recipe4 = new Recipe("Vegetarian Lasagna", "images/veggie-lasagna.jpg",
+		Recipe recVegLas = new Recipe("Vegetarian Lasagna", "images/veggie-lasagna.jpg",
 				"<p class=\"recipe-instruction recipe-instruction-1\">1. Spray 12x10-inch sheet of foil with nonstick cooking spray. In medium bowl, combine pasta sauce and zucchini; mix well. In another medium bowl, combine cottage cheese, spinach, Parmesan cheese and oregano; Mix well.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-2\">2. Spread 1/4 cup sauce mixture in ungreased 8-inch square (2-quart) glass baking dish. Top with 2 lasagna noodles. Spread about 1/2 cup sauce mixture over noodles. Drop 1/2 cup of spinach mixture by small spoonfuls over sauce mixture; spread carefully. Sprinkle with 1/4 of mushrooms and 1/2 cup of the mozzarella cheese.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-3\">3. Repeat layers 3 more times, beginning with noodles. Cover with foil, sprayed side down; refrigerate at least 8 hours or overnight.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-4\">4. Heat oven to 400°F. Bake covered for 45 minutes.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-5\">5. Uncover baking dish; bake an additional 10 minutes or until lasagna is bubbly around edges. Let stand 10 minutes before serving.</p>");
-		recipeRepo.save(recipe4);
+		recipeRepo.save(recVegLas);
 
-		Recipe recipe5 = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg",
+		Recipe recSalmon = new Recipe("Paleo Pecan Maple Syrup Salmon", "/images/salmon.jpg",
 				"<p class=\"recipe-instruction recipe-instruction-1\">1. "
 						+ "Place salmon fillets on a baking sheet and season with salt and black pepper.</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-2\">2. "
@@ -183,109 +183,112 @@ public class GroceryPopulator implements CommandLineRunner {
 						+ "Preheat oven to 425°F (220°C).</p>"
 						+ "<p class=\"recipe-instruction recipe-instruction-4\">4. "
 						+ "Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.</p>");
-		recipeRepo.save(recipe5);
+		recipeRepo.save(recSalmon);
 
-		Ingredient fettuccine = new Ingredient("Fettucine", "16 oz", tag1fettuccine, recipe1);
+		Ingredient fettuccine = new Ingredient("Fettucine", "16 oz", tag1fettuccine, recipeChkBrocAlf);
 		ingredientRepo.save(fettuccine);
-		Ingredient broccoli = new Ingredient("Fresh chopped broccoli", "1 to 2 cups", tag2broccoli, recipe1);
+		Ingredient broccoli = new Ingredient("Fresh chopped broccoli", "1 to 2 cups", tag2broccoli, recipeChkBrocAlf);
 		ingredientRepo.save(broccoli);
-		Ingredient butter = new Ingredient("Butter", "1/2 cup (1 stick)", tag3butter, recipe1);
+		Ingredient butter = new Ingredient("Butter", "1/2 cup (1 stick)", tag3butter, recipeChkBrocAlf);
 		ingredientRepo.save(butter);
-		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp (1 clove)", tag4mincedGarlic, recipe1);
+		Ingredient garlic = new Ingredient("Garlic", "1/2 tsp (1 clove)", tag4mincedGarlic, recipeChkBrocAlf);
 		ingredientRepo.save(garlic);
-		Ingredient heavyCream = new Ingredient("Heavy Cream", "2 cups", tag8heavyCream, recipe1);
+		Ingredient heavyCream = new Ingredient("Heavy Cream", "2 cups", tag8heavyCream, recipeChkBrocAlf);
 		ingredientRepo.save(heavyCream);
-		Ingredient garlicPowder = new Ingredient("Garlic Powder", "1/8 tsp", tag5garlicPowder, recipe1);
+		Ingredient garlicPowder = new Ingredient("Garlic Powder", "1/8 tsp", tag5garlicPowder, recipeChkBrocAlf);
 		ingredientRepo.save(garlicPowder);
-		Ingredient blackPepper = new Ingredient("Black Pepper", "1/8 tsp", tag6pepper, recipe1);
+		Ingredient blackPepper = new Ingredient("Black Pepper", "1/8 tsp", tag6pepper, recipeChkBrocAlf);
 		ingredientRepo.save(blackPepper);
 		Ingredient parmesanCheese = new Ingredient("Parmesan Cheese", "1/4 cup freshly grated", tag9parmesanCheese,
-				recipe1);
+				recipeChkBrocAlf);
 		ingredientRepo.save(parmesanCheese);
-		Ingredient chickenBreasts = new Ingredient("Chicken Breasts", "2 to 3 cooked/diced", tag10chicken, recipe1);
+		Ingredient chickenBreasts = new Ingredient("Chicken Breasts", "2 to 3 cooked/diced", tag10chicken,
+				recipeChkBrocAlf);
 		ingredientRepo.save(chickenBreasts);
 
-		Ingredient butter2 = new Ingredient("Butter", "1/3 cup", tag3butter, recipe2);
+		// Pot Pie
+		Ingredient butter2 = new Ingredient("Butter", "1/3 cup", tag3butter, recPotPie);
 		ingredientRepo.save(butter2);
-		Ingredient blackPepper2 = new Ingredient("Black Pepper", "1/4 tsp", tag6pepper, recipe2);
+		Ingredient blackPepper2 = new Ingredient("Black Pepper", "1/4 tsp", tag6pepper, recPotPie);
 		ingredientRepo.save(blackPepper2);
 
 		Ingredient chicken = new Ingredient("Chicken", "2 1/2 to 3 cups cut-up cooked chicken or turkey", tag10chicken,
-				recipe2);
+				recPotPie);
 		ingredientRepo.save(chicken);
-		Ingredient flour = new Ingredient("All Purpose flour", "1/3 cup", tag11flour, recipe2);
+		Ingredient flour = new Ingredient("All Purpose flour", "1/3 cup", tag11flour, recPotPie);
 		ingredientRepo.save(flour);
-		Ingredient milk = new Ingredient("Milk", "2/3 cup", tag14milk, recipe2);
+		Ingredient milk = new Ingredient("Milk", "2/3 cup", tag14milk, recPotPie);
 		ingredientRepo.save(milk);
-		Ingredient chickenBroth = new Ingredient("Chicken Broth", "1 3/4 cups", tag13chickenBroth, recipe2);
+		Ingredient chickenBroth = new Ingredient("Chicken Broth", "1 3/4 cups", tag13chickenBroth, recPotPie);
 		ingredientRepo.save(chickenBroth);
-		Ingredient onion = new Ingredient("Chopped onion", "1/3 cup", tag12onions, recipe2);
+		Ingredient onion = new Ingredient("Chopped onion", "1/3 cup", tag12onions, recPotPie);
 		ingredientRepo.save(onion);
-		Ingredient salt = new Ingredient("Salt", "1/2 tsp", tag7salt, recipe2);
+		Ingredient salt = new Ingredient("Salt", "1/2 tsp", tag7salt, recPotPie);
 		ingredientRepo.save(salt);
 		Ingredient frozenVeggies = new Ingredient("Frozen peas and carrots", "1 box (10 oz)", tag15frozenPeasAndCarrots,
-				recipe2);
+				recPotPie);
 		ingredientRepo.save(frozenVeggies);
 		Ingredient pieCrust = new Ingredient("Refrigerated Pie Crust", "1 package (15 oz) softened as directed on box",
-				tag16refrigeratedPieCrust, recipe2);
+				tag16refrigeratedPieCrust, recPotPie);
 		ingredientRepo.save(pieCrust);
 
-		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups", tag24pastaSauce, recipe3);
+		// Lasagna
+		Ingredient pastaSauce = new Ingredient("Pasta Sauce", "2 cups", tag24pastaSauce, recVegLas);
 		ingredientRepo.save(pastaSauce);
-		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup", tag25zucchini, recipe3);
+		Ingredient zucchini = new Ingredient("Zucchini - shredded", "1 cup", tag25zucchini, recVegLas);
 		ingredientRepo.save(zucchini);
-		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup", tag26, recipe3);
+		Ingredient cottageCheese = new Ingredient("Low-Fat Cottage Cheese", "1 1/2 cup", tag26, recVegLas);
 		ingredientRepo.save(cottageCheese);
-		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.", tag27, recipe3);
+		Ingredient frozenSpinach = new Ingredient("Frozen Spinach", "9 oz.", tag27, recVegLas);
 		ingredientRepo.save(frozenSpinach);
 		Ingredient parmessanCheese = new Ingredient("Parmessan Cheese - grated", "1/3 cup", tag9parmesanCheese,
-				recipe3);
+				recVegLas);
 		ingredientRepo.save(parmessanCheese);
-		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp", tag28, recipe3);
+		Ingredient oregano = new Ingredient("Oregano - chopped", "2 tbsp", tag28, recVegLas);
 		ingredientRepo.save(oregano);
-		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)", tag29, recipe3);
+		Ingredient lasagnaNoodles = new Ingredient("Lasagna Noodles - oven ready", "8 (7x3 inches)", tag29, recVegLas);
 		ingredientRepo.save(lasagnaNoodles);
-		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can", tag23mushrooms, recipe3);
+		Ingredient mushrooms = new Ingredient("Mushrooms", "1 (4oz.) can", tag23mushrooms, recVegLas);
 		ingredientRepo.save(mushrooms);
 		Ingredient mozzarellaCheese = new Ingredient("Mozzarella Cheese - shredded", "8oz. (2 Cups)",
-				tag30mozzarellaCheese, recipe3);
+				tag30mozzarellaCheese, recVegLas);
 		ingredientRepo.save(mozzarellaCheese);
 
-		Ingredient eggNoodles = new Ingredient("Egg noodles", "1 (12 ounce) package", tag17eggNoodles, recipe4);
+		Ingredient eggNoodles = new Ingredient("Egg noodles", "1 (12 ounce) package", tag17eggNoodles, recTunaCass);
 		ingredientRepo.save(eggNoodles);
-		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained", tag18tuna, recipe4);
+		Ingredient tuna = new Ingredient("Tuna", "2 (5 ounce) cans tuna, drained", tag18tuna, recTunaCass);
 		ingredientRepo.save(tuna);
-		Ingredient onion2 = new Ingredient("Chopped onion", "1/4 cup", tag12onions, recipe4);
+		Ingredient onion2 = new Ingredient("Chopped onion", "1/4 cup", tag12onions, recTunaCass);
 		ingredientRepo.save(onion2);
 		Ingredient mushroomSoup = new Ingredient("Condensed cream of mushroom soup", "2 (10.75 ounce) cans",
-				tag19mushroomSoup, recipe4);
+				tag19mushroomSoup, recTunaCass);
 		ingredientRepo.save(mushroomSoup);
-		Ingredient cheddarCheese = new Ingredient("Shredded cheddar cheese", "2 cups", tag20cheddarCheese, recipe4);
+		Ingredient cheddarCheese = new Ingredient("Shredded cheddar cheese", "2 cups", tag20cheddarCheese, recTunaCass);
 		ingredientRepo.save(cheddarCheese);
-		Ingredient mushrooms2 = new Ingredient("Sliced mushrooms", "1/2 (4.5 ounce) can", tag23mushrooms, recipe4);
+		Ingredient mushrooms2 = new Ingredient("Sliced mushrooms", "1/2 (4.5 ounce) can", tag23mushrooms, recTunaCass);
 		ingredientRepo.save(mushrooms2);
-		Ingredient greenPeas = new Ingredient("Frozen green peas", "1 cup", tag21frozenGreenPeas, recipe4);
+		Ingredient greenPeas = new Ingredient("Frozen green peas", "1 cup", tag21frozenGreenPeas, recTunaCass);
 		ingredientRepo.save(greenPeas);
-		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup", tag22chips, recipe4);
+		Ingredient potatoChips = new Ingredient("Crushed potato chips", "1 cup", tag22chips, recTunaCass);
 		ingredientRepo.save(potatoChips);
 
-		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "1/2 tsp", tag31, recipe5);
+		Ingredient chipotlePowder = new Ingredient("Chipotle pepper powder", "1/2 tsp", tag31, recSalmon);
 		ingredientRepo.save(chipotlePowder);
-		Ingredient salmon = new Ingredient("Salmon fillets", "4 (4 ounce)", tag32, recipe5);
+		Ingredient salmon = new Ingredient("Salmon fillets", "4 (4 ounce)", tag32, recSalmon);
 		ingredientRepo.save(salmon);
-		Ingredient pecans = new Ingredient("Pecans", "1/2 cup", tag33, recipe5);
+		Ingredient pecans = new Ingredient("Pecans", "1/2 cup", tag33, recSalmon);
 		ingredientRepo.save(pecans);
-		Ingredient onionPowder = new Ingredient("Onion powder", "1/2 tsp", tag34, recipe5);
+		Ingredient onionPowder = new Ingredient("Onion powder", "1/2 tsp", tag34, recSalmon);
 		ingredientRepo.save(onionPowder);
-		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp", tag35, recipe5);
+		Ingredient mapleSyrup = new Ingredient("Pure maple syrup", "3 tbsp", tag35, recSalmon);
 		ingredientRepo.save(mapleSyrup);
-		Ingredient paprika = new Ingredient("Smoked paprika", "1 tsp", tag36, recipe5);
+		Ingredient paprika = new Ingredient("Smoked paprika", "1 tsp", tag36, recSalmon);
 		ingredientRepo.save(paprika);
-		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp", tag37, recipe5);
+		Ingredient acv = new Ingredient("Apple cider vinegar", "1 tbsp", tag37, recSalmon);
 		ingredientRepo.save(acv);
-		Ingredient salt2 = new Ingredient("Salt", "to taste", tag7salt, recipe5);
+		Ingredient salt2 = new Ingredient("Salt", "to taste", tag7salt, recSalmon);
 		ingredientRepo.save(salt2);
-		Ingredient blackPepper3 = new Ingredient("Pepper", "to taste", tag6pepper, recipe5);
+		Ingredient blackPepper3 = new Ingredient("Pepper", "to taste", tag6pepper, recSalmon);
 		ingredientRepo.save(blackPepper3);
 
 	}
