@@ -56,15 +56,15 @@
     
 }
 a {
-	color: black;
-	font-size: large;
+	color: green;
+	font-size: 1rem;
     padding: 10px;
     text-shadow: .5px .5px grey;
 }
 
 	a:visited {
-		color: grey;
-		text-shadow: .5px .5px black;
+		color: #002C1E;
+		text-shadow: .5px .5px grey;
 	}
 
 body {
@@ -138,15 +138,6 @@ ul {
 	padding: 15px;
 }
 
-.build-cart #build-cart {
-	border: double;
-    border-width: 10px;
-    background-color: white;
-    background-image: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
 .checkout-item {
 	font-size: 5vw;
 }
@@ -205,7 +196,9 @@ ul {
 	}
 
 
-.page-title {
+.page-title,
+#build-cart,
+#my-shopping-list {
 	font-family: 'Homemade Apple', cursive;
 }
 
@@ -220,22 +213,13 @@ ul {
 	margin-right: 1rem;	
 }
 
-.selection-header {
-	background-color: white;
-	box-shadow: 2px 2px 2px 2px black;
-}
-
-	.selection-header p {
-		padding-top: .5rem;
-	}
-
 .store-item {
 	font-size: small;
 }
 
-.store-options .store-item-image {
+.store-item-image {
 	height: auto;
-	width: 30vw;
+	max-width: 65vw;
 }
 
 .store-item-selection {
@@ -413,6 +397,27 @@ ul {
 		box-shadow: none;
 	}
 
+	.recipe-on-home {
+		position: relative;
+	} 
+
+	.one-recipe:hover .mask {
+		opacity: 1;
+	}
+
+	.one-recipe:hover .recipe-image {
+		opacity: 0.3;
+	}
+
+	.build-cart #build-cart,
+	.my-shopping-list #my-shopping-list {
+		background-color: white;
+	    border: double;
+	    border-width: 10px;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	}
+
 	.content {
 		background-color: white;
 		border: none;
@@ -423,10 +428,31 @@ ul {
 		font-size: 2vw;
 	}
 
-	.recipe-on-home {
-		border: none;
-		box-shadow: none;
-		margin: 0;
+	.mask {
+		z-index: 10000;
+		transition: .5s ease;
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%)
+	}
+
+	.recipe-image {
+	  	backface-visibility: hidden;
+	  	display: block;
+	  	height: auto;
+		opacity: 1;
+	  	transition: .5s ease;
+	  	width: 100%;
+	}
+
+	.recipe-name {
+		background-color: transparent;
+		color: black;
+		font-size: 16px;
+		padding: 16px 32px;
 	}
 
 	.recipe-on-home {
@@ -435,8 +461,25 @@ ul {
 		margin: 0;
 	}
 
-	.recipes {
+	.recipe-on-home {
+		border: none;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	/*.recipes {
 		background-color: white;
+	}*/
+
+	.recipes .mask {
+		opacity: 0;
+		background-color: rgba (0,0,0,0.8);
+		transition: all 0.4s ease-in-out;
+	}
+
+	.recipes h3 {
+		transform: translateY(-100px);
+		transition: all 0.2s ease-in-out;
 	}
 
 	.selected-ingredients {
@@ -444,20 +487,16 @@ ul {
 		box-shadow: none;
 	}
 
-/*	.selection-header {
+	.selection-header {
 		background-color: white;
 		border: thin solid black;
 		box-shadow: 2px 2px 2px 2px black;
-	}*/
+	}
 
-/*	.store-item {
+	.store-item {
 		background-color: white;
 		border: thin solid black;
 		box-shadow: 2px 2px 2px 2px black;
-	}*/
-
-	.store-item-name {
-		font-size: 1.75vw;
 	}
 
 	.store-item-selection {
@@ -466,9 +505,14 @@ ul {
 		box-shadow: none;
 	}
 
-	.store-options {
+/*	.store-options {
 		background-color: white;
-		width: 100vw;
+		box-shadow: 2px 2px 2px 2px black;
+		max-width: 100vw;
+	}*/
+
+	.text {
+		font-size: 1rem;
 	}
 
 	#pick-recipes {
@@ -480,3 +524,15 @@ ul {
 		font-size: 8vw;
 
 	}
+
+	#quantity-input {
+		border: thin solid black;
+	}
+
+	#store-item-name,
+	#comma,
+	#store-item-price {
+		font-size: 1rem;
+	}
+
+}

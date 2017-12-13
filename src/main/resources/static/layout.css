@@ -37,6 +37,7 @@ ul {
 .back {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 1rem;
 }
 
 .container {
@@ -152,7 +153,10 @@ ul {
 }
 
 .total-edit {
-	margin-top: 0;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #cook-button,
@@ -231,12 +235,15 @@ ul {
 		width: 100vw;
 	}
 
-	.build-cart {
+	.build-cart,
+	.my-shopping-list {
 		align-items: center;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 	}
+
+	.c
 
 	.container {
 		min-height: 100vh;
@@ -254,6 +261,19 @@ ul {
 
 		.ingredients ul {
 			font-size: 8rem;
+		}
+
+	.final-selection li {
+		display: flex;
+		height: auto;
+		justify-content: space-between;
+		width: 33%;
+	}
+
+		.final-selection li .selected-text {
+			display: flex;
+			flex-direction: column;
+			margin: auto;
 		}
 
 	.nav-buttons {
@@ -310,6 +330,11 @@ ul {
 		margin: 0;
 	}
 
+	.selection .final-selection {
+		display: flex;
+		flex-direction: row;
+	}
+
 	.selection-header {
 		margin-bottom: 1rem;
 	}
@@ -331,12 +356,13 @@ ul {
 	.store-item {
 		margin-right: 1rem;
 		margin-bottom: 1rem;
+		width: 30%;
 	}
 
 	.store-item-image {
 		margin-top: 1rem;
-		max-width: 70%;
-		height: auto;
+		width: auto;
+		max-height: 50%;
 	}
 
 	.store-item-name {
@@ -347,6 +373,7 @@ ul {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	#ingredient-item {
@@ -359,9 +386,22 @@ ul {
 		margin-right: 0;
 	}
 
+	#my-shopping-list {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
 	#one-recipe-image {
 	/*	margin-right: 1rem;
 		margin-bottom: 1rem;*/
 		width: 45vw;
 	}
+
+	#selected-image {
+		height: auto;
+		margin: auto;
+		max-width: 45%;
+	}
+
 }

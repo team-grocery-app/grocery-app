@@ -32,13 +32,17 @@
 			<!-- Content -->
 			<div class="content">
 				<h2 id="pick-recipes">Pick Your Recipe(s):</h2>
-				<div class="recipes">
-					<div th:each="i: ${recipes}">
-						<a class="recipe-on-home" th:href="@{/recipe(id=${i.id})}">
-						<img class="recipe-image" th:src="${i.imageUrl}"/>
-						<h3 th:text="${i.name}"></h3></a>
+				
+					<div class="recipes">
+						<div class="one-recipe" th:each="i: ${recipes}">
+							<a class="recipe-on-home" th:href="@{/recipe(id=${i.id})}">
+								<img class="recipe-image" th:src="${i.imageUrl}"/>
+								<div class="mask">
+									<h3 class="recipe-name" th:text="${i.name}"></h3>
+								</div>
+							</a>
+						</div>
 					</div>
-				</div>
 			</div>
 
 			<!-- Footer -->

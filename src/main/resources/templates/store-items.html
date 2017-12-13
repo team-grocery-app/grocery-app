@@ -12,7 +12,7 @@
 <body>
 	<div class="container">
 		<header class="build-cart">
-			<h2 id="build-cart">Build Your Cart</h2>
+			<h1 id="build-cart">Build Your Cart</h1>
 				<!-- <div id="social__media">
 					<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
 						class="fa fa-reddit-square" aria-hidden="true"></i> <i
@@ -47,13 +47,16 @@ model attribute names for thymeleaf:
 					
 					<img class="store-item-image" th:src="${j.imgUrlLg}"/>
 					<br></br>
-					<span class="selection-item"><input class="checkbox" type="checkbox" th:field="*{ids[__${j.id}__]}"
-						th:value="${j.id}" /> 
-					<input id="quantity-input" type="text" th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
+					<span class="selection-item">
+						<input class="checkbox" type="checkbox" th:field="*{ids[__${j.id}__]}" th:value="${j.id}" /> 
+						<input id="quantity-input" type="text" th:field="*{qtys[__${j.id}__]}" th:value="'1'" th:placeholder="1" />
 					<!-- <br></br> -->
-					<span id="store-item-name" th:text="${j.name}"></span>
-					<span id="comma">,</span>
-					<span id="store-item-price" th:text="'$' + ${j.displayPrice}"></span></span>
+						<span class="item-name">
+							<span id="store-item-name" th:text="${j.name}"></span>
+							<span id="comma">,</span>
+							<span id="store-item-price" th:text="'$' + ${j.displayPrice}"></span>
+						</span>
+					</span>
 					<br></br>
 				
 				</p>

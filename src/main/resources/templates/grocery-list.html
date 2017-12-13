@@ -11,8 +11,8 @@
 
 <body>
 	<div class="container">
-		<header>
-			<h2 id="my-shopping-list">My Shopping List</h2>
+		<header class="my-shopping-list">
+			<h1 id="my-shopping-list">My Shopping List</h1>
 				<!-- <div id="social__media">
 					<i class="fa fa-facebook-square" aria-hidden="true"></i> 
 					<i class="fa fa-reddit-square" aria-hidden="true"></i> 
@@ -29,10 +29,12 @@
 				<ul class="final-selection">
 					<li th:each="i: ${groceryListLineItems}">
 						<img class="checkout-item" id="selected-image" th:src="${i.storeItem.imgUrlLg}"/>
-					 	<span class="text"><strong>Quantity: </strong><span class="checkout-item" th:text="${i.quantity}"></span></span>
-					 	<span class="text"><strong>Store Item: </strong><span class="checkout-item" th:text="${i.storeItem.name}"></span></span>
-					 	<span class="text"><strong>Price Per Item: </strong><span class="checkout-item" th:text="${i.storeItem.displayPrice}"></span></span>
-					 	<span class="text"><strong>Total Price: </strong><span class="checkout-item" th:text="${i.displayTotalPrice}"></span></span>
+					 	<div class="selected-text">
+						 	<span class="text"><strong>Quantity: </strong><span class="checkout-item text" th:text="${i.quantity}"></span></span>
+						 	<span class="text"><strong>Store Item: </strong><span class="checkout-item text" th:text="${i.storeItem.name}"></span></span>
+						 	<span class="text"><strong>Price Per Item: </strong><span class="checkout-item text" th:text="'$' + ${i.storeItem.displayPrice}"></span></span>
+						 	<span class="text"><strong>Total Price: </strong><span class="checkout-item text" th:text="'$' + ${i.displayTotalPrice}"></span></span>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -40,7 +42,10 @@
 			<div class="total-edit">
 				<p th:text="'Total: $' + ${totalGroceryPrice}"></p>
 
-				<p>Edit Shopping Cart</p>
+				<!-- <p>Edit Shopping Cart</p> -->
+				<form action="http://localhost:8080/store-items">
+					<button>Edit Shopping Cart</button>
+				</form> 
 			</div>
 
 			<a class="back" href="http://localhost:8080/recipes">Back to Recipes</a>
