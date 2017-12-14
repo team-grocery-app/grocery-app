@@ -144,10 +144,6 @@ ul {
 	padding: 15px;
 }
 
-.checkout-item {
-	font-size: 5vw;
-}
-
 .container {
 	background-attachment: fixed;
 	background-size: cover;
@@ -220,13 +216,19 @@ ul {
 	margin-right: 1rem;	
 }
 
+.selected-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
 .store-item {
 	font-size: small;
 }
 
 .store-item-image {
-	height: auto;
-	max-width: 65vw;
+	height: 150px;
+	width: 150px
 }
 
 .store-item-selection {
@@ -240,6 +242,11 @@ ul {
 .text {
 	font-size: 5vw;
 }
+	
+	.text .checkout-item,
+	.text strong {
+		font-size: 6vw;
+	}
 
 .total-edit {
 	background-color: white;
@@ -259,7 +266,7 @@ ul {
 #comma, 
 #store-item-name,
 #store-item-price {
-	font-size: 5vw;
+	font-size: 7vw;
 }
 
 #ingredient-item {
@@ -521,7 +528,8 @@ ul {
 		max-width: 100vw;
 	}*/
 
-	.text {
+	.text .checkout-item,
+	.text strong {
 		font-size: 1rem;
 	}
 
