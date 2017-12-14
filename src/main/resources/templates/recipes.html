@@ -38,7 +38,8 @@
 							<a class="recipe-on-home" th:href="@{/recipe(id=${i.id})}">
 								<img class="recipe-image" th:src="${i.imageUrl}"/>
 								<div class="mask">
-									<h3 class="recipe-name" th:text="${i.name}"></h3>
+									<!-- <h3 class="recipe-name" th:text="${i.name}"></h3> -->
+									<div class="recipe-name" th:text="${i.name}"></div>
 								</div>
 							</a>
 						</div>

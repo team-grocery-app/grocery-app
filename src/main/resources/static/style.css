@@ -75,7 +75,13 @@ body {
 }
 	
 button {
-	box-shadow: 2px 2px 2px 2px black;
+	/*box-shadow: 2px 2px 2px 2px black;*/
+	background-color: #108445;
+	color: white;
+	font-size: .75rem;
+	height: 2rem;
+	width: auto;
+	padding: .5rem;
 }
 
 footer {
@@ -89,7 +95,7 @@ footer {
 .dollar,	
 h1 {
 	font-family: 'Source Serif Pro', serif;
-	font-size: 6vw;
+	font-size: 8vw;
 	text-align: center;
 }
 	
@@ -200,6 +206,7 @@ ul {
 #build-cart,
 #my-shopping-list {
 	font-family: 'Homemade Apple', cursive;
+	font-size: .75rem;
 }
 
 .recipe-instruction {
@@ -383,7 +390,7 @@ ul {
 	    /*font-family: 'Shadows Into Light Two', cursive;*/
 	    /*font-family: 'Stalemate', cursive;*/
 	    /*font-family: 'Sue Ellen Francisco', cursive;*/
-		font-size: 34px;
+		font-size: 1rem;
 		text-shadow: .5px .5px grey;
 	}
 
@@ -409,8 +416,10 @@ ul {
 		opacity: 0.3;
 	}
 
+	.page-title,
 	.build-cart #build-cart,
 	.my-shopping-list #my-shopping-list {
+		font-size: 1.5rem;
 		background-color: white;
 	    border: double;
 	    border-width: 10px;
@@ -429,14 +438,14 @@ ul {
 	}
 
 	.mask {
-		z-index: 10000;
-		transition: .5s ease;
+		-ms-transform: translate(-50%, -50%);
+		left: 50%;
 		opacity: 1;
 		position: absolute;
 		top: 50%;
-		left: 50%;
 		transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%)
+		transition: 1s ease;
+		z-index: 10000;
 	}
 
 	.recipe-image {
@@ -451,8 +460,10 @@ ul {
 	.recipe-name {
 		background-color: transparent;
 		color: black;
-		font-size: 16px;
-		padding: 16px 32px;
+		font-family: 'Homemade Apple', cursive;
+		font-size: 1rem;
+		/*padding: 16px 32px;*/
+		text-align: center;
 	}
 
 	.recipe-on-home {
@@ -473,7 +484,6 @@ ul {
 
 	.recipes .mask {
 		opacity: 0;
-		background-color: rgba (0,0,0,0.8);
 		transition: all 0.4s ease-in-out;
 	}
 
@@ -515,6 +525,10 @@ ul {
 		font-size: 1rem;
 	}
 
+	.total-edit p {
+		padding-bottom: .5rem;
+	}
+
 	#pick-recipes {
 		border: none;
 		box-shadow: none;
@@ -522,7 +536,6 @@ ul {
 
 	#project-name {
 		font-size: 8vw;
-
 	}
 
 	#quantity-input {

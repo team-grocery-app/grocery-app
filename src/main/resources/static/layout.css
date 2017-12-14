@@ -54,7 +54,7 @@ ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
+	padding-bottom: .5rem;
 }
 
 	.ingredients ul li span {
@@ -96,6 +96,10 @@ ul {
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+	.recipe-ingredients ul li {
+		padding-bottom: .25rem;
+	}
 
 .recipe-layout {
 	align-items: center;
@@ -243,8 +247,6 @@ ul {
 		justify-content: center;
 	}
 
-	.c
-
 	.container {
 		min-height: 100vh;
 	}
@@ -297,7 +299,7 @@ ul {
 		justify-content: flex-start;
 		/*margin: auto;*/
 		max-width: 45vw;
-		padding: 0;
+		padding: 1rem;
 	}
 
 		.recipe-ingredients ul {
@@ -356,7 +358,7 @@ ul {
 	.store-item {
 		margin-right: 1rem;
 		margin-bottom: 1rem;
-		width: 30%;
+		width: 31%;
 	}
 
 	.store-item-image {
@@ -373,7 +375,7 @@ ul {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	#ingredient-item {
