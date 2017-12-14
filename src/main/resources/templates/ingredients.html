@@ -18,13 +18,11 @@
             
                 <ul>
                     <li th:each="i: ${selectedIngredients}">
-                        <span th:text="${i.name} + '  ---    ' + ${i.quantity}"></span>
+                        <span id="ingredient-item" th:text="${i.quantity} + '  ---    ' + ${i.name} + ', ' + ${i.recipe.name}"></span>
                         <button id="delete-button" th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">x</button>
                     </li>
                 </ul>
             </form>
-                    
-        </section>
         
         <div class="nav-buttons">
             <form id="shop-button" method="POST">
@@ -33,6 +31,9 @@
             <a class="back" href="http://localhost:8080/recipes">Back to
                 Recipes</a>
         </div>
+        
+        </section>
+        
         <footer>
                 <p class="copyright">Copyright © 2017</p>
             </footer>

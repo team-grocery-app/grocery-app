@@ -56,32 +56,26 @@
     
 }
 a {
-	color: green;
-	font-size: 1rem;
+	color: black;
+	font-size: large;
     padding: 10px;
     text-shadow: .5px .5px grey;
 }
 
 	a:visited {
-		color: #002C1E;
-		text-shadow: .5px .5px grey;
+		color: grey;
+		text-shadow: .5px .5px black;
 	}
 
 body {
-    background-attachment: fixed;
-    background-image: url("./images/cutting-board.jpg");
+	background-attachment: fixed;
+    background-image: url("./images/media-query-backdrop.jpg");
     background-position: center;
     background-size: cover;
 }
 	
 button {
-	/*box-shadow: 2px 2px 2px 2px black;*/
-	background-color: #108445;
-	color: white;
-	font-size: .75rem;
-	height: 2rem;
-	width: auto;
-	padding: .5rem;
+	box-shadow: 2px 2px 2px 2px black;
 }
 
 footer {
@@ -95,7 +89,7 @@ footer {
 .dollar,	
 h1 {
 	font-family: 'Source Serif Pro', serif;
-	font-size: 8vw;
+	font-size: 6vw;
 	text-align: center;
 }
 	
@@ -142,6 +136,7 @@ ul {
 	margin: 1rem;
 	box-shadow: 2px 2px 2px 2px black;
 	padding: 15px;
+	text-align: center;
 }
 
 .checkout-item {
@@ -202,15 +197,8 @@ ul {
 	}
 
 
-.page-title,
-#build-cart,
-#my-shopping-list {
+.page-title {
 	font-family: 'Homemade Apple', cursive;
-	font-size: .75rem;
-}
-
-.recipe-instruction {
-	padding-bottom: 1rem;
 }
 
 .recipe-on-home {
@@ -227,6 +215,10 @@ ul {
 .store-item-image {
 	height: auto;
 	max-width: 65vw;
+}
+
+.store-item-name {
+	font-size: 5vw;
 }
 
 .store-item-selection {
@@ -256,16 +248,6 @@ ul {
 	margin: 0;
 }
 
-#comma, 
-#store-item-name,
-#store-item-price {
-	font-size: 5vw;
-}
-
-#ingredient-item {
-	font-size: 1rem;
-}
-
 #my-shopping-list {
 	border: none;
 	box-shadow: none;
@@ -281,6 +263,7 @@ ul {
 #pick-recipes {
 	box-shadow: 2px 2px 2px 2px black;
 }
+
 
 #recipe-text {
     color: black;
@@ -325,8 +308,6 @@ ul {
 
 
 
-
-
 @media (min-width: 600px) {
 	.copyright {
 		font-size: 3vw;
@@ -334,11 +315,16 @@ ul {
 }
 
 @media (min-width: 768px) {
-/*	body {
+	* {
+		border: none;
+		box-shadow: none;
+	}
+
+	body {
 		background-attachment: fixed;
-	    background-image: url("./images/cutting-board.jpg");
+	    background-image: url("./images/meal-prep-cutting-board-2.jpg");
 	    background-size: cover;
-	}*/
+	}
 
 	footer {
 		background-color: transparent;
@@ -346,10 +332,8 @@ ul {
 		margin: 0;
 	}
 
+	h1 .dollar,
 	h1 {
-		background-color: white;
-	    border: double;
-	    border-width: 10px;
 	    /*font-family: 'Cabin Sketch', cursive;*/
 	    /*font-family: 'Arima Madurai', cursive;*/
 	    /*font-family: 'Unica One', cursive;*/
@@ -372,12 +356,12 @@ ul {
 	    /*font-family: 'Scope One', serif;*/
 	    font-family: 'Source Serif Pro', serif;
 	    font-size: 46px;
-	    padding-left: 1rem;
-	    padding-right: 1rem;
+		    
 	}
 
 	h2 {
-		box-shadow: 2px 2px 2px 2px black;
+		border: none;
+		box-shadow: none;
 	    /*font-family: 'Clicker Script', cursive;***/
 	    /*font-family: 'Covered By Your Grace', cursive;*/
 	    /*font-family: 'Dancing Script', cursive;*/
@@ -390,41 +374,32 @@ ul {
 	    /*font-family: 'Shadows Into Light Two', cursive;*/
 	    /*font-family: 'Stalemate', cursive;*/
 	    /*font-family: 'Sue Ellen Francisco', cursive;*/
-		font-size: 1rem;
+		font-size: 34px;
 		text-shadow: .5px .5px grey;
 	}
+
+		.instructions h2 {
+			border: none;
+			box-shadow: none;
+		}
 
 	h3 {
 		font-size: 32px;
 	}
 
 	header {
-		background-color: transparent;
+		border: none;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.all-instructions {
 		border: none;
 		box-shadow: none;
-	}
-
-	.recipe-on-home {
-		position: relative;
-	} 
-
-	.one-recipe:hover .mask {
-		opacity: 1;
-	}
-
-	.one-recipe:hover .recipe-image {
-		opacity: 0.3;
-	}
-
-	.page-title,
-	.build-cart #build-cart,
-	.my-shopping-list #my-shopping-list {
-		font-size: 1.5rem;
-		background-color: white;
-	    border: double;
-	    border-width: 10px;
-	    padding-left: 1rem;
-	    padding-right: 1rem;
+		padding: 1rem;
 	}
 
 	.content {
@@ -437,59 +412,31 @@ ul {
 		font-size: 2vw;
 	}
 
-	.mask {
-		-ms-transform: translate(-50%, -50%);
-		left: 50%;
-		opacity: 1;
-		position: absolute;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		transition: 1s ease;
-		z-index: 10000;
-	}
-
-	.recipe-image {
-	  	backface-visibility: hidden;
-	  	display: block;
-	  	height: auto;
-		opacity: 1;
-	  	transition: .5s ease;
-	  	width: 100%;
-	}
-
-	.recipe-name {
-		background-color: transparent;
-		color: black;
-		font-family: 'Homemade Apple', cursive;
-		font-size: 1rem;
-		/*padding: 16px 32px;*/
-		text-align: center;
-	}
-
-	.recipe-on-home {
-		border: none;
-		box-shadow: none;
+	.recipe-ingredients {
 		margin: 0;
 	}
 
-	.recipe-on-home {
-		border: none;
-		box-shadow: none;
-		margin: 0;
-	}
-
-	/*.recipes {
+		.recipe-ingredients ul {
+			border: none;
+			box-shadow: none;
+		}
+	
+	.recipe-layout {
 		background-color: white;
-	}*/
-
-	.recipes .mask {
-		opacity: 0;
-		transition: all 0.4s ease-in-out;
+		margin-bottom: 1rem;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 1rem;
 	}
 
-	.recipes h3 {
-		transform: translateY(-100px);
-		transition: all 0.2s ease-in-out;
+	.recipe-on-home {
+		border: none;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	.recipes {
+		background-color: white;
 	}
 
 	.selected-ingredients {
@@ -509,24 +456,33 @@ ul {
 		box-shadow: 2px 2px 2px 2px black;
 	}
 
+	.store-item-name {
+		font-size: 1.75vw;
+	}
+
 	.store-item-selection {
 		background-color: transparent;
 		border: none;
 		box-shadow: none;
 	}
 
-/*	.store-options {
+	/*.store-options {
 		background-color: white;
-		box-shadow: 2px 2px 2px 2px black;
 		max-width: 100vw;
 	}*/
 
-	.text {
-		font-size: 1rem;
+	#ingredients {
+		margin: 0
 	}
 
-	.total-edit p {
-		padding-bottom: .5rem;
+		#ingredients ul li {
+			border: none;
+			box-shadow: none;
+		}
+
+	#one-recipe-image {
+		border: none;
+		box-shadow: none;
 	}
 
 	#pick-recipes {
@@ -534,18 +490,9 @@ ul {
 		box-shadow: none;
 	}
 
-	#project-name {
-		font-size: 8vw;
+	.recipe-instruction {
+		background-color: white;
+		border: none;
+		box-shadow: none;
 	}
-
-	#quantity-input {
-		border: thin solid black;
-	}
-
-	#store-item-name,
-	#comma,
-	#store-item-price {
-		font-size: 1rem;
-	}
-
 }
