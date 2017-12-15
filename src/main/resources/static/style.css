@@ -81,7 +81,10 @@ button {
 	font-size: .75rem;
 	height: 2rem;
 	width: auto;
-	/*padding: .5rem;*/
+	padding-bottom: .25rem;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	padding-top: .25rem;
 }
 
 footer {
@@ -144,6 +147,10 @@ ul {
 	padding: 15px;
 }
 
+.back {
+	font-size: .9rem;
+}
+
 .checkout-item {
 	font-size: 5vw;
 }
@@ -157,7 +164,7 @@ ul {
 }
 
 .copyright {
-    font-size: 3.5vw;
+    font-size: 4.25vw;
     text-shadow: .5px .5px grey;
 }
 
@@ -206,7 +213,7 @@ ul {
 #build-cart,
 #my-shopping-list {
 	font-family: 'Homemade Apple', cursive;
-	font-size: .75rem;
+	font-size: .85rem;
 }
 
 .recipe-instruction {
@@ -237,8 +244,12 @@ ul {
 	padding: 15px;
 }
 
+.submit-reset button input {
+	color: white;
+}
+
 .text {
-	font-size: 5vw;
+	font-size: 5.5vw;
 }
 
 .total-edit {
@@ -259,7 +270,7 @@ ul {
 #comma, 
 #store-item-name,
 #store-item-price {
-	font-size: 5vw;
+	font-size: 6.5vw;
 }
 
 #ingredient-item {
@@ -280,6 +291,10 @@ ul {
 
 #pick-recipes {
 	box-shadow: 2px 2px 2px 2px black;
+}
+
+#quantity-input {
+	border: thin solid black;
 }
 
 #recipe-text {

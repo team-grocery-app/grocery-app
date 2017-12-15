@@ -37,8 +37,8 @@ ul {
 .back {
 	display: flex;
 	justify-content: center;
-	margin-bottom: .5rem;
-	margin-top: .5rem;
+	margin-bottom: .25rem;
+	margin-top: .25rem;
 }
 
 .container {
@@ -46,11 +46,12 @@ ul {
 }
 
 .delete-button {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	height: 30px;
 	margin-left: 10px;
+	padding: 0;
 	width: 30px;
 }
 
@@ -96,7 +97,7 @@ ul {
     display: flex;
     height: auto;
     max-width: 100%;
-    width: 80vw;
+    width: 85vw;
 }
 
 .recipe-image {
@@ -142,7 +143,7 @@ ul {
 	margin-bottom: 1rem;
 	margin-left: 0;
 	margin-right: 0;
-	margin-top: 1rem;
+	margin-top: .75rem;
 }
 
 .store-item {
@@ -154,10 +155,21 @@ ul {
 
 .submit-reset {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	justify-content: space-around;
-	margin-bottom: 1rem;
+	margin-bottom: .5rem;
+	margin-top: .5rem;
 }
+
+.selected-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+	.selected-text .text{
+		padding-bottom: .25rem;
+	}
 
 
 .title-social {
@@ -174,6 +186,10 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 }
+
+	.total-edit button {
+		margin-top: .5rem;
+	}
 
 #cook-button,
 #shop-button {
