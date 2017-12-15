@@ -44,31 +44,42 @@ ul {
 	min-height: 100vh;
 }
 
+.delete-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	margin-left: 1rem;
+	width: 30px;
+}
+
+	.delete-button span {
+		transform: rotate(45deg);
+	}
+
 .final-selection li {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.ingredients ul li{
+.ingredients ul {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
-	padding-bottom: .5rem;
 }
 
-	.ingredients ul li span {
-		font-size: large;
+	.ingredients ul li{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: .5rem;
 	}
 
-	.ingredients ul li button {
-		font-size: medium;
-		height: 1rem;
-		margin-bottom: 15px;
-		padding-left: 5px;
-		padding-right: 5px;
-		width: auto;
-	}
+		.ingredients ul li #ingredient-item {
+			/*font-size: large;*/
+			font-size: 1rem;
+		}
 	
 .instructions h2 {
 	margin-top: 0;
@@ -256,15 +267,6 @@ ul {
 	    width: 100vw;
 	}
 
-	.ingredients {
-		margin: auto;
-		max-width: 60vw;
-	}
-
-		.ingredients ul {
-			font-size: 8rem;
-		}
-
 	.final-selection li {
 		display: flex;
 		height: auto;
@@ -276,6 +278,15 @@ ul {
 			display: flex;
 			flex-direction: column;
 			margin: auto;
+		}
+
+	.ingredients {
+		margin: auto;
+		max-width: 60vw;
+	}
+
+		.ingredients ul {
+			font-size: 8rem;
 		}
 
 	.nav-buttons {
@@ -379,7 +390,8 @@ ul {
 	}
 
 	#ingredient-item {
-		padding-right: 10rem;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	#ingredients {
