@@ -140,12 +140,18 @@ ul {
 }
 
 .reset-shop {
+	align-items: center;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column-reverse;
+	justify-content: center;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
+
+	.reset-shop #reset-button,
+	.reset-shop #shop-button {
+		margin: .5rem;
+	}
 
 .selected-ingredients {
 	margin-bottom: 1rem;
@@ -161,15 +167,16 @@ ul {
 	justify-content: center;
 }
 
-.submit-reset {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
-	margin-bottom: .5rem;
-	margin-left: 1rem;
-	margin-right: 1rem;
-	margin-top: .5rem;
-}
+	.submit-reset {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+		.submit-reset input {
+			margin: .5rem;
+		}
 
 .selected-text {
 	display: flex;
@@ -206,10 +213,6 @@ ul {
 	display: flex;
 	justify-content: center;
 }
-
-	#shop-button button {
-		
-	}
 
 #ingredients {
 	margin-bottom: 0;
@@ -410,7 +413,7 @@ ul {
 		margin-bottom: 1rem;
 		margin-left: .5rem;
 		margin-right: .5rem;
-		width: 30vw;
+		width: 29.5vw;
 	}
 
 	.store-item-image {

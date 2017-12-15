@@ -273,6 +273,7 @@ ul {
 #store-item-name,
 #store-item-price {
 	font-size: 6.5vw;
+	text-transform: capitalize;
 }
 
 #ingredient-item {
