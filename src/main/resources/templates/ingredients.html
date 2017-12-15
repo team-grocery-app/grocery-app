@@ -15,21 +15,24 @@
         
         <section class="ingredients">
             <form method = "POST">
-            
                 <ul>
                     <li th:each="i: ${selectedIngredients}">
                         <span id="ingredient-item" th:text="${i.quantity} + '  ---    ' + ${i.name} + ', ' + ${i.recipe.name}"></span>
-                        <button class="delete-button" th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}">x</button>
+                        <button class="delete-button" th:id="${i.id}" th:formaction="@{/remove(id=${i.id})}"><span>+</span></button>
                     </li>
                 </ul>
             </form>
         
         <div class="nav-buttons">
-            <form id="shop-button" method="POST">
-                <button type="submit" formaction="/shop">Shop</button>
-            </form>
-            <a class="back" href="http://localhost:8080/recipes">Back to
-                Recipes</a>
+        		<div class="reset-shop">
+	            <form id="reset-button" action="/reset">
+	                <button>Reset</button>
+	            </form>
+	            <form id="shop-button" method="POST">
+	                <button type="submit" formaction="/shop">Shop</button>
+	            </form>
+	      	</div>
+            <a class="back" href="http://localhost:8080/recipes">Back to Recipes</a>
         </div>
         
         </section>

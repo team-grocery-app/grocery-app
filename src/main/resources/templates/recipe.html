@@ -13,6 +13,13 @@
 	<div class="container">
 		<header>
 			<h1 class="page-title" th:text="${recipe.name}"></h1>
+			<!-- <div id="social-media">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
+					class="fa fa-reddit-square" aria-hidden="true"></i> <i
+					class="fa fa-twitter-square" aria-hidden="true"></i> <i
+					class="fa fa-youtube-square" aria-hidden="true"></i> <i
+					class="fa fa-google-plus-square" aria-hidden="true"></i>
+			</div> -->
 		</header>
 
 		<section class="recipe-layout">
@@ -41,21 +48,9 @@
 				<button type="submit" th:formaction="@{/cook-this(id=${recipe.id})}">Cook
 					This</button>
 			</form>
-			<a class="back" href="http://localhost:8080/recipes">Back to
-				Recipes</a>
+			<a class="back" href="http://localhost:8080/recipes">Back to Recipes</a>
 		</div>
-		
-<!-- 		<footer>
-			<h4>The Grocery App Team Copyright 2017</h4>
-			<div id="social-media">
-				<i class="fa fa-facebook-square" aria-hidden="true"></i> <i
-					class="fa fa-reddit-square" aria-hidden="true"></i> <i
-					class="fa fa-twitter-square" aria-hidden="true"></i> <i
-					class="fa fa-youtube-square" aria-hidden="true"></i> <i
-					class="fa fa-google-plus-square" aria-hidden="true"></i>
-			</div>
 
-		</footer> -->
 		<footer>
 				<p class="copyright">Copyright © 2017</p>
 		</footer>
