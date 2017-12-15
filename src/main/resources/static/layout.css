@@ -381,6 +381,20 @@ ul {
 		flex-wrap: wrap;
 		margin-bottom: 1rem;
 	}
+	
+	.reset-shop {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.reset-shop #reset-button,
+	.reset-shop #shop-button {
+		margin: 0;
+	}
+	
 
 	.selected-ingredients {
 		margin: 0;
