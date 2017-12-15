@@ -24,9 +24,14 @@
             </form>
         
         <div class="nav-buttons">
-            <form id="shop-button" method="POST">
-                <button type="submit" formaction="/shop">Shop</button>
-            </form>
+        		<div class="reset-shop">
+	            <form id="reset-button" action="/reset">
+	                <button>Reset</button>
+	            </form>
+	            <form id="shop-button" method="POST">
+	                <button type="submit" formaction="/shop">Shop</button>
+	            </form>
+	      	</div>
             <a class="back" href="http://localhost:8080/recipes">Back to Recipes</a>
         </div>
         

@@ -139,6 +139,14 @@ ul {
     justify-content: center;
 }
 
+.reset-shop {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
 .selected-ingredients {
 	margin-bottom: 1rem;
 	margin-left: 0;
@@ -156,8 +164,10 @@ ul {
 .submit-reset {
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-bottom: .5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	margin-top: .5rem;
 }
 
@@ -198,10 +208,7 @@ ul {
 }
 
 	#shop-button button {
-		padding-bottom: .25rem;
-		padding-left: .5rem;
-		padding-right: .5rem;
-		padding-top: .25rem;
+		
 	}
 
 #ingredients {
@@ -291,18 +298,25 @@ ul {
 	    width: 100vw;
 	}
 
-	.final-selection li {
+	.final-selection {
 		display: flex;
-		height: auto;
-		justify-content: space-between;
-		width: 33%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
-		.final-selection li .selected-text {
+		.final-selection li {
 			display: flex;
-			flex-direction: column;
-			margin: auto;
+			height: auto;
+			justify-content: space-between;
+			width: 33%;
 		}
+
+			.final-selection li .selected-text {
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+			}
 
 	.ingredients {
 		margin: auto;
@@ -318,8 +332,7 @@ ul {
 		flex-direction: column;
 	}
 
-		.nav-buttons #cook-button,
-		.nav-buttons #shop-button {
+		.nav-buttons #cook-button {
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
@@ -397,11 +410,12 @@ ul {
 		margin-bottom: 1rem;
 		margin-left: .5rem;
 		margin-right: .5rem;
-		width: 31%;
+		width: 30vw;
 	}
 
 	.store-item-image {
 		margin-top: 1rem;
+		max-width: 100%;
 		width: auto;
 		max-height: 50%;
 	}
@@ -420,6 +434,17 @@ ul {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+
+	.submit-reset {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+		.submit-reset input {
+			margin: .5rem;
+		}
 
 	.total-edit {
 		align-items: flex-end;

@@ -74,13 +74,14 @@ body {
     background-size: cover;
 }
 	
-button {
+button,
+.submit-reset input {
 	/*box-shadow: 2px 2px 2px 2px black;*/
 	background-color: #108445;
 	color: white;
 	font-size: .8rem;
 	height: 2rem;
-	width: auto;
+	width: 6.5rem;
 	padding-bottom: .25rem;
 	padding-left: .5rem;
 	padding-right: .5rem;
@@ -244,8 +245,7 @@ ul {
 	padding: 15px;
 }
 
-.submit-reset button,
-.submit-reset button input {
+.submit-reset input {
 	font-size: .8rem;
 	color: white;
 }
@@ -452,6 +452,10 @@ ul {
 
 	.copyright {
 		font-size: 2vw;
+	}
+
+	.final-selection li {
+		max-width: 28vw;
 	}
 
 	.mask {
