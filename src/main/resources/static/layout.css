@@ -37,7 +37,8 @@ ul {
 .back {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 1rem;
+	margin-bottom: .25rem;
+	margin-top: .25rem;
 }
 
 .container {
@@ -48,9 +49,15 @@ ul {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	margin: 0;
+	height: 30px;
+	margin-left: 10px;
 	padding: 0;
+	width: 30px;
 }
+
+	.delete-button span {
+		transform: rotate(45deg);
+	}
 
 .final-selection li {
 	display: flex;
@@ -58,27 +65,23 @@ ul {
 	justify-content: center;
 }
 
-.ingredients ul li{
+.ingredients ul {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
-	padding-bottom: .5rem;
 }
 
-	.ingredients ul li span {
-		font-size: large;
+	.ingredients ul li{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: .5rem;
 	}
 
-	.ingredients ul li button {
-		text-align: center;
-		font-size: medium;
-		height: 1rem;
-		/* margin-bottom: 15px; */ 
-		padding-left: 5px;
-		padding-right: 5px;
-		width: auto;
-		
-	}
+		.ingredients ul li #ingredient-item {
+			font-size: .85rem;
+			max-width: 80%;
+		}
 	
 .instructions h2 {
 	margin-top: 0;
@@ -94,7 +97,7 @@ ul {
     display: flex;
     height: auto;
     max-width: 100%;
-    width: 80vw;
+    width: 85vw;
 }
 
 .recipe-image {
@@ -136,11 +139,25 @@ ul {
     justify-content: center;
 }
 
+.reset-shop {
+	align-items: center;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+	.reset-shop #reset-button,
+	.reset-shop #shop-button {
+		margin: .5rem;
+	}
+
 .selected-ingredients {
 	margin-bottom: 1rem;
 	margin-left: 0;
 	margin-right: 0;
-	margin-top: 1rem;
+	margin-top: .75rem;
 }
 
 .store-item {
@@ -150,12 +167,26 @@ ul {
 	justify-content: center;
 }
 
-.submit-reset {
+	.submit-reset {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+		.submit-reset input {
+			margin: .5rem;
+		}
+
+.selected-text {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-bottom: 1rem;
+	flex-direction: column;
+	justify-content: flex-start;
 }
+
+	.selected-text .text{
+		padding-bottom: .25rem;
+	}
 
 
 .title-social {
@@ -172,6 +203,10 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 }
+
+	.total-edit button {
+		margin-top: .5rem;
+	}
 
 #cook-button,
 #shop-button {
@@ -199,7 +234,7 @@ ul {
 
 #selected-image {
 	margin: auto;
-	padding-bottom: .5rem;
+	padding-bottom: .8rem;
 }
 
 
@@ -266,6 +301,26 @@ ul {
 	    width: 100vw;
 	}
 
+	.final-selection {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+		.final-selection li {
+			display: flex;
+			height: auto;
+			justify-content: space-between;
+			width: 33%;
+		}
+
+			.final-selection li .selected-text {
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+			}
+
 	.ingredients {
 		margin: auto;
 		max-width: 60vw;
@@ -274,36 +329,18 @@ ul {
 		.ingredients ul {
 			font-size: 8rem;
 		}
-		
-	.final-selection li{
-		display: flex;
-		flex-direction: row;
-		height: auto;
-		justify-content: flex-start;
-		max-width: 100%;
-	}
-
-/* 	.final-selection li {
-		display: flex;
-		height: auto;
-		justify-content: space-between;
-		width: 33%;
-	}
-
-		.final-selection li .selected-text {
-			display: flex;
-			flex-direction: column;
-			margin: auto;
-		} */
 
 	.nav-buttons {
 		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-		margin-bottom: 1rem;
-		margin-left: 1rem;
-		margin-right: 1rem;
+		flex-direction: column;
 	}
+
+		.nav-buttons #cook-button {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-right: 1rem;
+		}
 
 	.recipe-image {
         /* max-height: 45vh;
@@ -315,9 +352,8 @@ ul {
     .recipe-ingredients {
 		display: flex;
 		justify-content: flex-start;
-		/*margin: auto;*/
-		max-width: 45vw;
-		padding: 1rem;
+		margin-top: 1rem;
+		width: 45vw;
 	}
 
 		.recipe-ingredients ul {
@@ -328,7 +364,7 @@ ul {
 		align-items: flex-start;
 		display: flex;
 		flex-direction: row-reverse;
-		justify-content: space-around;
+		justify-content: space-between;
 		margin: 1rem;
 	}
 
@@ -345,19 +381,28 @@ ul {
 		flex-wrap: wrap;
 		margin-bottom: 1rem;
 	}
+	
+	.reset-shop {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.reset-shop #reset-button,
+	.reset-shop #shop-button {
+		margin: 0;
+	}
+	
 
 	.selected-ingredients {
 		margin: 0;
 	}
 
-	/* .selection .final-selection {
-		display: flex;
-		flex-direction: row;
-	} */
 	.selection .final-selection {
 		display: flex;
-		flex-direction: column;
-		max-width: 100vw;
+		flex-direction: row;
 	}
 
 	.selection-header {
@@ -379,13 +424,15 @@ ul {
 	}
 
 	.store-item {
-		margin-right: 1rem;
 		margin-bottom: 1rem;
-		width: 31%;
+		margin-left: .5rem;
+		margin-right: .5rem;
+		width: 29.5vw;
 	}
 
 	.store-item-image {
 		margin-top: 1rem;
+		max-width: 100%;
 		width: auto;
 		max-height: 50%;
 	}
@@ -394,21 +441,45 @@ ul {
 		word-wrap: normal;
 	}
 
+	.store-item-selection {
+		padding: 0;
+	}
+
 	.store-options {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: center;
+	}
+
+	.submit-reset {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+		.submit-reset input {
+			margin: .5rem;
+		}
+
+	.total-edit {
+		align-items: flex-end;
+		display: flex;
+		flex-direction: column;
+		/*justify-content: flex-end;*/
 	}
 
 	#ingredient-item {
-		/* padding-right: 10rem; */
+		display: flex;
+		justify-content: space-between;
 	}
 
 	#ingredients {
 		margin-bottom: 1rem;
 		margin-left: 0;
 		margin-right: 0;
+		margin-top: 0;
 	}
 
 	#my-shopping-list {
@@ -426,7 +497,7 @@ ul {
 	#selected-image {
 		height: auto;
 		margin: auto;
-		max-width: 45%;
+		max-width: 60%;
 	}
 
 }
